@@ -7,7 +7,7 @@ inputs:
     required: true
     default: "outputs"
   outputs:
-    description: "String JSON example `${{ toJSON(steps.<step-id>.outputs) }}`"
+    description: "JSON string"
     required: true
   keys:
     description: "Comma separated list of Keys to read from the outputs. Example: foo,bar"

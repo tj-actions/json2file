@@ -31,6 +31,14 @@ fn write_outputs(
     }
 
     for key in keys {
+        let value = match json.get(key) {
+            Some(value) => value.as_str().unwrap(),
+            None => {
+                eprintln!("Invalid key \"{}\" not found in output {}", key, output);
+                std::process::exit(1);
+            }
+        };
+        
         let file_name = &format!("{}.{}", key, output_extension);
         let mut file = match File::create(output_directory.join(file_name)) {
             Ok(file) => file,
@@ -42,14 +50,6 @@ fn write_outputs(
                     eprintln!("Failed to create file {}: {}", file_name, err);
                     std::process::exit(1);
                 }
-            }
-        };
-
-        let value = match json.get(key) {
-            Some(value) => value.as_str().unwrap(),
-            None => {
-                eprintln!("Invalid key \"{}\" not found in output {}", key, output);
-                std::process::exit(1);
             }
         };
 
@@ -97,7 +97,7 @@ fn parse_keys() -> Result<Vec<String>, String> {
         for key in keys {
             if re.is_match(&key) {
                 output.extend(re.split(&key).map(|s| s.trim().to_string()));
-            } else {
+            } else if !key.is_empty() {
                 output.push(key.trim().to_string());
             }
         }

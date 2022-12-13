@@ -26,7 +26,7 @@ runs:
   steps:
     - run: |
         INPUT_DIRECTORY="${{ inputs.directory }}"
-        INPUT_OUTPUTS="$(echo "${{ inputs.outputs }}" | jq @json)"
+        INPUT_OUTPUTS="$(echo '${{ inputs.outputs }}' | jq @json)"
         INPUT_KEYS="${{ inputs.keys }}"
         INPUT_EXTENSION="${{ inputs.extension }}"
         INPUT_BIN_PATH="${{ inputs.bin_path }}"

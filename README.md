@@ -21,11 +21,22 @@ Generate file output from a JSON string.
 
 The above example will create a file named `color.txt` in the `output` directory with the contents `green`.
 
-
 ## Inputs
 
+<!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
+
+|   INPUT   |  TYPE  | REQUIRED |           DEFAULT            |                                                            DESCRIPTION                                                             |
+|-----------|--------|----------|------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
+| bin\_path  | string |  false   | `"target/release/json2file"` |                                                         Path to the binary                                                         |
+| directory | string |   true   |         `"outputs"`          |                                                       Directory to write to                                                        |
+| extension | string |  false   |           `"txt"`            |                                                       File extension to use                                                        |
+|   keys    | string |   true   |                              |                           Comma separated list of Keys<br>to read from the outputs.<br>Example: foo,bar                            |
+|  outputs  | string |   true   |                              | String output from a previous<br>step. Example: ${{ steps.<step-id>.outputs }}<br>which pass {"foo": "value1", "bar":<br>"value2"} |
+
+<!-- AUTO-DOC-INPUT:END -->
 
 ## CLI Reference
+
 Run `json2file --help` for more information.
 
 ```bash
@@ -48,7 +59,6 @@ Options:
 Example:
         json2file --keys=foo,bar --outputs="{\"foo\": \"value1\", \"bar\": \"value2\"}" --directory=/tmp --extension=tx
 ```
-
 
 *   Free software: [MIT license](LICENSE)
 
@@ -73,4 +83,3 @@ If you are reporting a bug, please include:
 *   Your operating system name and VERSION.
 *   Any details about your workflow that might be helpful in troubleshooting.
 *   Detailed steps to reproduce the bug.
-

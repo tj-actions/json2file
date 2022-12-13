@@ -21,13 +21,12 @@ inputs:
     required: false
     default: "target/release/json2file"
 
-
 runs:
   using: 'composite'
   steps:
     - run: |
         INPUT_DIRECTORY="${{ inputs.directory }}"
-        INPUT_OUTPUTS="${{ inputs.outputs }}"
+        INPUT_OUTPUTS='${{ inputs.outputs }}'
         INPUT_KEYS="${{ inputs.keys }}"
         INPUT_EXTENSION="${{ inputs.extension }}"
         INPUT_BIN_PATH="${{ inputs.bin_path }}"

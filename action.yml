@@ -3,11 +3,11 @@ description: Generate file output from JSON
 author: jackton1
 inputs:
   directory:
-    description: 'Directory to write to'
+    description: "Directory to write to"
     required: true
-    default: 'outputs'
+    default: "outputs"
   outputs:
-    description: "String output from a previous step. Example: `${{ steps.<step-id>.outputs }}` which pass `{\"foo\": \"value1\", \"bar\": \"value2\"}`"
+    description: "String JSON example `${{ toJSON(steps.<step-id>.outputs) }}`"
     required: true
   keys:
     description: "Comma separated list of Keys to read from the outputs. Example: foo,bar"
@@ -15,11 +15,11 @@ inputs:
   extension:
     description: "File extension to use"
     required: false
-    default: 'txt'
+    default: "txt"
   bin_path:
-    description: 'Path to the binary'
+    description: "Path to the binary"
     required: false
-    default: 'target/release/json2file'
+    default: "target/release/json2file"
 
 
 runs:

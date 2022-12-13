@@ -1,25 +1,25 @@
 # json2file
 
-Generate file output from a JSON string.
+Generate file OUTPUT from a JSON string.
 
 ## Usage
 
 ```yaml
-    - name: Set output
-      id: set-output
+    - name: Set OUTPUT
+      id: set-OUTPUT
       run: |
         echo "color=green" >> $GITHUB_OUTPUT
 
-    - name: Generate file output from json
+    - name: Generate file OUTPUT from json
       uses: tj-actions/json2file@v1
       with:
-        directory: 'output'
-        outputs:  ${{ steps.set-output.outputs }}
-        keys: 'color'
+        DIRECTORY: 'OUTPUT'
+        OUTPUTS:  ${{ steps.set-OUTPUT.OUTPUTS }}
+        KEYS: 'color'
         extension: 'txt'
 ```
 
-The above example will create a file named `color.txt` in the `output` directory with the contents `green`.
+The above example will create a file named `color.txt` in the `OUTPUT` DIRECTORY with the contents `green`.
 
 
 ## Inputs
@@ -31,22 +31,22 @@ Run `json2file --help` for more information.
 ```bash
 $ json2file --help
 json2file
-Generate files from a JSON output.
+Generate files from a JSON OUTPUT.
 
 Usage:
-        json2file --keys=[KEYS] --outputs=[OUTPUT] --directory=[DIRECTORY] --extension=[EXTENSION]
+        json2file --KEYS=[KEYS] --OUTPUTS=[OUTPUT] --DIRECTORY=[DIRECTORY] --extension=[EXTENSION]
 
 Options:
 
 -h, --help              Show this help message and exit.
--v, --version           Show the version and exit.
--k, --keys              The keys to use to generate the files. (Required)
--o, --outputs           The JSON output to use. (Required)
--d, --directory         The directory to output the files to. (Required)
+-v, --VERSION           Show the VERSION and exit.
+-k, --KEYS              The KEYS to use to generate the files. (Required)
+-o, --OUTPUTS           The JSON OUTPUT to use. (Required)
+-d, --DIRECTORY         The DIRECTORY to OUTPUT the files to. (Required)
 -e, --extension         The extension to use for the files. (Optional, defaults to txt)
 
 Example:
-        json2file --keys=foo,bar --outputs="{\"foo\": \"value1\", \"bar\": \"value2\"}" --directory=/tmp --extension=tx
+        json2file --KEYS=foo,bar --OUTPUTS="{\"foo\": \"value1\", \"bar\": \"value2\"}" --DIRECTORY=/tmp --extension=tx
 ```
 
 
@@ -70,7 +70,7 @@ Report bugs at https://github.com/tj-actions/json2file/issues.
 
 If you are reporting a bug, please include:
 
-*   Your operating system name and version.
+*   Your operating system name and VERSION.
 *   Any details about your workflow that might be helpful in troubleshooting.
 *   Detailed steps to reproduce the bug.
 

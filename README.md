@@ -57,7 +57,7 @@ Options:
 -e, --extension         The extension to use for the files. (Optional, defaults to txt)
 
 Example:
-        json2file --keys=foo,bar --outputs="{\"foo\": \"value1\", \"bar\": \"value2\"}" --directory=/tmp --extension=tx
+        json2file --keys=foo,bar --outputs="{\"foo\": \"value1\", \"bar\": \"value2\"}" --directory=/tmp --extension=txt
 ```
 
 *   Free software: [MIT license](LICENSE)

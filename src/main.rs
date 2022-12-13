@@ -3,7 +3,7 @@ use std::fs::File;
 use std::io::{ErrorKind, Write};
 use std::path::PathBuf;
 
-const VERSION: &'static str = env!("CARGO_PKG_VERSION");
+const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 fn write_outputs(
     keys: &Vec<String>,
@@ -62,12 +62,13 @@ fn write_outputs(
 
 fn get_args_as_vec(pattern: &str) -> Vec<String> {
     let re: regex::Regex = regex::Regex::new(pattern).unwrap();
+    const PATTERN: &str = "=";
 
-    return env::args()
+    env::args()
         .skip(1)
         .filter(|arg| re.is_match(arg))
         .map(|arg| {
-            arg.split("=")
+            arg.split(PATTERN)
                 .nth(1)
                 .unwrap_or_else(|| {
                     eprintln!("Invalid option: {}", arg);
@@ -75,13 +76,13 @@ fn get_args_as_vec(pattern: &str) -> Vec<String> {
                 })
                 .to_string()
         })
-        .collect();
+        .collect()
 }
 
 fn get_args_as_bool(pattern: &str) -> bool {
     let re: regex::Regex = regex::Regex::new(pattern).unwrap();
 
-    return env::args().skip(1).filter(|arg| re.is_match(arg)).count() > 0;
+    env::args().skip(1).filter(|arg| re.is_match(arg)).count() > 0
 }
 
 fn parse_keys() -> Result<Vec<String>, String> {
@@ -162,11 +163,11 @@ fn parse_output_extension() -> Result<String, String> {
 }
 
 fn parse_help() -> bool {
-    return get_args_as_bool(r"^(--help|-h)$");
+    get_args_as_bool(r"^(--help|-h)$")
 }
 
 fn parse_version() -> bool {
-    return get_args_as_bool(r"^(--version|-v)$");
+    get_args_as_bool(r"^(--version|-v)$")
 }
 
 fn options_valid() -> bool {
@@ -198,7 +199,7 @@ fn options_valid() -> bool {
         })
         .collect();
 
-    if invalid_options.len() > 0 {
+    if !invalid_options.is_empty() {
         eprintln!("Invalid option(s): {:?}", invalid_options);
         eprintln!("Please use --help or -h to see the available options.");
         return false;

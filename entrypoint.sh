@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-INPUT_OUTPUTS="$(echo "$INPUT_OUTPUTS" | jq @json)"
+INPUT_OUTPUTS="$(echo "$INPUT_OUTPUTS" | jq -r @json)"
 
 if [[ -z "$INPUT_BIN_PATH" ]]; then
   ## TODO: use "curl -sf https://[github releases - latest]] | PREFIX=. sh"
@@ -10,7 +10,7 @@ fi
 
 echo "::debug::Generating output using $INPUT_BIN_PATH..."
 
-$INPUT_BIN_PATH --keys="$INPUT_KEYS" --outputs=$INPUT_OUTPUTS \
+$INPUT_BIN_PATH --keys="$INPUT_KEYS" --outputs="$INPUT_OUTPUTS" \
   --directory="$INPUT_DIRECTORY" --extension="$INPUT_EXTENSION" && exit_status=$? || exit_status=$?
 
 rm -f "$INPUT_BIN_PATH"

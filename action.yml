@@ -25,29 +25,17 @@ runs:
   using: 'composite'
   steps:
     - run: |
-        INPUT_DIRECTORY="${{ inputs.directory }}"
-        INPUT_OUTPUTS="$(echo '${{ inputs.outputs }}' | jq @json)"
-        INPUT_KEYS="${{ inputs.keys }}"
-        INPUT_EXTENSION="${{ inputs.extension }}"
-        INPUT_BIN_PATH="${{ inputs.bin_path }}"
-        
-        if [[ -z "$BIN_PATH" ]]; then
-          ## TODO: use "curl -sf https://[github releases - latest]] | PREFIX=. sh"
-          exit 1;
-        fi
-        
-        echo "::debug::Generating output using ${BIN_PATH}..."
-        
-        $BIN_PATH --keys="$INPUT_KEYS" --outputs=="$INPUT_OUTPUTS" \
-          --directory="$INPUT_DIRECTORY" --extension="$INPUT_EXTENSION" && exit_status=$? || exit_status=$?
-
-        rm -f $BIN_PATH
-        
-        if [[ $exit_status -ne 0 ]]; then
-          echo "::error::Error generating output files from JSON"
-          exit $exit_status;
-        fi
+        bash $GITHUB_ACTION_PATH/entrypoint.sh
+      id: json2file
       shell: bash
+      env:
+        # INPUT_<VARIABLE_NAME> is not available in Composite run steps
+        # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#example-specifying-inputs
+        INPUT_DIRECTORY: ${{ inputs.directory }}
+        INPUT_OUTPUTS: ${{ inputs.outputs }}
+        INPUT_KEYS: ${{ inputs.keys }}
+        INPUT_EXTENSION: ${{ inputs.extension }}
+        INPUT_BIN_PATH: ${{ inputs.bin_path }}
 
 branding:
   icon: file-text

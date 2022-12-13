@@ -38,7 +38,6 @@ fn write_outputs(
                 std::process::exit(1);
             }
         };
-        
         let file_name = &format!("{}.{}", key, output_extension);
         let mut file = match File::create(output_directory.join(file_name)) {
             Ok(file) => file,

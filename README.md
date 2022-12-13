@@ -31,7 +31,7 @@ The above example will create a file named `color.txt` in the `output` directory
 | directory | string |   true   |         `"outputs"`          |                             Directory to write to                             |
 | extension | string |  false   |           `"txt"`            |                             File extension to use                             |
 |   keys    | string |   true   |                              | Comma separated list of Keys<br>to read from the outputs.<br>Example: foo,bar |
-|  outputs  | string |   true   |                              |        String JSON example `${{ toJSON(steps.<step-id>.outputs)<br>}}`        |
+|  outputs  | string |   true   |                              |                                  JSON string                                  |
 
 <!-- AUTO-DOC-INPUT:END -->
 

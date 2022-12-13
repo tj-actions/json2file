@@ -7,7 +7,7 @@ inputs:
     required: true
     default: 'outputs'
   outputs:
-    description: "String output from a previous step. Example: ${{ steps.<step-id>.outputs }} which pass {\"foo\": \"value1\", \"bar\": \"value2\"}"
+    description: "String output from a previous step. Example: `${{ steps.<step-id>.outputs }}` which pass `{\"foo\": \"value1\", \"bar\": \"value2\"}`"
     required: true
   keys:
     description: "Comma separated list of Keys to read from the outputs. Example: foo,bar"

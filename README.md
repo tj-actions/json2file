@@ -1,25 +1,25 @@
 # json2file
 
-Generate file OUTPUT from a JSON string.
+Generate file output from a JSON string.
 
 ## Usage
 
 ```yaml
-    - name: Set OUTPUT
-      id: set-OUTPUT
+    - name: Set output
+      id: set-output
       run: |
         echo "color=green" >> $GITHUB_OUTPUT
 
-    - name: Generate file OUTPUT from json
+    - name: Generate file output from json
       uses: tj-actions/json2file@v1
       with:
-        DIRECTORY: 'OUTPUT'
-        OUTPUTS:  ${{ steps.set-OUTPUT.OUTPUTS }}
-        KEYS: 'color'
+        directory: 'output'
+        outputs:  ${{ steps.set-output.outputs }}
+        keys: 'color'
         extension: 'txt'
 ```
 
-The above example will create a file named `color.txt` in the `OUTPUT` DIRECTORY with the contents `green`.
+The above example will create a file named `color.txt` in the `output` directory with the contents `green`.
 
 
 ## Inputs
@@ -31,22 +31,22 @@ Run `json2file --help` for more information.
 ```bash
 $ json2file --help
 json2file
-Generate files from a JSON OUTPUT.
+Generate files from a JSON output.
 
 Usage:
-        json2file --KEYS=[KEYS] --OUTPUTS=[OUTPUT] --DIRECTORY=[DIRECTORY] --extension=[EXTENSION]
+        json2file --keys=[keys] --outputs=[output] --directory=[directory] --extension=[EXTENSION]
 
 Options:
 
 -h, --help              Show this help message and exit.
 -v, --VERSION           Show the VERSION and exit.
--k, --KEYS              The KEYS to use to generate the files. (Required)
--o, --OUTPUTS           The JSON OUTPUT to use. (Required)
--d, --DIRECTORY         The DIRECTORY to OUTPUT the files to. (Required)
+-k, --keys              The keys to use to generate the files. (Required)
+-o, --outputs           The JSON output to use. (Required)
+-d, --directory         The directory to output the files to. (Required)
 -e, --extension         The extension to use for the files. (Optional, defaults to txt)
 
 Example:
-        json2file --KEYS=foo,bar --OUTPUTS="{\"foo\": \"value1\", \"bar\": \"value2\"}" --DIRECTORY=/tmp --extension=tx
+        json2file --keys=foo,bar --outputs="{\"foo\": \"value1\", \"bar\": \"value2\"}" --directory=/tmp --extension=tx
 ```
 
 

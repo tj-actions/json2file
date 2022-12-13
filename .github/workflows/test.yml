@@ -109,8 +109,4 @@ jobs:
         with:
           outputs: ${{ toJSON(steps.changed-files.outputs) }}
           directory: test/output
-          keys: |
-            added_files
-            copied_files
-            deleted_files
-            modified_files
+          keys: "added_files copied_files deleted_files modified_files"

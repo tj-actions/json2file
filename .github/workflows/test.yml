@@ -9,6 +9,16 @@ on:
       - main
 
 jobs:
+  shellcheck:
+    name: Run shellcheck
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout to branch
+        uses: actions/checkout@v3
+      - name: shellcheck
+        uses: reviewdog/action-shellcheck@v1.15
+
   test:
     name: Run test
     strategy:

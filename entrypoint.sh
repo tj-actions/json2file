@@ -9,6 +9,7 @@ if [[ -z "$INPUT_BIN_PATH" ]]; then
 fi
 
 echo "::debug::Generating output using $INPUT_BIN_PATH..."
+echo "$INPUT_OUTPUTS"
 
 $INPUT_BIN_PATH --keys="$INPUT_KEYS" --outputs=="$INPUT_OUTPUTS" \
   --directory="$INPUT_DIRECTORY" --extension="$INPUT_EXTENSION" && exit_status=$? || exit_status=$?

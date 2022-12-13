@@ -107,7 +107,7 @@ jobs:
       - name: Generate output files from JSON
         uses: ./
         with:
-          outputs: "${{ toJSON(steps.changed-files.outputs) }}"
+          outputs: '${{ toJSON(steps.changed-files.outputs) }}'
           directory: test/output
           keys: |
             added_files

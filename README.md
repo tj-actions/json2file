@@ -25,13 +25,13 @@ The above example will create a file named `color.txt` in the `output` directory
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|   INPUT   |  TYPE  | REQUIRED |           DEFAULT            |                                                            DESCRIPTION                                                             |
-|-----------|--------|----------|------------------------------|------------------------------------------------------------------------------------------------------------------------------------|
-| bin\_path  | string |  false   | `"target/release/json2file"` |                                                         Path to the binary                                                         |
-| directory | string |   true   |         `"outputs"`          |                                                       Directory to write to                                                        |
-| extension | string |  false   |           `"txt"`            |                                                       File extension to use                                                        |
-|   keys    | string |   true   |                              |                           Comma separated list of Keys<br>to read from the outputs.<br>Example: foo,bar                            |
-|  outputs  | string |   true   |                              | String output from a previous<br>step. Example: ${{ steps.<step-id>.outputs }}<br>which pass {"foo": "value1", "bar":<br>"value2"} |
+|   INPUT   |  TYPE  | REQUIRED |           DEFAULT            |                                                              DESCRIPTION                                                               |
+|-----------|--------|----------|------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| bin\_path  | string |  false   | `"target/release/json2file"` |                                                           Path to the binary                                                           |
+| directory | string |   true   |         `"outputs"`          |                                                         Directory to write to                                                          |
+| extension | string |  false   |           `"txt"`            |                                                         File extension to use                                                          |
+|   keys    | string |   true   |                              |                             Comma separated list of Keys<br>to read from the outputs.<br>Example: foo,bar                              |
+|  outputs  | string |   true   |                              | String output from a previous<br>step. Example: `${{ steps.<step-id>.outputs }}`<br>which pass `{"foo": "value1", "bar":<br>"value2"}` |
 
 <!-- AUTO-DOC-INPUT:END -->
 

@@ -104,7 +104,7 @@ fn parse_keys() -> Result<Vec<String>, String> {
                             if s.is_empty() {
                                 None
                             } else {
-                                Some(s.trim().replace("\\n", "\\\\n").to_string())
+                                Some(s.trim().to_string())
                             }
                         })
                         .collect(),

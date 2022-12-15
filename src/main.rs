@@ -99,7 +99,7 @@ fn parse_keys() -> Result<Vec<String>, String> {
             if !key.is_empty() {
                 output.append(
                     &mut re
-                        .split(&key)
+                        .split(&key.replace("\\n", "\\\\n"))
                         .filter_map(|s| {
                             if s.is_empty() {
                                 None

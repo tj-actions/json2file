@@ -96,7 +96,7 @@ fn parse_keys() -> Result<Vec<String>, String> {
         Err("No keys provided, Please specify at least one key using --key=[KEY_NAME] or -k=[KEY_NAME].".to_string())
     } else {
         for key in keys {
-            if key != "" {
+            if !key.is_empty() {
                 output.append(
                     &mut re
                         .split(&key)
@@ -104,6 +104,17 @@ fn parse_keys() -> Result<Vec<String>, String> {
                         .map(|s| s.trim().to_string())
                         .collect(),
                 );
+                if re.is_match(&key) {
+                    output.extend(re.split(&key).filter_map(|s| {
+                        if s.is_empty() {
+                            None
+                        } else {
+                            Some(s.trim().to_string())
+                        }
+                    }));
+                } else {
+                    output.push(key.trim().to_string());
+                }
                 println!("Output: {:?}", output);
             } else {
                 Err("Invalid key provided, Please specify at least one key using --key=[KEY_NAME] or -k=[KEY_NAME].".to_string())?;

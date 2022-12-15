@@ -97,7 +97,7 @@ fn parse_keys() -> Result<Vec<String>, String> {
     } else {
         for key in keys {
             if !key.is_empty() {
-                output.extend(re.split(&key.replace("\n", "\\n")).filter_map(|s| {
+                output.extend(re.split(&key.replace('\n', "\\n").filter_map(|s| {
                     if s.is_empty() {
                         None
                     } else {

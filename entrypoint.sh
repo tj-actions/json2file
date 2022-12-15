@@ -19,5 +19,5 @@ rm -f "$INPUT_BIN_PATH"
 
 if [[ $exit_status -ne 0 ]]; then
   echo "::error::Error generating output files from JSON"
-  exit $exit_status;
+  exit 1;
 fi

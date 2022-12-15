@@ -87,7 +87,7 @@ fn get_args_as_bool(pattern: &str) -> bool {
 fn parse_keys() -> Result<Vec<String>, String> {
     let keys: Vec<String> = get_args_as_vec(r"^(--keys|-k)=");
     // Split the keys by commas or spaces or newlines
-    let re: regex::Regex = regex::Regex::new(r"[,\s\n]+").unwrap();
+    let re: regex::Regex = regex::Regex::new(r"[,\s\\n]+").unwrap();
     let mut output: Vec<String> = Vec::new();
 
     println!("Keys: {:?}", keys);
@@ -100,21 +100,15 @@ fn parse_keys() -> Result<Vec<String>, String> {
                 output.append(
                     &mut re
                         .split(&key)
-                        .filter(|s| !s.is_empty())
-                        .map(|s| s.trim().to_string())
+                        .filter_map(|s| {
+                            if s.is_empty() {
+                                None
+                            } else {
+                                Some(s.trim().replace("\\n", "\\\\n").to_string())
+                            }
+                        })
                         .collect(),
                 );
-                if re.is_match(&key) {
-                    output.extend(re.split(&key).filter_map(|s| {
-                        if s.is_empty() {
-                            None
-                        } else {
-                            Some(s.trim().to_string())
-                        }
-                    }));
-                } else {
-                    output.push(key.trim().to_string());
-                }
                 println!("Output: {:?}", output);
             } else {
                 Err("Invalid key provided, Please specify at least one key using --key=[KEY_NAME] or -k=[KEY_NAME].".to_string())?;

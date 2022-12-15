@@ -10,7 +10,7 @@ fi
 
 echo "::debug::Generating output using $INPUT_BIN_PATH..."
 
-KEYS=( "$INPUT_KEYS" )
+IFS=$'\n' read -ra KEYS <<<"$INPUT_KEYS"
 
 $INPUT_BIN_PATH --keys="${KEYS[*]}" --outputs="$INPUT_OUTPUTS" \
   --directory="$INPUT_DIRECTORY" --extension="$INPUT_EXTENSION" && exit_status=$? || exit_status=$?

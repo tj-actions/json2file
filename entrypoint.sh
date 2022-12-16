@@ -2,7 +2,7 @@
 set -exuo pipefail
 
 INPUT_OUTPUTS="$(echo "$INPUT_OUTPUTS" | jq -r @json)"
-INPUT_KEYS="$(echo "$INPUT_KEYS" | jq -r @bash)"
+INPUT_KEYS="$(echo "$INPUT_KEYS" |  tr '\n' ' ' | xargs)"
 
 if [[ -z "$INPUT_BIN_PATH" ]]; then
   ## TODO: use "curl -sf https://[github releases - latest]] | PREFIX=. sh"

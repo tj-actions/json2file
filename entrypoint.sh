@@ -8,11 +8,13 @@ if [[ -z "$INPUT_BIN_PATH" ]]; then
   exit 1;
 fi
 
-echo "::debug::Generating output using $INPUT_BIN_PATH..."
+echo "Generating output using $INPUT_BIN_PATH..."
 
 read -r -d '' KEYS_STRING <<< "$INPUT_KEYS"
 
 mapfile -t KEYS_ARRAY <<< "$KEYS_STRING"
+
+echo "Keys: ${KEYS_ARRAY[*]}"
 
 $INPUT_BIN_PATH --keys="${KEYS_ARRAY[*]}" --outputs="$INPUT_OUTPUTS" \
   --directory="$INPUT_DIRECTORY" --extension="$INPUT_EXTENSION" && exit_status=$? || exit_status=$?

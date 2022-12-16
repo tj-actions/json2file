@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -exuo pipefail
+set -euo pipefail
 
 INPUT_OUTPUTS="$(echo "$INPUT_OUTPUTS" | jq -r @json)"
 INPUT_KEYS="$(echo "$INPUT_KEYS" |  tr '\n' ' ' | xargs)"

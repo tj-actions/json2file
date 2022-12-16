@@ -5,7 +5,7 @@ inputs:
   directory:
     description: "Directory to write to"
     required: true
-    default: "outputs"
+    default: ".github/outputs"
   outputs:
     description: "JSON string"
     required: true

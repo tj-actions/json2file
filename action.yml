@@ -5,12 +5,12 @@ inputs:
   directory:
     description: "Directory to write to"
     required: true
-    default: "outputs"
+    default: ".github/outputs"
   outputs:
     description: "JSON string"
     required: true
   keys:
-    description: "List of Keys to read from the outputs. Example: foo,bar"
+    description: "List of Keys to read from the outputs."
     required: true
   extension:
     description: "File extension to use"

@@ -87,17 +87,27 @@ fn get_args_as_bool(pattern: &str) -> bool {
 fn parse_keys() -> Result<Vec<String>, String> {
     let keys: Vec<String> = get_args_as_vec(r"^(--keys|-k)=");
     // Split the keys by commas or spaces or newlines
-    let re: regex::Regex = regex::Regex::new(r"[,\s\\n]+").unwrap();
+    let re: regex::Regex = regex::Regex::new(r"[[:space:]]+").unwrap();
     let mut output: Vec<String> = Vec::new();
+
+    println!("Keys: {:?}", keys);
 
     if keys.is_empty() {
         Err("No keys provided, Please specify at least one key using --key=[KEY_NAME] or -k=[KEY_NAME].".to_string())
     } else {
         for key in keys {
-            if re.is_match(&key) {
-                output.extend(re.split(&key).map(|s| s.trim().to_string()));
-            } else if !key.is_empty() {
-                output.push(key.trim().to_string());
+            if !key.is_empty() {
+                output.extend(re.split(&key).filter_map(|s| {
+                    if s.is_empty() {
+                        None
+                    } else {
+                        Some(s.trim().to_string())
+                    }
+                }));
+
+                println!("Output: {:?}", output);
+            } else {
+                Err("Invalid key provided, Please specify at least one key using --key=[KEY_NAME] or -k=[KEY_NAME].".to_string())?;
             }
         }
         Ok(output)
@@ -206,6 +216,17 @@ fn options_valid() -> bool {
 
     true
 }
+
+// TODO: Switch to use https://rust-cli.github.io/book/tutorial/index.html
+// #[derive(Parser)]
+// struct Options {
+//     help: bool,
+//     version: bool,
+//     keys: Vec<String>,
+//     outputs: String,
+//     directory: String,
+//     extension: String,
+// }
 
 fn main() {
     if !options_valid() {

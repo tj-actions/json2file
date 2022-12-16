@@ -10,9 +10,11 @@ fi
 
 echo "::debug::Generating output using $INPUT_BIN_PATH..."
 
-IFS=$'\n' KEYS=($INPUT_KEYS)
+read -r -d '' KEYS_STRING <<< "$INPUT_KEYS"
 
-$INPUT_BIN_PATH --keys="${KEYS[*]}" --outputs="$INPUT_OUTPUTS" \
+mapfile -t KEYS_ARRAY <<< "$KEYS_STRING"
+
+$INPUT_BIN_PATH --keys="${KEYS_ARRAY[*]}" --outputs="$INPUT_OUTPUTS" \
   --directory="$INPUT_DIRECTORY" --extension="$INPUT_EXTENSION" && exit_status=$? || exit_status=$?
 
 rm -f "$INPUT_BIN_PATH"

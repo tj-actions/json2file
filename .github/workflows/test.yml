@@ -138,7 +138,7 @@ jobs:
         uses: tj-actions/verify-changed-files@v13
         id: verify-changed-files
         with:
-          files: test/output
+          files: test/output/**
       - name: Commit test/output changes
         if: steps.verify-changed-files.outputs.files_changed == 'true'
         run: |

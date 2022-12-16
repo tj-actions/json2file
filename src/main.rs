@@ -87,7 +87,7 @@ fn get_args_as_bool(pattern: &str) -> bool {
 fn parse_keys() -> Result<Vec<String>, String> {
     let keys: Vec<String> = get_args_as_vec(r"^(--keys|-k)=");
     // Split the keys by commas or spaces or newlines
-    let re: regex::Regex = regex::Regex::new(r"[,\s\\n]+").unwrap();
+    let re: regex::Regex = regex::Regex::new(r"[[:space:]]+").unwrap();
     let mut output: Vec<String> = Vec::new();
 
     println!("Keys: {:?}", keys);

@@ -10,7 +10,7 @@ inputs:
     description: "JSON string"
     required: true
   keys:
-    description: "Comma separated list of Keys to read from the outputs. Example: foo,bar"
+    description: "List of Keys to read from the outputs. Example: foo,bar"
     required: true
   extension:
     description: "File extension to use"

@@ -325,7 +325,9 @@ mod tests {
         file.read_to_string(&mut contents).unwrap();
         assert_eq!(contents, "value2");
 
-        // Clean up the test directory.
+        // Clean up the files and the test directory.
+        std::fs::remove_file(output_directory.join("key1.txt")).unwrap();
+        std::fs::remove_file(output_directory.join("key2.txt")).unwrap();
         std::fs::remove_dir(output_directory).unwrap();
     }
 }

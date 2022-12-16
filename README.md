@@ -25,13 +25,13 @@ The above example will create a file named `color.txt` in the `output` directory
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|   INPUT   |  TYPE  | REQUIRED |           DEFAULT            |                                  DESCRIPTION                                  |
-|-----------|--------|----------|------------------------------|-------------------------------------------------------------------------------|
-| bin\_path  | string |  false   | `"target/release/json2file"` |                              Path to the binary                               |
-| directory | string |   true   |         `"outputs"`          |                             Directory to write to                             |
-| extension | string |  false   |           `"txt"`            |                             File extension to use                             |
-|   keys    | string |   true   |                              | Comma separated list of Keys<br>to read from the outputs.<br>Example: foo,bar |
-|  outputs  | string |   true   |                              |                                  JSON string                                  |
+|   INPUT   |  TYPE  | REQUIRED |           DEFAULT            |                        DESCRIPTION                         |
+|-----------|--------|----------|------------------------------|------------------------------------------------------------|
+| bin\_path  | string |  false   | `"target/release/json2file"` |                     Path to the binary                     |
+| directory | string |   true   |         `"outputs"`          |                   Directory to write to                    |
+| extension | string |  false   |           `"txt"`            |                   File extension to use                    |
+|   keys    | string |   true   |                              | List of Keys to read from the<br>outputs. Example: foo,bar |
+|  outputs  | string |   true   |                              |                        JSON string                         |
 
 <!-- AUTO-DOC-INPUT:END -->
 

@@ -5,6 +5,7 @@ Generate file output from a JSON string.
 ## Usage
 
 ```yaml
+...
     - name: Set output
       id: set-output
       run: |
@@ -17,6 +18,7 @@ Generate file output from a JSON string.
         outputs:  ${{ steps.set-output.outputs }}
         keys: 'color'
         extension: 'txt'
+...
 ```
 
 The above example will create a file named `color.txt` in the `output` directory with the contents `green`.

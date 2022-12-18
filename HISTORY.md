@@ -1,8 +1,27 @@
 # Changelog
 
-## [v1](https://github.com/tj-actions/json2file/tree/v1) (2022-12-13)
+## [v1](https://github.com/tj-actions/json2file/tree/v1) (2022-12-18)
 
-[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.0...v1)
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.1...v1)
+
+## [v1.0.1](https://github.com/tj-actions/json2file/tree/v1.0.1) (2022-12-18)
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.0...v1.0.1)
+
+**Merged pull requests:**
+
+- Updated README.md [\#25](https://github.com/tj-actions/json2file/pull/25) ([jackton1](https://github.com/jackton1))
+- Updated README.md [\#24](https://github.com/tj-actions/json2file/pull/24) ([jackton1](https://github.com/jackton1))
+- Update Rust crate serde\_json to 1.0.91 [\#23](https://github.com/tj-actions/json2file/pull/23) ([renovate[bot]](https://github.com/apps/renovate))
+- Update Rust crate serde\_json to 1.0.90 [\#22](https://github.com/tj-actions/json2file/pull/22) ([renovate[bot]](https://github.com/apps/renovate))
+- Updated README.md [\#21](https://github.com/tj-actions/json2file/pull/21) ([jackton1](https://github.com/jackton1))
+- Updated README.md [\#20](https://github.com/tj-actions/json2file/pull/20) ([jackton1](https://github.com/jackton1))
+- Updated README.md [\#19](https://github.com/tj-actions/json2file/pull/19) ([jackton1](https://github.com/jackton1))
+- Update tj-actions/verify-changed-files action to v13 [\#18](https://github.com/tj-actions/json2file/pull/18) ([renovate[bot]](https://github.com/apps/renovate))
+- Update tj-actions/auto-doc action to v1.6.0 [\#17](https://github.com/tj-actions/json2file/pull/17) ([renovate[bot]](https://github.com/apps/renovate))
+- chore/update test [\#16](https://github.com/tj-actions/json2file/pull/16) ([jackton1](https://github.com/jackton1))
+- Update cirrus-actions/rebase action to v1.8 [\#15](https://github.com/tj-actions/json2file/pull/15) ([renovate[bot]](https://github.com/apps/renovate))
+- Upgraded to v1.0.0 [\#14](https://github.com/tj-actions/json2file/pull/14) ([jackton1](https://github.com/jackton1))
 
 ## [v1.0.0](https://github.com/tj-actions/json2file/tree/v1.0.0) (2022-12-13)
 

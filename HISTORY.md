@@ -6,6 +6,18 @@
 
 ## [v1.0.2](https://github.com/tj-actions/json2file/tree/v1.0.2) (2022-12-18)
 
+- Upgraded to v1.0.2 [\#28](https://github.com/tj-actions/json2file/pull/28) ([jackton1](https://github.com/jackton1))
+
+**Merged pull requests:**
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.3...v1)
+
+## [v1.0.3](https://github.com/tj-actions/json2file/tree/v1.0.3) (2022-12-18)
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.2...v1.0.3)
+
+## [v1.0.2](https://github.com/tj-actions/json2file/tree/v1.0.2) (2022-12-18)
+
 [Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.1...v1.0.2)
 
 **Merged pull requests:**

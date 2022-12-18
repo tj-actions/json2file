@@ -1,13 +1,41 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+if [[ -z "$INPUT_BIN_PATH" ]]; then
+  # Get the latest version of https://github.com/tj-actions/json2file
+  LATEST_VERSION=$(curl -sL https://api.github.com/repos/tj-actions/json2file/releases/latest | jq -r .tag_name)
+
+  # Download the latest version
+  WINDOWS_TARGET=x86_64-pc-windows-gnu
+  LINUX_TARGET=x86_64-unknown-linux-musl
+  MACOS_TARGET=x86_64-apple-darwin
+  ARCHIVE=zip
+  TEMP_DIR=$(mktemp -d)
+
+  if [[ uname -s == "Linux" ]]; then
+    TARGET=$LINUX_TARGET
+    ARCHIVE=tar.gz
+  elif [[ uname -s == "Darwin" ]]; then
+    TARGET=$MACOS_TARGET
+  else
+    TARGET=$WINDOWS_TARGET
+  fi
+
+  if [[ "$ARCHIVE" == "zip" ]]; then
+    curl -sL https://github.com/tj-actions/json2file/releases/download/$LATEST_VERSION/json2file_$LATEST_VERSION_$TARGET.$ARCHIVE -o $TEMP_DIR/json2file.zip
+    unzip -q $TEMP_DIR/json2file.zip -d $TEMP_DIR
+    chmod +x $TEMP_DIR/json2file
+  else
+    curl -sL https://github.com/tj-actions/json2file/releases/download/$LATEST_VERSION/json2file_$LATEST_VERSION_$TARGET.$ARCHIVE -o $TEMP_DIR/json2file.tar.gz
+    tar -xzf $TEMP_DIR/json2file.tar.gz -C $TEMP_DIR
+    chmod +x $TEMP_DIR/json2file
+  fi
+
+  INPUT_BIN_PATH=$TEMP_DIR/json2file
+fi
+
 INPUT_OUTPUTS="$(echo "$INPUT_OUTPUTS" | jq -r @json)"
 INPUT_KEYS="$(echo "$INPUT_KEYS" |  tr '\n' ' ' | xargs)"
-
-if [[ -z "$INPUT_BIN_PATH" ]]; then
-  ## TODO: use "curl -sf https://[github releases - latest]] | PREFIX=. sh"
-  exit 1;
-fi
 
 echo "Generating output using $INPUT_BIN_PATH..."
 

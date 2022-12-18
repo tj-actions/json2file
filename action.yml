@@ -19,7 +19,6 @@ inputs:
   bin_path:
     description: "Path to the binary"
     required: false
-    default: "target/release/json2file"
 
 runs:
   using: 'composite'

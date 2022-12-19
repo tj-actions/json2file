@@ -50,6 +50,7 @@ jobs:
         id: sync-release-version-entrypoint
         with:
           pattern: 'LATEST_VERSION='
+          only_major: true
           paths: |
             entrypoint.sh
       - name: Generate CHANGELOG

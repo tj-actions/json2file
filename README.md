@@ -24,7 +24,7 @@ Generate file output from a JSON string.
       uses: tj-actions/json2file@v1
       with:
         directory: 'output'
-        outputs:  ${{ steps.set-output.outputs }}
+        outputs:  ${{ toJSON(steps.set-output.outputs) }}
         keys: 'color'
         extension: 'txt'
 ...

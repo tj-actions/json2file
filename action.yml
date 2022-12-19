@@ -1,4 +1,4 @@
-name: Generate file output from JSON
+name: json2file
 description: Generate file output from JSON
 author: jackton1
 inputs:

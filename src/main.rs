@@ -257,7 +257,7 @@ fn main() {
         println!("Options:\n");
         println!("-h, --help\t\tShow this help message and exit.");
         println!("-v, --VERSION\t\tShow the VERSION and exit.");
-        println!("-k, --keys\t\tThe keys to use to generate the files. (Required)");
+        println!("-k, --keys\t\tSpace delimited list of keys to extract from the JSON output. (Required)");
         println!("-o, --outputs\t\tThe JSON output to use. (Required)");
         println!("-d, --directory\t\tThe directory to output the files to. (Required)");
         println!(

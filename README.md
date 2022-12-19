@@ -68,13 +68,13 @@ Options:
 
 -h, --help              Show this help message and exit.
 -v, --VERSION           Show the VERSION and exit.
--k, --keys              The keys to use to generate the files. (Required)
+-k, --keys              Space delimited list of keys to extract from the JSON output. (Required)
 -o, --outputs           The JSON output to use. (Required)
 -d, --directory         The directory to output the files to. (Required)
 -e, --extension         The extension to use for the files. (Optional, defaults to txt)
 
 Example:
-        json2file --keys=foo,bar --outputs="{\"foo\": \"value1\", \"bar\": \"value2\"}" --directory=/tmp --extension=txt
+        json2file --keys="foo bar" --outputs="{\"foo\": \"value1\", \"bar\": \"value2\"}" --directory=/tmp --extension=txt
 ```
 
 *   Free software: [MIT license](LICENSE)

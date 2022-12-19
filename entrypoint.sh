@@ -22,11 +22,11 @@ if [[ -z "$INPUT_BIN_PATH" ]]; then
   fi
 
   if [[ "$ARCHIVE" == "zip" ]]; then
-    curl --connect-timeout 300 -sLf https://github.com/tj-actions/json2file/releases/download/"$LATEST_VERSION"/json2file_"$LATEST_VERSION"_"$TARGET"."$ARCHIVE" -o "$TEMP_DIR"/json2file.zip
+    curl --connect-timeout 300 -svLf https://github.com/tj-actions/json2file/releases/download/"$LATEST_VERSION"/json2file_"$LATEST_VERSION"_"$TARGET"."$ARCHIVE" -o "$TEMP_DIR"/json2file.zip
     unzip -q "$TEMP_DIR"/json2file.zip -d "$TEMP_DIR"
     chmod +x "$TEMP_DIR"/json2file
   else
-    curl --connect-timeout 300 -sLf https://github.com/tj-actions/json2file/releases/download/"$LATEST_VERSION"/json2file_"$LATEST_VERSION"_"$TARGET"."$ARCHIVE" -o "$TEMP_DIR"/json2file.tar.gz
+    curl --connect-timeout 300 -svLf https://github.com/tj-actions/json2file/releases/download/"$LATEST_VERSION"/json2file_"$LATEST_VERSION"_"$TARGET"."$ARCHIVE" -o "$TEMP_DIR"/json2file.tar.gz
     tar -xzf "$TEMP_DIR"/json2file.tar.gz -C "$TEMP_DIR"
     chmod +x "$TEMP_DIR"/json2file
   fi

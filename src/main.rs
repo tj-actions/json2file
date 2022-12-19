@@ -90,8 +90,6 @@ fn parse_keys() -> Result<Vec<String>, String> {
     let re: regex::Regex = regex::Regex::new(r"[[:space:]]+").unwrap();
     let mut output: Vec<String> = Vec::new();
 
-    println!("Keys: {:?}", keys);
-
     if keys.is_empty() {
         Err("No keys provided, Please specify at least one key using --key=[KEY_NAME] or -k=[KEY_NAME].".to_string())
     } else {
@@ -104,8 +102,6 @@ fn parse_keys() -> Result<Vec<String>, String> {
                         Some(s.trim().to_string())
                     }
                 }));
-
-                println!("Output: {:?}", output);
             } else {
                 Err("Invalid key provided, Please specify at least one key using --key=[KEY_NAME] or -k=[KEY_NAME].".to_string())?;
             }
@@ -172,7 +168,7 @@ fn parse_output_extension() -> Result<String, String> {
 }
 
 fn parse_help() -> bool {
-    get_args_as_bool(r"^(--help|-h)$")
+    get_args_as_bool(r"^(--help|-h)$") || env::args().len() == 1
 }
 
 fn parse_version() -> bool {

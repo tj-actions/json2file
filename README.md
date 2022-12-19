@@ -32,8 +32,8 @@ Generate file output from a JSON string.
 
 The above example will create a file named `color.txt` in the `output` directory with the contents `green`.
 
-```
-cat ./output/color.txt
+```bash
+$ cat ./output/color.txt
 green
 ```
 

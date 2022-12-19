@@ -189,6 +189,8 @@ fn options_valid() -> bool {
     let valid_options: Vec<&str> = vec![
         "--keys",
         "-k",
+        "--skip-missing-keys",
+        "-s",
         "--outputs",
         "-o",
         "--directory",

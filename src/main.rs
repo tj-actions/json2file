@@ -6,6 +6,7 @@ use std::path::PathBuf;
 const VERSION: &str = env!("CARGO_PKG_VERSION");
 
 fn write_outputs(
+    skip_missing_keys: &bool,
     keys: &Vec<String>,
     output: &str,
     output_directory: &PathBuf,
@@ -34,8 +35,12 @@ fn write_outputs(
         let value = match json.get(key) {
             Some(value) => value.as_str().unwrap(),
             None => {
-                eprintln!("Invalid key \"{}\" not found in output {}", key, output);
-                std::process::exit(1);
+                if *skip_missing_keys {
+                    continue;
+                } else {
+                    eprintln!("Invalid key \"{}\" not found in output {}", key, output);
+                    std::process::exit(1);
+                }
             }
         };
         let file_name = &format!("{}.{}", key, output_extension);
@@ -175,6 +180,10 @@ fn parse_version() -> bool {
     get_args_as_bool(r"^(--version|-v)$")
 }
 
+fn skip_missing_keys() -> bool {
+    get_args_as_bool(r"^(--skip-missing-keys|-s)$")
+}
+
 fn options_valid() -> bool {
     // Check if the options are valid i.e if the user had a typo --h instead of --help
     let valid_options: Vec<&str> = vec![
@@ -256,6 +265,8 @@ fn main() {
         std::process::exit(0);
     }
 
+    let skip_missing_keys: bool = skip_missing_keys();
+
     let keys: Vec<String> = parse_keys().unwrap_or_else(|err| {
         eprintln!("{}", err);
         std::process::exit(1);
@@ -283,7 +294,7 @@ fn main() {
 
     let output_directory: PathBuf = current_directory.join(directory);
 
-    write_outputs(&keys, &outputs, &output_directory, &output_extension);
+    write_outputs(&skip_missing_keys, &keys, &outputs, &output_directory, &output_extension);
 }
 
 #[cfg(test)]

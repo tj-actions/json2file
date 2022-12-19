@@ -12,6 +12,10 @@ inputs:
   keys:
     description: "List of Keys to read from the `outputs` JSON string"
     required: true
+  skip_missing_keys:
+    description: "Skip missing keys not found in the `outputs` JSON string"
+    required: false
+    default: "false"
   extension:
     description: "File extension to use"
     required: false
@@ -33,6 +37,7 @@ runs:
         INPUT_DIRECTORY: ${{ inputs.directory }}
         INPUT_OUTPUTS: ${{ inputs.outputs }}
         INPUT_KEYS: ${{ inputs.keys }}
+        INPUT_SKIP_MISSING_KEYS: ${{ inputs.skip_missing_keys }}
         INPUT_EXTENSION: ${{ inputs.extension }}
         INPUT_BIN_PATH: ${{ inputs.bin_path }}
 

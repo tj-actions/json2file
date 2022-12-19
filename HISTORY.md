@@ -1,5 +1,15 @@
 # Changelog
 
+## [v1.0.7](https://github.com/tj-actions/json2file/tree/v1.0.7) (2022-12-19)
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1...v1.0.7)
+
+**Merged pull requests:**
+
+- feat: add support for updating the release assets [\#43](https://github.com/tj-actions/json2file/pull/43) ([jackton1](https://github.com/jackton1))
+- feat: update help text [\#42](https://github.com/tj-actions/json2file/pull/42) ([jackton1](https://github.com/jackton1))
+- Upgraded to v1.0.6 [\#41](https://github.com/tj-actions/json2file/pull/41) ([jackton1](https://github.com/jackton1))
+
 ## [v1](https://github.com/tj-actions/json2file/tree/v1) (2022-12-19)
 
 [Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.6...v1)

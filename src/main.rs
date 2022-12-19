@@ -297,7 +297,7 @@ fn main() {
     write_outputs(
         &skip_missing_keys,
         &keys,
-        &output,
+        &outputs,
         &output_directory,
         &output_extension,
     )

@@ -3,7 +3,7 @@ set -euo pipefail
 
 if [[ -z "$INPUT_BIN_PATH" ]]; then
   echo "Downloading json2file binary..."
-  LATEST_VERSION=$(curl -sL https://api.github.com/repos/tj-actions/json2file/releases/latest | jq -r .tag_name)
+  LATEST_VERSION="v1.0.4"
 
   # Download the latest version
   WINDOWS_TARGET=x86_64-pc-windows-gnu

@@ -49,7 +49,7 @@ jobs:
         uses: tj-actions/sync-release-version@v13
         id: sync-release-version-entrypoint
         with:
-          pattern: 'LATEST_VERSION=\"'
+          pattern: 'LATEST_VERSION='
           paths: |
             entrypoint.sh
       - name: Generate CHANGELOG

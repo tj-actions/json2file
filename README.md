@@ -32,6 +32,11 @@ Generate file output from a JSON string.
 
 The above example will create a file named `color.txt` in the `output` directory with the contents `green`.
 
+```
+cat ./output/color.txt
+green
+```
+
 ## Inputs
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->

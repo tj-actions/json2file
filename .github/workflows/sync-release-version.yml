@@ -35,9 +35,8 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
+          ref: main
           fetch-depth: 0
-      - name: Run release-tagger
-        uses: tj-actions/release-tagger@v2
       - name: Sync release version.
         uses: tj-actions/sync-release-version@v13
         id: sync-release-version
@@ -57,6 +56,36 @@ jobs:
         uses: tj-actions/github-changelog-generator@v1.15
         with:
           output: 'HISTORY.md'
+      - name: Get branch name
+        id: branch-name
+        uses: tj-actions/branch-names@v6
+      - name: Verify Changed files
+        uses: tj-actions/verify-changed-files@v13
+        id: verify-changed-files
+        with:
+          files: |
+            README.md
+            HISTORY.md
+            entrypoint.sh
+      - name: Commit changes
+        if: steps.verify-changed-files.outputs.files_changed == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git tag -d ${{ steps.branch-name.outputs.tag }}
+          git add ${{ steps.verify-changed-files.outputs.changed_files }}
+          git commit -m "Update release assets."
+          git tag ${{ steps.branch-name.outputs.tag }}
+      - name: Push changes
+        if: steps.verify-changed-files.outputs.files_changed == 'true'
+        uses: ad-m/github-push-action@master
+        continue-on-error: true
+        with:
+          github_token: ${{ secrets.PAT_TOKEN }}
+          force: true
+          tags: true
+      - name: Run release-tagger
+        uses: tj-actions/release-tagger@v2
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4.2.3
         with:

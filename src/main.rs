@@ -294,7 +294,13 @@ fn main() {
 
     let output_directory: PathBuf = current_directory.join(directory);
 
-    write_outputs(&skip_missing_keys, &keys, &outputs, &output_directory, &output_extension);
+    write_outputs(
+        &skip_missing_keys,
+        &keys,
+        &output,
+        &output_directory,
+        &output_extension,
+    )
 }
 
 #[cfg(test)]

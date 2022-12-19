@@ -171,29 +171,16 @@ jobs:
             any_deleted
             only_deleted
             other_deleted_files
-      - name: Generate output files from JSON with latest release
+      - uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release --all-features
+      - name: Generate output files from JSON with compiled binary skip missing keys
         uses: ./
         with:
           outputs: ${{ toJSON(steps.changed-files.outputs) }}
+          bin_path: target/release/json2file
+          skip_missing_keys: true
           keys: |
             added_files
-            copied_files
-            deleted_files
-            modified_files
-            renamed_files
-            all_old_new_renamed_files
-            type_changed_files
-            unmerged_files
-            unknown_files
-            all_changed_and_modified_files
-            all_changed_files
-            any_changed
-            only_changed
-            other_changed_files
-            all_modified_files
-            any_modified
-            only_modified
-            other_modified_files
-            any_deleted
-            only_deleted
-            other_deleted_files
+            unknown_key

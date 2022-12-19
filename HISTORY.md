@@ -6,12 +6,25 @@
 
 **Merged pull requests:**
 
-- Updated README.md [\#32](https://github.com/tj-actions/json2file/pull/32) ([jackton1](https://github.com/jackton1))
-- Updated README.md [\#31](https://github.com/tj-actions/json2file/pull/31) ([jackton1](https://github.com/jackton1))
+- Updated README.md [\#39](https://github.com/tj-actions/json2file/pull/39) ([jackton1](https://github.com/jackton1))
 
 ## [v1](https://github.com/tj-actions/json2file/tree/v1) (2022-12-19)
 
-[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.4...v1)
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.5...v1)
+
+## [v1.0.5](https://github.com/tj-actions/json2file/tree/v1.0.5) (2022-12-19)
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.4...v1.0.5)
+
+**Merged pull requests:**
+
+- Updated README.md [\#38](https://github.com/tj-actions/json2file/pull/38) ([jackton1](https://github.com/jackton1))
+- feat: add support for skipping missing keys [\#37](https://github.com/tj-actions/json2file/pull/37) ([jackton1](https://github.com/jackton1))
+- Update tj-actions/changed-files action to v35 [\#35](https://github.com/tj-actions/json2file/pull/35) ([renovate[bot]](https://github.com/apps/renovate))
+- Updated README.md [\#34](https://github.com/tj-actions/json2file/pull/34) ([jackton1](https://github.com/jackton1))
+- Upgraded to v1.0.4 [\#33](https://github.com/tj-actions/json2file/pull/33) ([jackton1](https://github.com/jackton1))
+- Updated README.md [\#32](https://github.com/tj-actions/json2file/pull/32) ([jackton1](https://github.com/jackton1))
+- Updated README.md [\#31](https://github.com/tj-actions/json2file/pull/31) ([jackton1](https://github.com/jackton1))
 
 ## [v1.0.4](https://github.com/tj-actions/json2file/tree/v1.0.4) (2022-12-19)
 

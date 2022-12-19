@@ -109,7 +109,7 @@ jobs:
         with:
           outputs: ${{ toJSON(steps.changed-files.outputs) }}
           bin_path: target/release/json2file
-          keys: ${{ join(steps.changed-files.outputs.*, ' ') }}
+          keys: ${{ join(steps.changed-files.outputs, ' ') }}
       - name: Generate output files from JSON with latest release
         uses: ./
         with:

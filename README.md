@@ -41,13 +41,13 @@ green
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|   INPUT   |  TYPE  | REQUIRED |           DEFAULT            |                DESCRIPTION                |
-|-----------|--------|----------|------------------------------|-------------------------------------------|
-| bin\_path  | string |  false   | `"target/release/json2file"` |            Path to the binary             |
-| directory | string |   true   |     `".github/outputs"`      |           Directory to write to           |
-| extension | string |  false   |           `"txt"`            |           File extension to use           |
-|   keys    | string |   true   |                              | List of Keys to read from the<br>outputs. |
-|  outputs  | string |   true   |                              |                JSON string                |
+|   INPUT   |  TYPE  | REQUIRED |       DEFAULT       |                DESCRIPTION                |
+|-----------|--------|----------|---------------------|-------------------------------------------|
+| bin\_path  | string |  false   |                     |            Path to the binary             |
+| directory | string |   true   | `".github/outputs"` |           Directory to write to           |
+| extension | string |  false   |       `"txt"`       |           File extension to use           |
+|   keys    | string |   true   |                     | List of Keys to read from the<br>outputs. |
+|  outputs  | string |   true   |                     |                JSON string                |
 
 <!-- AUTO-DOC-INPUT:END -->
 

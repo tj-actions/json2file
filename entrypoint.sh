@@ -2,6 +2,7 @@
 set -euo pipefail
 
 if [[ -z "$INPUT_BIN_PATH" ]]; then
+  echo "Downloading json2file binary..."
   LATEST_VERSION=$(curl -sL https://api.github.com/repos/tj-actions/json2file/releases/latest | jq -r .tag_name)
 
   # Download the latest version
@@ -33,6 +34,7 @@ if [[ -z "$INPUT_BIN_PATH" ]]; then
   INPUT_BIN_PATH=$TEMP_DIR/json2file
 fi
 
+echo "Parsing inputs..."
 INPUT_OUTPUTS="$(echo "$INPUT_OUTPUTS" | jq -r @json)"
 INPUT_KEYS="$(echo "$INPUT_KEYS" |  tr '\n' ' ' | xargs)"
 EXTRA_ARGS=""

@@ -10,7 +10,7 @@ inputs:
     description: "JSON string"
     required: true
   keys:
-    description: "List of Keys to read from the outputs."
+    description: "List of Keys to read from the `outputs` JSON string"
     required: true
   extension:
     description: "File extension to use"

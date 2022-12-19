@@ -1,16 +1,17 @@
 # Changelog
 
-## [Unreleased](https://github.com/tj-actions/json2file/tree/HEAD)
+## [v1](https://github.com/tj-actions/json2file/tree/v1) (2022-12-19)
 
-[Full Changelog](https://github.com/tj-actions/json2file/compare/v1...HEAD)
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.6...v1)
+
+## [v1.0.6](https://github.com/tj-actions/json2file/tree/v1.0.6) (2022-12-19)
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.5...v1.0.6)
 
 **Merged pull requests:**
 
+- Upgraded to v1.0.5 [\#40](https://github.com/tj-actions/json2file/pull/40) ([jackton1](https://github.com/jackton1))
 - Updated README.md [\#39](https://github.com/tj-actions/json2file/pull/39) ([jackton1](https://github.com/jackton1))
-
-## [v1](https://github.com/tj-actions/json2file/tree/v1) (2022-12-19)
-
-[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.5...v1)
 
 ## [v1.0.5](https://github.com/tj-actions/json2file/tree/v1.0.5) (2022-12-19)
 

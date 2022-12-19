@@ -171,6 +171,10 @@ jobs:
             any_deleted
             only_deleted
             other_deleted_files
+      - uses: actions-rs/cargo@v1
+        with:
+          command: build
+          args: --release --all-features
       - name: Generate output files from JSON with compiled binary skip missing keys
         uses: ./
         with:

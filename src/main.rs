@@ -314,8 +314,15 @@ mod tests {
 
         let output_directory: PathBuf = PathBuf::from("test");
         let output_extension: &str = "txt";
+        let skip_missing_keys: bool = false;
 
-        write_outputs(&keys, &output, &output_directory, &output_extension);
+        write_outputs(
+            &skip_missing_keys,
+            &keys,
+            &output,
+            &output_directory,
+            &output_extension,
+        );
 
         // Check that the files were created.
         assert!(output_directory.join("key1.txt").exists());

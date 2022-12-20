@@ -5,6 +5,19 @@ on:
 
 
 jobs:
+  publish:
+    name: Publish to crates.io
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions-rs/toolchain@v1
+        with:
+            toolchain: stable
+            override: true
+      - uses: katyo/publish-crates@v1
+        with:
+            registry-token: ${{ secrets.CARGO_REGISTRY_TOKEN }}
+
   release:
     name: release ${{ matrix.target }}
     runs-on: ubuntu-latest
@@ -28,6 +41,7 @@ jobs:
         with:
           RUSTTARGET: ${{ matrix.target }}
           ARCHIVE_TYPES: ${{ matrix.archive }}
+          EXTRA_FILES: "README.md LICENSE"
 
   update-version:
     runs-on: ubuntu-latest
@@ -74,7 +88,7 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git tag -d ${{ steps.branch-name.outputs.tag }}
           git add ${{ steps.verify-changed-files.outputs.changed_files }}
-          git commit -m "Update release assets."
+          git commit -m "chore: upgraded from ${{ steps.sync-release-version.outputs.old_version }} -> ${{ steps.sync-release-version.outputs.new_version }}"
           git tag ${{ steps.branch-name.outputs.tag }}
           git push -f origin ${{ steps.branch-name.outputs.tag }}
       - name: Run release-tagger
@@ -84,8 +98,7 @@ jobs:
         with:
           base: "main"
           labels: "merge when passing"
-          title: "Upgraded to ${{ steps.sync-release-version.outputs.new_version }}"
-          branch: "upgrade-to-${{ steps.sync-release-version.outputs.new_version }}"
-          commit-message: "Upgraded from ${{ steps.sync-release-version.outputs.old_version }} -> ${{ steps.sync-release-version.outputs.new_version }}"
+          title: "chore: upgraded to ${{ steps.sync-release-version.outputs.new_version }}"
+          branch: "chore/upgrade-to-${{ steps.sync-release-version.outputs.new_version }}"
           body: "View [CHANGES](https://github.com/${{ github.repository }}/compare/${{ steps.sync-release-version.outputs.old_version }}...${{ steps.sync-release-version.outputs.new_version }})"
           token: ${{ secrets.PAT_TOKEN }}

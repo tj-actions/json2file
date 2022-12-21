@@ -1,4 +1,4 @@
-![Crates.io](https://img.shields.io/crates/v/json2file)
+[![Crates.io](https://img.shields.io/crates/v/json2file)](https://crates.io/crates/json2file)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/29ec338049e8410cbf7f858d84b22ab8)](https://www.codacy.com/gh/tj-actions/json2file/dashboard?utm_source=github.com\&utm_medium=referral\&utm_content=tj-actions/json2file\&utm_campaign=Badge_Grade)
 [![CI](https://github.com/tj-actions/json2file/workflows/CI/badge.svg)](https://github.com/tj-actions/json2file/actions?query=workflow%3ACI)
 [![Update release version.](https://github.com/tj-actions/json2file/actions/workflows/sync-release-version.yml/badge.svg)](https://github.com/tj-actions/json2file/actions/workflows/sync-release-version.yml)

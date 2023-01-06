@@ -1,6 +1,19 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+download_with_retries() {
+    local RETRIES=5
+    local DELAY=10
+
+    local OUTPUT_FILE=$1
+
+    for i in $(seq 1 $RETRIES); do
+        curl --connect-timeout 300 -sLf https://github.com/tj-actions/json2file/releases/download/"$LATEST_VERSION"/json2file_"$LATEST_VERSION"_"$TARGET"."$ARCHIVE" -o "$OUTPUT_FILE" && break
+        sleep $DELAY
+    done
+}
+
+
 if [[ -z "$INPUT_BIN_PATH" ]]; then
   echo "Downloading json2file binary..."
   LATEST_VERSION=v1.0.15
@@ -22,11 +35,11 @@ if [[ -z "$INPUT_BIN_PATH" ]]; then
   fi
 
   if [[ "$ARCHIVE" == "zip" ]]; then
-    curl --connect-timeout 300 -sLf https://github.com/tj-actions/json2file/releases/download/"$LATEST_VERSION"/json2file_"$LATEST_VERSION"_"$TARGET"."$ARCHIVE" -o "$TEMP_DIR"/json2file.zip
+    download_with_retries "$TEMP_DIR"/json2file.zip
     unzip -q "$TEMP_DIR"/json2file.zip -d "$TEMP_DIR"
     chmod +x "$TEMP_DIR"/json2file
   else
-    curl --connect-timeout 300 -sLf https://github.com/tj-actions/json2file/releases/download/"$LATEST_VERSION"/json2file_"$LATEST_VERSION"_"$TARGET"."$ARCHIVE" -o "$TEMP_DIR"/json2file.tar.gz
+    download_with_retries "$TEMP_DIR"/json2file.tar.gz
     tar -xzf "$TEMP_DIR"/json2file.tar.gz -C "$TEMP_DIR"
     chmod +x "$TEMP_DIR"/json2file
   fi

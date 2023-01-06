@@ -59,23 +59,25 @@ Run `json2file --help` for more information.
 
 ```bash
 $ json2file --help
-json2file
-Generate files from a JSON output.
+Generate file output from JSON
 
-Usage:
-        json2file --keys=[keys] --outputs=[output] --directory=[directory] --extension=[EXTENSION]
+Usage: json2file [OPTIONS] --keys <KEYS> --outputs <OUTPUTS> --directory <DIRECTORY>
 
 Options:
+  -k, --keys <KEYS>            Space delimited list of keys to extract from the JSON output converted into Vec<String>
+  -o, --outputs <OUTPUTS>      The JSON output to use
+  -d, --directory <DIRECTORY>  The directory to output the files to
+  -s, --skip-missing-keys      Skip missing keys
+  -e, --extension <EXTENSION>  The extension to use for the files [default: txt]
+  -v, --verbose                
+  -h, --help                   Print help information
+  -V, --version                Print version information
+```
 
--h, --help              Show this help message and exit.
--v, --VERSION           Show the VERSION and exit.
--k, --keys              Space delimited list of keys to extract from the JSON output. (Required)
--o, --outputs           The JSON output to use. (Required)
--d, --directory         The directory to output the files to. (Required)
--e, --extension         The extension to use for the files. (Optional, defaults to txt)
+### Example
 
-Example:
-        json2file --keys="foo bar" --outputs="{\"foo\": \"value1\", \"bar\": \"value2\"}" --directory=/tmp --extension=txt
+```bash
+$ json2file --keys="foo bar" --outputs="{\"foo\": \"value1\", \"bar\": \"value2\"}" --directory=/tmp --extension=txt
 ```
 
 *   Free software: [MIT license](LICENSE)

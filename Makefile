@@ -7,7 +7,7 @@ help:
 	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z_-]+:.*?## / {printf "\033[36m%-32s-\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
 
 .PHONY: build
-build:  ## Build the binary
+build: clean  ## Build the binary
 	@cargo build
 
 .PHONY: test
@@ -17,10 +17,6 @@ test:  ## Run the tests
 .PHONY: clean
 clean:  ## Clean the build artifacts
 	@cargo clean
-
-.PHONY: run
-run:  ## Run the binary
-	@cargo run
 
 .PHONY: install
 install:  ## Install the binary

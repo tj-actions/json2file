@@ -10,6 +10,7 @@ download_with_retries() {
     for i in $(seq 1 $RETRIES); do
         curl --connect-timeout 300 -sLf https://github.com/tj-actions/json2file/releases/download/"$LATEST_VERSION"/json2file_"$LATEST_VERSION"_"$TARGET"."$ARCHIVE" -o "$OUTPUT_FILE" && break
         sleep $DELAY
+        echo "$i retries"
     done
 }
 

@@ -1,8 +1,22 @@
 # Changelog
 
+## [v1.0.16](https://github.com/tj-actions/json2file/tree/v1.0.16) (2023-01-06)
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1...v1.0.16)
+
+**Merged pull requests:**
+
+- chore\(deps\): update actions/checkout action to v3.3.0 [\#61](https://github.com/tj-actions/json2file/pull/61) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v1.7.3 [\#60](https://github.com/tj-actions/json2file/pull/60) ([renovate[bot]](https://github.com/apps/renovate))
+- chore: upgraded to v1.0.15 [\#59](https://github.com/tj-actions/json2file/pull/59) ([jackton1](https://github.com/jackton1))
+
+## [v1](https://github.com/tj-actions/json2file/tree/v1) (2023-01-03)
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.15...v1)
+
 ## [v1.0.15](https://github.com/tj-actions/json2file/tree/v1.0.15) (2023-01-03)
 
-[Full Changelog](https://github.com/tj-actions/json2file/compare/v1...v1.0.15)
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.14...v1.0.15)
 
 **Merged pull requests:**
 
@@ -11,10 +25,6 @@
 - chore\(deps\): update tj-actions/auto-doc action to v1.7.1 [\#56](https://github.com/tj-actions/json2file/pull/56) ([renovate[bot]](https://github.com/apps/renovate))
 - chore\(deps\): update tj-actions/github-changelog-generator action to v1.17 [\#55](https://github.com/tj-actions/json2file/pull/55) ([renovate[bot]](https://github.com/apps/renovate))
 - chore: upgraded to v1.0.14 [\#54](https://github.com/tj-actions/json2file/pull/54) ([jackton1](https://github.com/jackton1))
-
-## [v1](https://github.com/tj-actions/json2file/tree/v1) (2022-12-23)
-
-[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.0.14...v1)
 
 ## [v1.0.14](https://github.com/tj-actions/json2file/tree/v1.0.14) (2022-12-23)
 

@@ -16,7 +16,7 @@ download_with_retries() {
 
 if [[ -z "$INPUT_BIN_PATH" ]]; then
   echo "Downloading json2file binary..."
-  LATEST_VERSION=v1.0.15
+  LATEST_VERSION=v1.0.16
 
   # Download the latest version
   WINDOWS_TARGET=x86_64-pc-windows-gnu

@@ -2,12 +2,11 @@
 set -euo pipefail
 
 download_with_retries() {
-    local RETRIES=5
     local DELAY=10
 
     local OUTPUT_FILE=$1
 
-    for i in $(seq 1 $RETRIES); do
+    for i in $(seq 1 5); do
         curl --connect-timeout 300 -sLf https://github.com/tj-actions/json2file/releases/download/"$LATEST_VERSION"/json2file_"$LATEST_VERSION"_"$TARGET"."$ARCHIVE" -o "$OUTPUT_FILE" && break
         sleep $DELAY
         echo "$i retries"
@@ -17,7 +16,7 @@ download_with_retries() {
 
 if [[ -z "$INPUT_BIN_PATH" ]]; then
   echo "Downloading json2file binary..."
-  LATEST_VERSION=v1.0.15
+  LATEST_VERSION=v1.0.16
 
   # Download the latest version
   WINDOWS_TARGET=x86_64-pc-windows-gnu

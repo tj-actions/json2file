@@ -10,8 +10,6 @@ if [[ "$INPUT_SKIP_MISSING_KEYS" == "true" ]]; then
   EXTRA_ARGS="$EXTRA_ARGS --skip-missing-keys"
 fi
 
-echo "Generating output using $INPUT_BIN_PATH..."
-
 # shellcheck disable=SC2086
 json2file $EXTRA_ARGS --keys="$INPUT_KEYS" --outputs="$INPUT_OUTPUTS" --directory="$INPUT_DIRECTORY" --extension="$INPUT_EXTENSION" && exit_status=$? || exit_status=$?
 

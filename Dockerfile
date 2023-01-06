@@ -16,7 +16,7 @@ RUN cargo build --release
 
 FROM alpine:latest as install
 
-RUN apk add --no-cache ca-certificates bash
+RUN apk add --no-cache ca-certificates bash jq
 
 COPY --from=build /app/target/release/json2file /usr/local/bin/json2file
 

@@ -20,26 +20,10 @@ inputs:
     description: "File extension to use"
     required: false
     default: "txt"
-  bin_path:
-    description: "Path to the binary"
-    required: false
 
 runs:
-  using: 'composite'
-  steps:
-    - run: |
-        bash $GITHUB_ACTION_PATH/entrypoint.sh
-      id: json2file
-      shell: bash
-      env:
-        # INPUT_<VARIABLE_NAME> is not available in Composite run steps
-        # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions#example-specifying-inputs
-        INPUT_DIRECTORY: ${{ inputs.directory }}
-        INPUT_OUTPUTS: ${{ inputs.outputs }}
-        INPUT_KEYS: ${{ inputs.keys }}
-        INPUT_SKIP_MISSING_KEYS: ${{ inputs.skip_missing_keys }}
-        INPUT_EXTENSION: ${{ inputs.extension }}
-        INPUT_BIN_PATH: ${{ inputs.bin_path }}
+  using: 'docker'
+  image: 'Dockerfile'
 
 branding:
   icon: file-text

@@ -16,15 +16,17 @@ fn write_outputs(
         println!("Parsing outputs...");
     }
     let json: serde_json::Value = match serde_json::from_str(output) {
-        Ok(json) => json,
+        Ok(json) => {
+            if *verbose {
+                println!("Outputs parsed successfully.");
+            }
+            json
+        }
         Err(e) => {
             eprintln!("Error parsing output: {}", e);
             std::process::exit(1);
         }
     };
-    if *verbose {
-        println!("Parsed outputs.");
-    }
 
     // Create the output directory if it doesn't exist
     if !output_directory.exists() {
@@ -33,7 +35,11 @@ fn write_outputs(
         }
 
         match std::fs::create_dir_all(output_directory) {
-            Ok(_) => (),
+            Ok(_) => {
+                if *verbose {
+                    println!("Output directory created successfully.");
+                }
+            }
             Err(e) => {
                 eprintln!(
                     "Error creating output directory '{}': {}",
@@ -43,10 +49,8 @@ fn write_outputs(
                 std::process::exit(1);
             }
         }
-    } else {
-        if *verbose {
-            println!("Output directory already exists.");
-        }
+    } else if *verbose {
+        println!("Output directory already exists.");
     }
 
     for key in keys {

@@ -2,12 +2,11 @@
 set -euo pipefail
 
 download_with_retries() {
-    local RETRIES=5
     local DELAY=10
 
     local OUTPUT_FILE=$1
 
-    for i in $(seq 1 $RETRIES); do
+    for i in $(seq 1 5); do
         curl --connect-timeout 300 -sLf https://github.com/tj-actions/json2file/releases/download/"$LATEST_VERSION"/json2file_"$LATEST_VERSION"_"$TARGET"."$ARCHIVE" -o "$OUTPUT_FILE" && break
         sleep $DELAY
     done

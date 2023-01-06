@@ -1,4 +1,4 @@
-FROM rust:1.49-alpine as build
+FROM rust:1.66-alpine as build
 
 # Install dependencies
 RUN apk add --no-cache \

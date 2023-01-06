@@ -7,25 +7,18 @@ RUN apk add --no-cache \
         git \
         openssh-client
 
-# Set the working directory
 WORKDIR /app
 
-# Copy the Cargo.toml file
-COPY Cargo.toml .
-
-# Copy the source code
 COPY . .
 
-# Rebuild the project
 RUN cargo build --release
 
-# Install the binary
+
 FROM alpine:latest as install
 
-RUN apk add --no-cache \
-        ca-certificates
+RUN apk add --no-cache ca-certificates
 
-COPY --from=build /app/target/release/json2file /usr/local/bin/
+COPY --from=build /app/target/release/json2file /usr/local/bin/json2file
 
 RUN chmod +x /usr/local/bin/json2file
 

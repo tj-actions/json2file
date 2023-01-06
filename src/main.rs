@@ -68,7 +68,7 @@ fn write_outputs(
                 }
             }
         };
-        let file_path = &output_directory.join(&format!("{}.{}", key, output_extension));
+        let file_path = &output_directory.join(format!("{}.{}", key, output_extension));
         if *verbose {
             println!("Writing output to file '{}'...", file_path.display());
         }

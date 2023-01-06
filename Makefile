@@ -19,5 +19,5 @@ clean:  ## Clean the build artifacts
 	@cargo clean
 
 .PHONY: install
-install:  ## Install the binary
+install: build  ## Install the binary
 	@cargo install --path .

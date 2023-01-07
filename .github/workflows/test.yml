@@ -85,6 +85,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
         rust: [stable, beta, nightly]
+        json: [true, false]
     name: Test release
     steps:
       - name: Checkout
@@ -92,6 +93,8 @@ jobs:
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v35
+        with:
+          json: ${{ matrix.json }}
       - name: Generate output files from JSON with latest release
         uses: ./
         with:
@@ -142,6 +145,8 @@ jobs:
       - name: Get changed files
         id: changed-files
         uses: tj-actions/changed-files@v35
+        with:
+          json: ${{ matrix.json }}
       - name: Generate output files from JSON with compiled binary
         uses: ./
         with:

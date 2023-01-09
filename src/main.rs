@@ -59,27 +59,41 @@ mod tests {
 
         let output_directory: PathBuf = current_directory.join(directory);
 
+        // Create the output directory if it doesn't exist
+        if !output_directory.exists() {
+            println!("Creating output directory...");
+            match std::fs::create_dir_all(&output_directory) {
+                Ok(_) => println!("Output directory created successfully."),
+                Err(e) => {
+                    eprintln!(
+                        "Error creating output directory '{}': {}",
+                        output_directory.display(),
+                        e
+                    );
+                    std::process::exit(1);
+                }
+            }
+        } else {
+            println!("Output directory already exists.");
+        }
+
         TestContext { output_directory }
     }
 
-    impl Drop for TestContext {
-        fn drop(&mut self) {
-            println!("Test teardown...");
+    fn teardown(context: &TestContext) {
+        println!("Test teardown...");
 
-            if self.output_directory.exists() {
-                println!(
-                    "Removing output directory {}...",
-                    self.output_directory.display()
+        // Remove the output directory
+        println!("Removing output directory...");
+        match std::fs::remove_dir_all(&context.output_directory) {
+            Ok(_) => println!("Output directory removed successfully."),
+            Err(e) => {
+                eprintln!(
+                    "Error removing output directory '{}': {}",
+                    context.output_directory.display(),
+                    e
                 );
-                std::fs::remove_dir_all(&self.output_directory).unwrap_or_else(|err| {
-                    eprintln!("Failed to remove output directory: {}", err);
-                    std::process::exit(1);
-                });
-            } else {
-                println!(
-                    "Output directory {} does not exist.",
-                    self.output_directory.display()
-                );
+                std::process::exit(1);
             }
         }
     }
@@ -114,7 +128,7 @@ mod tests {
             "--outputs",
             "{ \"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\" }",
             "--directory",
-            "test1",
+            "test",
             "--extension",
             "txt",
             "--skip-missing-keys",
@@ -150,6 +164,7 @@ mod tests {
         let mut contents = String::new();
         file.read_to_string(&mut contents).unwrap();
         assert_eq!(contents, "value2");
+        teardown(&context);
     }
 
     #[test]
@@ -161,7 +176,7 @@ mod tests {
             "--outputs",
             "{ \"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\" }",
             "--directory",
-            "test2",
+            "test",
             "--extension",
             "json",
             "--skip-missing-keys",
@@ -197,5 +212,6 @@ mod tests {
         let mut contents = String::new();
         file.read_to_string(&mut contents).unwrap();
         assert_eq!(contents, "\"value2\"");
+        teardown(&context);
     }
 }

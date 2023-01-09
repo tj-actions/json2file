@@ -45,6 +45,45 @@ mod tests {
 
     use super::*;
 
+    struct TestContext {
+        output_directory: PathBuf,
+    }
+
+    fn setup(directory: &str) -> TestContext {
+        println!("Test setup...");
+
+        let current_directory: PathBuf = env::current_dir().unwrap_or_else(|err| {
+            eprintln!("Failed to get current directory: {}", err);
+            std::process::exit(1);
+        });
+
+        let output_directory: PathBuf = current_directory.join(directory);
+
+        TestContext { output_directory }
+    }
+
+    impl Drop for TestContext {
+        fn drop(&mut self) {
+            println!("Test teardown...");
+
+            if self.output_directory.exists() {
+                println!(
+                    "Removing output directory {}...",
+                    self.output_directory.display()
+                );
+                std::fs::remove_dir_all(&self.output_directory).unwrap_or_else(|err| {
+                    eprintln!("Failed to remove output directory: {}", err);
+                    std::process::exit(1);
+                });
+            } else {
+                println!(
+                    "Output directory {} does not exist.",
+                    self.output_directory.display()
+                );
+            }
+        }
+    }
+
     #[test]
     fn test_args() {
         let args = args::Args::parse_from(&[
@@ -75,23 +114,18 @@ mod tests {
             "--outputs",
             "{ \"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\" }",
             "--directory",
-            "test",
+            "test1",
             "--extension",
             "txt",
             "--skip-missing-keys",
         ]);
+        let context = setup(&args.directory);
+        let output_directory = &context.output_directory;
         let keys: Vec<String> = args
             .keys
             .split_whitespace()
             .map(|s| s.to_string())
             .collect();
-
-        let current_directory: PathBuf = env::current_dir().unwrap_or_else(|err| {
-            eprintln!("Failed to get current directory: {}", err);
-            std::process::exit(1);
-        });
-
-        let output_directory: PathBuf = current_directory.join(args.directory);
 
         write_outputs(
             &args.skip_missing_keys,
@@ -116,9 +150,6 @@ mod tests {
         let mut contents = String::new();
         file.read_to_string(&mut contents).unwrap();
         assert_eq!(contents, "value2");
-
-        // Clean up the files and the test directory.
-        std::fs::remove_dir_all(output_directory).unwrap();
     }
 
     #[test]
@@ -130,23 +161,18 @@ mod tests {
             "--outputs",
             "{ \"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\" }",
             "--directory",
-            "test",
+            "test2",
             "--extension",
             "json",
             "--skip-missing-keys",
         ]);
+        let context = setup(&args.directory);
+        let output_directory = &context.output_directory;
         let keys: Vec<String> = args
             .keys
             .split_whitespace()
             .map(|s| s.to_string())
             .collect();
-
-        let current_directory: PathBuf = env::current_dir().unwrap_or_else(|err| {
-            eprintln!("Failed to get current directory: {}", err);
-            std::process::exit(1);
-        });
-
-        let output_directory: PathBuf = current_directory.join(args.directory);
 
         write_outputs(
             &args.skip_missing_keys,
@@ -171,8 +197,5 @@ mod tests {
         let mut contents = String::new();
         file.read_to_string(&mut contents).unwrap();
         assert_eq!(contents, "\"value2\"");
-
-        // Clean up the files and the test directory.
-        std::fs::remove_dir_all(output_directory).unwrap();
     }
 }

@@ -119,6 +119,29 @@ jobs:
             any_deleted
             only_deleted
             other_deleted_files
+      - name: Show output
+        working-directory: .github/outputs
+        run: |
+          cat added_files
+          cat copied_files
+          cat deleted_files
+          cat modified_files
+          cat renamed_files
+          cat type_changed_files
+          cat unmerged_files
+          cat unknown_files
+          cat all_changed_and_modified_files
+          cat all_changed_files
+          cat any_changed
+          cat only_changed
+          cat other_changed_files
+          cat all_modified_files
+          cat any_modified
+          cat only_modified
+          cat other_modified_files
+          cat any_deleted
+          cat only_deleted
+          cat other_deleted_files
 
   test-action:
     runs-on: ${{ matrix.os }}
@@ -173,6 +196,29 @@ jobs:
             any_deleted
             only_deleted
             other_deleted_files
+      - name: Show output
+        working-directory: .github/outputs
+        run: |
+          cat added_files
+          cat copied_files
+          cat deleted_files
+          cat modified_files
+          cat renamed_files
+          cat type_changed_files
+          cat unmerged_files
+          cat unknown_files
+          cat all_changed_and_modified_files
+          cat all_changed_files
+          cat any_changed
+          cat only_changed
+          cat other_changed_files
+          cat all_modified_files
+          cat any_modified
+          cat only_modified
+          cat other_modified_files
+          cat any_deleted
+          cat only_deleted
+          cat other_deleted_files
       - uses: actions-rs/cargo@v1
         with:
           command: build
@@ -186,3 +232,12 @@ jobs:
           keys: |
             added_files
             unknown_key
+      - name: Show output
+        working-directory: .github/outputs
+        run: |
+          cat added_files
+          
+          if [ -f unknown_key ]; then
+            echo "unknown_key file should not exist"
+            exit 1
+          fi

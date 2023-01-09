@@ -124,26 +124,26 @@ jobs:
       - name: Show output
         working-directory: .github/outputs
         run: |
-          cat added_files
-          cat copied_files
-          cat deleted_files
-          cat modified_files
-          cat renamed_files
-          cat type_changed_files
-          cat unmerged_files
-          cat unknown_files
-          cat all_changed_and_modified_files
-          cat all_changed_files
-          cat any_changed
-          cat only_changed
-          cat other_changed_files
-          cat all_modified_files
-          cat any_modified
-          cat only_modified
-          cat other_modified_files
-          cat any_deleted
-          cat only_deleted
-          cat other_deleted_files
+          cat added_files.txt
+          cat copied_files.txt
+          cat deleted_files.txt
+          cat modified_files.txt
+          cat renamed_files.txt
+          cat type_changed_files.txt
+          cat unmerged_files.txt
+          cat unknown_files.txt
+          cat all_changed_and_modified_files.txt
+          cat all_changed_files.txt
+          cat any_changed.txt
+          cat only_changed.txt
+          cat other_changed_files.txt
+          cat all_modified_files.txt
+          cat any_modified.txt
+          cat only_modified.txt
+          cat other_modified_files.txt
+          cat any_deleted.txt
+          cat only_deleted.txt
+          cat other_deleted_files.txt
 
   test-action:
     runs-on: ${{ matrix.os }}
@@ -201,26 +201,26 @@ jobs:
       - name: Show output
         working-directory: .github/outputs
         run: |
-          cat added_files
-          cat copied_files
-          cat deleted_files
-          cat modified_files
-          cat renamed_files
-          cat type_changed_files
-          cat unmerged_files
-          cat unknown_files
-          cat all_changed_and_modified_files
-          cat all_changed_files
-          cat any_changed
-          cat only_changed
-          cat other_changed_files
-          cat all_modified_files
-          cat any_modified
-          cat only_modified
-          cat other_modified_files
-          cat any_deleted
-          cat only_deleted
-          cat other_deleted_files
+          cat added_files.txt
+          cat copied_files.txt
+          cat deleted_files.txt
+          cat modified_files.txt
+          cat renamed_files.txt
+          cat type_changed_files.txt
+          cat unmerged_files.txt
+          cat unknown_files.txt
+          cat all_changed_and_modified_files.txt
+          cat all_changed_files.txt
+          cat any_changed.txt
+          cat only_changed.txt
+          cat other_changed_files.txt
+          cat all_modified_files.txt
+          cat any_modified.txt
+          cat only_modified.txt
+          cat other_modified_files.txt
+          cat any_deleted.txt
+          cat only_deleted.txt
+          cat other_deleted_files.txt
       - uses: actions-rs/cargo@v1
         with:
           command: build
@@ -237,9 +237,9 @@ jobs:
       - name: Show output
         working-directory: .github/outputs
         run: |
-          cat added_files
+          cat added_files.txt
           
-          if [ -f unknown_key ]; then
+          if [ -f unknown_key.txt ]; then
             echo "unknown_key file should not exist"
             exit 1
           fi

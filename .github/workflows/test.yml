@@ -41,6 +41,8 @@ jobs:
         uses: actions-rs/cargo@v1
         with:
           command: test
+        env:
+          RUST_BACKTRACE: 1
 
   lint:
     name: Run lint

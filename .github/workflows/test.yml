@@ -239,7 +239,7 @@ jobs:
         run: |
           cat added_files.txt
           
-          if [ -f unknown_key.txt ]; then
+          if [[ -f unknown_key.txt ]]; then
             echo "unknown_key.txt file should not exist"
             exit 1
           fi

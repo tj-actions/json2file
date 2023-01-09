@@ -1,12 +1,18 @@
 # Changelog
 
-## [Unreleased](https://github.com/tj-actions/json2file/tree/HEAD)
+## [v1.1.0](https://github.com/tj-actions/json2file/tree/v1.1.0) (2023-01-09)
 
-[Full Changelog](https://github.com/tj-actions/json2file/compare/v1...HEAD)
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1...v1.1.0)
+
+**Fixed bugs:**
+
+- \[BUG\] write\_output\_files: true -\> double escapes json content in generated files [\#66](https://github.com/tj-actions/json2file/issues/66)
 
 **Merged pull requests:**
 
-- chore: upgraded to v1.0.16 [\#63](https://github.com/tj-actions/json2file/pull/63) ([jackton1](https://github.com/jackton1))
+- fix: convert value to json string [\#67](https://github.com/tj-actions/json2file/pull/67) ([jackton1](https://github.com/jackton1))
+- chore: switch to use clap [\#65](https://github.com/tj-actions/json2file/pull/65) ([jackton1](https://github.com/jackton1))
+- chore: upgraded to v1.0.16 [\#64](https://github.com/tj-actions/json2file/pull/64) ([jackton1](https://github.com/jackton1))
 
 ## [v1](https://github.com/tj-actions/json2file/tree/v1) (2023-01-06)
 
@@ -18,6 +24,7 @@
 
 **Merged pull requests:**
 
+- chore: upgraded to v1.0.16 [\#63](https://github.com/tj-actions/json2file/pull/63) ([jackton1](https://github.com/jackton1))
 - chore\(deps\): update actions/checkout action to v3.3.0 [\#61](https://github.com/tj-actions/json2file/pull/61) ([renovate[bot]](https://github.com/apps/renovate))
 - chore\(deps\): update tj-actions/auto-doc action to v1.7.3 [\#60](https://github.com/tj-actions/json2file/pull/60) ([renovate[bot]](https://github.com/apps/renovate))
 - chore: upgraded to v1.0.15 [\#59](https://github.com/tj-actions/json2file/pull/59) ([jackton1](https://github.com/jackton1))

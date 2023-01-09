@@ -37,12 +37,12 @@ jobs:
           toolchain: ${{ matrix.rust }}
           override: true
 
-      - uses: Swatinem/rust-cache@v2
-
       - name: Run cargo test
         uses: actions-rs/cargo@v1
         with:
           command: test
+        env:
+          RUST_BACKTRACE: 1
 
   lint:
     name: Run lint
@@ -121,6 +121,29 @@ jobs:
             any_deleted
             only_deleted
             other_deleted_files
+      - name: Show output
+        working-directory: .github/outputs
+        run: |
+          cat added_files.txt
+          cat copied_files.txt
+          cat deleted_files.txt
+          cat modified_files.txt
+          cat renamed_files.txt
+          cat type_changed_files.txt
+          cat unmerged_files.txt
+          cat unknown_files.txt
+          cat all_changed_and_modified_files.txt
+          cat all_changed_files.txt
+          cat any_changed.txt
+          cat only_changed.txt
+          cat other_changed_files.txt
+          cat all_modified_files.txt
+          cat any_modified.txt
+          cat only_modified.txt
+          cat other_modified_files.txt
+          cat any_deleted.txt
+          cat only_deleted.txt
+          cat other_deleted_files.txt
 
   test-action:
     runs-on: ${{ matrix.os }}
@@ -175,6 +198,29 @@ jobs:
             any_deleted
             only_deleted
             other_deleted_files
+      - name: Show output
+        working-directory: .github/outputs
+        run: |
+          cat added_files.txt
+          cat copied_files.txt
+          cat deleted_files.txt
+          cat modified_files.txt
+          cat renamed_files.txt
+          cat type_changed_files.txt
+          cat unmerged_files.txt
+          cat unknown_files.txt
+          cat all_changed_and_modified_files.txt
+          cat all_changed_files.txt
+          cat any_changed.txt
+          cat only_changed.txt
+          cat other_changed_files.txt
+          cat all_modified_files.txt
+          cat any_modified.txt
+          cat only_modified.txt
+          cat other_modified_files.txt
+          cat any_deleted.txt
+          cat only_deleted.txt
+          cat other_deleted_files.txt
       - uses: actions-rs/cargo@v1
         with:
           command: build
@@ -188,3 +234,13 @@ jobs:
           keys: |
             added_files
             unknown_key
+      - name: Show output
+        working-directory: .github/outputs
+        run: |
+          cat added_files.txt
+          
+          if [[ -f unknown_key.txt ]]; then
+            echo "unknown_key.txt file should not exist"
+            exit 1
+          fi
+        shell: bash

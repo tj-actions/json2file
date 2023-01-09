@@ -3,7 +3,7 @@ use clap::Parser;
 #[derive(Debug, Parser)]
 #[command(author, version, about, long_about = None)]
 pub struct Args {
-    /// Space delimited list of keys to extract from the JSON output converted into Vec<String>.
+    /// Space delimited list of keys to extract from the JSON output.
     #[clap(short, long, required = true)]
     pub keys: String,
 

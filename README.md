@@ -64,7 +64,7 @@ Generate file output from JSON
 Usage: json2file [OPTIONS] --keys <KEYS> --outputs <OUTPUTS> --directory <DIRECTORY>
 
 Options:
-  -k, --keys <KEYS>            Space delimited list of keys to extract from the JSON output converted into Vec<String>
+  -k, --keys <KEYS>            Space delimited list of keys to extract from the JSON output
   -o, --outputs <OUTPUTS>      The JSON output to use
   -d, --directory <DIRECTORY>  The directory to output the files to
   -s, --skip-missing-keys      Skip missing keys

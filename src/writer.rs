@@ -56,7 +56,13 @@ pub fn write_outputs(
             println!("Writing output for key '{}'...", key);
         }
         let value = match json.get(key) {
-            Some(value) => value.as_str().unwrap(),
+            Some(value) => match serde_json::to_string(value) {
+                Ok(value) => value,
+                Err(e) => {
+                    eprintln!("Error converting value to string: {}", e);
+                    std::process::exit(1);
+                }
+            },
             None => {
                 if *skip_missing_keys {
                     continue;

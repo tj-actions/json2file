@@ -240,6 +240,6 @@ jobs:
           cat added_files.txt
           
           if [ -f unknown_key.txt ]; then
-            echo "unknown_key file should not exist"
+            echo "unknown_key.txt file should not exist"
             exit 1
           fi

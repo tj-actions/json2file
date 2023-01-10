@@ -108,12 +108,10 @@ pub fn write_outputs(
         };
 
         if output_extension == "json" {
-            serde_json::to_writer_pretty(&mut file, &value).unwrap();
-        } else {
-            if let Err(err) = file.write_all(value.as_str().unwrap().as_bytes()) {
-                eprintln!("Error writing to file '{}': {}", file_path.display(), err);
-                std::process::exit(1);
-            }
+            serde_json::to_writer(&mut file, &value).unwrap();
+        } else if let Err(err) = file.write_all(value.as_str().unwrap().as_bytes()) {
+            eprintln!("Error writing to file '{}': {}", file_path.display(), err);
+            std::process::exit(1);
         }
 
         if *verbose {

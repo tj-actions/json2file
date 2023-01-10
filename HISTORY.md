@@ -1,8 +1,20 @@
 # Changelog
 
+## [v1.2.1](https://github.com/tj-actions/json2file/tree/v1.2.1) (2023-01-10)
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1...v1.2.1)
+
+**Merged pull requests:**
+
+- chore: upgraded to v1.2.0 [\#71](https://github.com/tj-actions/json2file/pull/71) ([jackton1](https://github.com/jackton1))
+
+## [v1](https://github.com/tj-actions/json2file/tree/v1) (2023-01-10)
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.2.0...v1)
+
 ## [v1.2.0](https://github.com/tj-actions/json2file/tree/v1.2.0) (2023-01-10)
 
-[Full Changelog](https://github.com/tj-actions/json2file/compare/v1...v1.2.0)
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.1.0...v1.2.0)
 
 **Fixed bugs:**
 
@@ -13,10 +25,6 @@
 - feat: write valid json ouput [\#70](https://github.com/tj-actions/json2file/pull/70) ([jackton1](https://github.com/jackton1))
 - fix\(deps\): update rust crate regex to 1.7.1 [\#69](https://github.com/tj-actions/json2file/pull/69) ([renovate[bot]](https://github.com/apps/renovate))
 - chore: upgraded to v1.1.0 [\#68](https://github.com/tj-actions/json2file/pull/68) ([jackton1](https://github.com/jackton1))
-
-## [v1](https://github.com/tj-actions/json2file/tree/v1) (2023-01-09)
-
-[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.1.0...v1)
 
 ## [v1.1.0](https://github.com/tj-actions/json2file/tree/v1.1.0) (2023-01-09)
 

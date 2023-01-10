@@ -2,6 +2,8 @@ use std::fs::File;
 use std::io::{ErrorKind, Write};
 use std::path::PathBuf;
 
+use unescape::unescape;
+
 pub fn write_outputs(
     skip_missing_keys: &bool,
     keys: &Vec<String>,
@@ -58,19 +60,29 @@ pub fn write_outputs(
         let value = match json.get(key) {
             Some(value) => {
                 if output_extension == "json" {
-                    match serde_json::to_string(value) {
-                        Ok(value) => value,
-                        Err(e) => {
-                            eprintln!("Error converting value to string: {}", e);
-                            std::process::exit(1);
+                    let bytes = value.to_string().into_bytes();
+                    let json: serde_json::Value = serde_json::from_slice(&bytes).unwrap();
+
+                    if json.is_string() {
+                        let string = json.as_str().unwrap();
+                        let unescaped = unescape(string).unwrap();
+
+                        match serde_json::from_slice(&unescaped.into_bytes()) {
+                            Ok(json) => json,
+                            Err(_) => json,
                         }
+                    } else {
+                        json
                     }
                 } else {
-                    value.as_str().unwrap().to_string()
+                    value.clone()
                 }
             }
             None => {
                 if *skip_missing_keys {
+                    if *verbose {
+                        println!("Key '{}' not found, skipping...", key);
+                    }
                     continue;
                 } else {
                     eprintln!("Invalid key \"{}\" not found in output {}", key, output);
@@ -95,9 +107,13 @@ pub fn write_outputs(
             }
         };
 
-        if let Err(err) = file.write_all(value.to_string().as_bytes()) {
-            eprintln!("Error writing to file '{}': {}", file_path.display(), err);
-            std::process::exit(1);
+        if output_extension == "json" {
+            serde_json::to_writer_pretty(&mut file, &value).unwrap();
+        } else {
+            if let Err(err) = file.write_all(value.as_str().unwrap().as_bytes()) {
+                eprintln!("Error writing to file '{}': {}", file_path.display(), err);
+                std::process::exit(1);
+            }
         }
 
         if *verbose {

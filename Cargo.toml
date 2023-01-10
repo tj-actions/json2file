@@ -16,3 +16,4 @@ categories = ["command-line-utilities"]
 regex = "1.7.1"
 serde_json = "1.0.91"
 clap = { version = "4.0", features = ["derive"] }
+unescape = "0.1.0"

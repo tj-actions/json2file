@@ -1,5 +1,6 @@
 [![Crates.io](https://img.shields.io/crates/v/json2file)](https://crates.io/crates/json2file)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/29ec338049e8410cbf7f858d84b22ab8)](https://www.codacy.com/gh/tj-actions/json2file/dashboard?utm_source=github.com\&utm_medium=referral\&utm_content=tj-actions/json2file\&utm_campaign=Badge_Grade)
+[![codecov](https://codecov.io/github/tj-actions/json2file/branch/main/graph/badge.svg?token=FALQKDPDP2)](https://codecov.io/github/tj-actions/json2file)
 [![CI](https://github.com/tj-actions/json2file/workflows/CI/badge.svg)](https://github.com/tj-actions/json2file/actions?query=workflow%3ACI)
 [![Update release version.](https://github.com/tj-actions/json2file/actions/workflows/sync-release-version.yml/badge.svg)](https://github.com/tj-actions/json2file/actions/workflows/sync-release-version.yml)
 [![Public workflows that use this action.](https://img.shields.io/endpoint?url=https%3A%2F%2Fused-by.vercel.app%2Fapi%2Fgithub-actions%2Fused-by%3Faction%3Dtj-actions%2Fjson2file%26badge%3Dtrue)](https://github.com/search?o=desc\&q=tj-actions+json2file+language%3AYAML\&s=\&type=Code)

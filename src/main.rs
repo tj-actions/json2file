@@ -9,6 +9,7 @@ mod args;
 mod writer;
 
 fn main() {
+    // codecov: disable
     let args = args::Args::parse();
 
     let keys: Vec<String> = args
@@ -42,6 +43,9 @@ fn main() {
 mod tests {
     use std::fs::File;
     use std::io::Read;
+    use std::process;
+
+    use crate::writer::create_output_directory;
 
     use super::*;
 
@@ -49,7 +53,7 @@ mod tests {
         output_directory: PathBuf,
     }
 
-    fn setup(directory: &str) -> TestContext {
+    fn setup(directory: &str, create_output_dir: bool) -> TestContext {
         println!("Test setup...");
 
         let current_directory: PathBuf = env::current_dir().unwrap_or_else(|err| {
@@ -59,22 +63,8 @@ mod tests {
 
         let output_directory: PathBuf = current_directory.join(directory);
 
-        // Create the output directory if it doesn't exist
-        if !output_directory.exists() {
-            println!("Creating output directory...");
-            match std::fs::create_dir_all(&output_directory) {
-                Ok(_) => println!("Output directory created successfully."),
-                Err(e) => {
-                    eprintln!(
-                        "Error creating output directory '{}': {}",
-                        output_directory.display(),
-                        e
-                    );
-                    std::process::exit(1);
-                }
-            }
-        } else {
-            println!("Output directory already exists.");
+        if create_output_dir {
+            create_output_directory(&output_directory);
         }
 
         TestContext { output_directory }
@@ -133,7 +123,7 @@ mod tests {
             "txt",
             "--skip-missing-keys",
         ]);
-        let context = setup(&args.directory);
+        let context = setup(&args.directory, true);
         let output_directory = &context.output_directory;
         let keys: Vec<String> = args
             .keys
@@ -181,7 +171,7 @@ mod tests {
             "json",
             "--skip-missing-keys",
         ]);
-        let context = setup(&args.directory);
+        let context = setup(&args.directory, true);
         let output_directory = &context.output_directory;
         let keys: Vec<String> = args
             .keys
@@ -212,6 +202,134 @@ mod tests {
         let mut contents = String::new();
         file.read_to_string(&mut contents).unwrap();
         assert_eq!(contents, "\"value2\"");
+        teardown(&context);
+    }
+
+    #[test]
+    fn test_if_output_directory_doesnt_exist_it_gets_created() {
+        let args = args::Args::parse_from(&[
+            "",
+            "--keys",
+            "key1 key2",
+            "--outputs",
+            "{ \"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\" }",
+            "--directory",
+            "test_output_directory_doesnt_exist",
+            "--extension",
+            "txt",
+            "--skip-missing-keys",
+        ]);
+
+        let context = setup(&args.directory, false);
+        let output_directory = &context.output_directory;
+        let keys: Vec<String> = args
+            .keys
+            .split_whitespace()
+            .map(|s| s.to_string())
+            .collect();
+
+        write_outputs(
+            &args.skip_missing_keys,
+            &keys,
+            &args.outputs,
+            &output_directory,
+            &args.extension,
+            &args.verbose,
+        );
+
+        // Check that the files were created.
+        assert!(output_directory.join("key1.txt").exists());
+        assert!(output_directory.join("key2.txt").exists());
+
+        // Check that the files contain the correct values.
+        let mut file = File::open(output_directory.join("key1.txt")).unwrap();
+        let mut contents = String::new();
+        file.read_to_string(&mut contents).unwrap();
+        assert_eq!(contents, "value1");
+
+        let mut file = File::open(output_directory.join("key2.txt")).unwrap();
+        let mut contents = String::new();
+        file.read_to_string(&mut contents).unwrap();
+        assert_eq!(contents, "value2");
+        teardown(&context);
+    }
+
+    #[test]
+    fn test_main_txt_verbose() {
+        let args = args::Args::parse_from(&[
+            "",
+            "--keys",
+            "key1 key2",
+            "--outputs",
+            "{ \"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\" }",
+            "--directory",
+            "test_txt_verbose",
+            "--extension",
+            "txt",
+            "--skip-missing-keys",
+            "--verbose",
+        ]);
+
+        let context = setup(&args.directory, true);
+        let output_directory = &context.output_directory;
+        let keys: Vec<String> = args
+            .keys
+            .split_whitespace()
+            .map(|s| s.to_string())
+            .collect();
+
+        write_outputs(
+            &args.skip_missing_keys,
+            &keys,
+            &args.outputs,
+            &output_directory,
+            &args.extension,
+            &args.verbose,
+        );
+
+        // Check that the files were created.
+        assert!(output_directory.join("key1.txt").exists());
+        assert!(output_directory.join("key2.txt").exists());
+
+        // Check that the files contain the correct values.
+        let mut file = File::open(output_directory.join("key1.txt")).unwrap();
+        let mut contents = String::new();
+
+        file.read_to_string(&mut contents).unwrap();
+        assert_eq!(contents, "value1");
+
+        let mut file = File::open(output_directory.join("key2.txt")).unwrap();
+        let mut contents = String::new();
+
+        file.read_to_string(&mut contents).unwrap();
+        assert_eq!(contents, "value2");
+        teardown(&context);
+    }
+
+    #[test]
+    fn test_invalid_key_without_skip_missing_keys() {
+        let context = setup("test_invalid_key_without_skip_missing_keys", true);
+        let output_directory = &context.output_directory;
+
+        let status = process::Command::new("cargo")
+            .args(&[
+                "run",
+                "--",
+                "--keys",
+                "invalid_keys",
+                "--outputs",
+                "{ \"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\" }",
+                "--directory",
+                &output_directory.to_str().unwrap(),
+                "--extension",
+                "txt",
+            ])
+            .status()
+            .expect("failed to execute process");
+
+        assert!(!status.success());
+        assert_eq!(status.code().unwrap(), 1);
+        assert!(!output_directory.join("invalid_keys.txt").exists());
         teardown(&context);
     }
 }

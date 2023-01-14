@@ -4,6 +4,25 @@ use std::path::PathBuf;
 
 use unescape::unescape;
 
+pub fn create_output_directory(path: &PathBuf) {
+    if !path.try_exists().unwrap_or(false) {
+        println!("Creating output directory...");
+        match std::fs::create_dir_all(path) {
+            Ok(_) => println!("Output directory created successfully."),
+            Err(e) => {
+                eprintln!(
+                    "Error creating output directory '{}': {}",
+                    path.display(),
+                    e
+                );
+                std::process::exit(1);
+            }
+        }
+    } else {
+        println!("Output directory already exists.");
+    }
+}
+
 pub fn write_outputs(
     skip_missing_keys: &bool,
     keys: &Vec<String>,
@@ -28,30 +47,7 @@ pub fn write_outputs(
         }
     };
 
-    // Create the output directory if it doesn't exist
-    if !output_directory.exists() {
-        if *verbose {
-            println!("Creating output directory...");
-        }
-
-        match std::fs::create_dir_all(output_directory) {
-            Ok(_) => {
-                if *verbose {
-                    println!("Output directory created successfully.");
-                }
-            }
-            Err(e) => {
-                eprintln!(
-                    "Error creating output directory '{}': {}",
-                    output_directory.display(),
-                    e
-                );
-                std::process::exit(1);
-            }
-        }
-    } else if *verbose {
-        println!("Output directory already exists.");
-    }
+    create_output_directory(output_directory);
 
     for key in keys {
         if *verbose {

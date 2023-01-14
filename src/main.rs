@@ -255,11 +255,11 @@ mod tests {
     }
 
     #[test]
-    fn test_main_txt_verbose() {
+    fn test_skips_invalid_keys() {
         let args = args::Args::parse_from(&[
             "",
             "--keys",
-            "key1 key2",
+            "key1 key2 invalid_key",
             "--outputs",
             "{ \"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\" }",
             "--directory",

@@ -1,16 +1,29 @@
 # Changelog
 
+## [v1.3.0](https://github.com/tj-actions/json2file/tree/v1.3.0) (2023-01-14)
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1...v1.3.0)
+
+**Merged pull requests:**
+
+- feat: improve test coverage [\#77](https://github.com/tj-actions/json2file/pull/77) ([jackton1](https://github.com/jackton1))
+- fix\(deps\): update rust crate clap to 4.1 [\#76](https://github.com/tj-actions/json2file/pull/76) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update codecov/codecov-action action to v3.1.1 [\#75](https://github.com/tj-actions/json2file/pull/75) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update actions-rs/grcov action to v0.1.6 [\#74](https://github.com/tj-actions/json2file/pull/74) ([renovate[bot]](https://github.com/apps/renovate))
+- chore: update test [\#73](https://github.com/tj-actions/json2file/pull/73) ([jackton1](https://github.com/jackton1))
+- chore: upgraded to v1.2.1 [\#72](https://github.com/tj-actions/json2file/pull/72) ([jackton1](https://github.com/jackton1))
+
+## [v1](https://github.com/tj-actions/json2file/tree/v1) (2023-01-10)
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.2.1...v1)
+
 ## [v1.2.1](https://github.com/tj-actions/json2file/tree/v1.2.1) (2023-01-10)
 
-[Full Changelog](https://github.com/tj-actions/json2file/compare/v1...v1.2.1)
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.2.0...v1.2.1)
 
 **Merged pull requests:**
 
 - chore: upgraded to v1.2.0 [\#71](https://github.com/tj-actions/json2file/pull/71) ([jackton1](https://github.com/jackton1))
-
-## [v1](https://github.com/tj-actions/json2file/tree/v1) (2023-01-10)
-
-[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.2.0...v1)
 
 ## [v1.2.0](https://github.com/tj-actions/json2file/tree/v1.2.0) (2023-01-10)
 

@@ -37,13 +37,12 @@ if [[ -z "$INPUT_BIN_PATH" ]]; then
   if [[ "$ARCHIVE" == "zip" ]]; then
     download_with_retries "$TEMP_DIR"/json2file.zip
     unzip -q "$TEMP_DIR"/json2file.zip -d "$TEMP_DIR"
-    chmod +x "$TEMP_DIR"/json2file
   else
     download_with_retries "$TEMP_DIR"/json2file.tar.gz
     tar -xzf "$TEMP_DIR"/json2file.tar.gz -C "$TEMP_DIR"
-    chmod +x "$TEMP_DIR"/json2file
   fi
 
+  chmod +x "$TEMP_DIR"/json2file
   INPUT_BIN_PATH=$TEMP_DIR/json2file
 fi
 

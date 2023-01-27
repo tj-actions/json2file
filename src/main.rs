@@ -19,7 +19,7 @@ fn main() {
         .collect();
 
     let current_directory: PathBuf = env::current_dir().unwrap_or_else(|err| {
-        eprintln!("Failed to get current directory: {}", err);
+        eprintln!("Failed to get current directory: {err}");
         std::process::exit(1);
     });
 
@@ -57,8 +57,8 @@ mod tests {
         println!("Test setup...");
 
         let current_directory: PathBuf = env::current_dir().unwrap_or_else(|err| {
-            eprintln!("Failed to get current directory: {}", err);
-            std::process::exit(1);
+            eprintln!("Failed to get current directory: {err}");
+            process::exit(1);
         });
 
         let output_directory: PathBuf = current_directory.join(directory);
@@ -83,14 +83,14 @@ mod tests {
                     context.output_directory.display(),
                     e
                 );
-                std::process::exit(1);
+                process::exit(1);
             }
         }
     }
 
     #[test]
     fn test_args() {
-        let args = args::Args::parse_from(&[
+        let args = args::Args::parse_from([
             "",
             "--keys",
             "key1 key2",
@@ -105,13 +105,13 @@ mod tests {
         assert_eq!(args.outputs, "output");
         assert_eq!(args.directory, "directory");
         assert_eq!(args.extension, "ext");
-        assert_eq!(args.skip_missing_keys, false);
-        assert_eq!(args.verbose, false);
+        assert!(!args.skip_missing_keys);
+        assert!(!args.verbose);
     }
 
     #[test]
     fn test_main_txt() {
-        let args = args::Args::parse_from(&[
+        let args = args::Args::parse_from([
             "",
             "--keys",
             "key1 key2",
@@ -135,7 +135,7 @@ mod tests {
             &args.skip_missing_keys,
             &keys,
             &args.outputs,
-            &output_directory,
+            output_directory,
             &args.extension,
             &args.verbose,
         );
@@ -159,7 +159,7 @@ mod tests {
 
     #[test]
     fn test_main_json() {
-        let args = args::Args::parse_from(&[
+        let args = args::Args::parse_from([
             "",
             "--keys",
             "key1 key2",
@@ -183,7 +183,7 @@ mod tests {
             &args.skip_missing_keys,
             &keys,
             &args.outputs,
-            &output_directory,
+            output_directory,
             &args.extension,
             &args.verbose,
         );
@@ -207,7 +207,7 @@ mod tests {
 
     #[test]
     fn test_if_output_directory_doesnt_exist_it_gets_created() {
-        let args = args::Args::parse_from(&[
+        let args = args::Args::parse_from([
             "",
             "--keys",
             "key1 key2",
@@ -232,7 +232,7 @@ mod tests {
             &args.skip_missing_keys,
             &keys,
             &args.outputs,
-            &output_directory,
+            output_directory,
             &args.extension,
             &args.verbose,
         );
@@ -256,7 +256,7 @@ mod tests {
 
     #[test]
     fn test_skips_invalid_keys() {
-        let args = args::Args::parse_from(&[
+        let args = args::Args::parse_from([
             "",
             "--keys",
             "key1 key2 invalid_key",
@@ -282,7 +282,7 @@ mod tests {
             &args.skip_missing_keys,
             &keys,
             &args.outputs,
-            &output_directory,
+            output_directory,
             &args.extension,
             &args.verbose,
         );
@@ -312,7 +312,7 @@ mod tests {
         let output_directory = &context.output_directory;
 
         let status = process::Command::new("cargo")
-            .args(&[
+            .args([
                 "run",
                 "--",
                 "--keys",
@@ -320,7 +320,7 @@ mod tests {
                 "--outputs",
                 "{ \"key1\": \"value1\", \"key2\": \"value2\", \"key3\": \"value3\" }",
                 "--directory",
-                &output_directory.to_str().unwrap(),
+                (output_directory.to_str().unwrap()),
                 "--extension",
                 "txt",
             ])

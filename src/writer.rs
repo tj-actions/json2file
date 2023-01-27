@@ -42,7 +42,7 @@ pub fn write_outputs(
             json
         }
         Err(e) => {
-            eprintln!("Error parsing output: {}", e);
+            eprintln!("Error parsing output: {e}");
             std::process::exit(1);
         }
     };
@@ -51,7 +51,7 @@ pub fn write_outputs(
 
     for key in keys {
         if *verbose {
-            println!("Writing output for key '{}'...", key);
+            println!("Writing output for key '{key}'...");
         }
         let value = match json.get(key) {
             Some(value) => {
@@ -77,16 +77,16 @@ pub fn write_outputs(
             None => {
                 if *skip_missing_keys {
                     if *verbose {
-                        println!("Key '{}' not found, skipping...", key);
+                        println!("Key '{key}' not found, skipping...");
                     }
                     continue;
                 } else {
-                    eprintln!("Invalid key \"{}\" not found in output {}", key, output);
+                    eprintln!("Invalid key \"{key}\" not found in output {output}");
                     std::process::exit(1);
                 }
             }
         };
-        let file_path = &output_directory.join(format!("{}.{}", key, output_extension));
+        let file_path = &output_directory.join(format!("{key}.{output_extension}"));
         if *verbose {
             println!("Writing output to file '{}'...", file_path.display());
         }

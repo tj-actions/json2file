@@ -81,6 +81,20 @@ Options:
 $ json2file --keys="foo bar" --outputs="{\"foo\": \"value1\", \"bar\": \"value2\"}" --directory=/tmp --extension=txt
 ```
 
+This creates two files with the following contents:
+
+`foo.txt`
+```txt
+value1
+```
+
+
+`bar.txt`
+```txt
+value2
+```
+
+
 *   Free software: [MIT license](LICENSE)
 
 If you feel generous and want to show some extra appreciation:

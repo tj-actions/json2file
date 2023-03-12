@@ -84,16 +84,16 @@ $ json2file --keys="foo bar" --outputs="{\"foo\": \"value1\", \"bar\": \"value2\
 This creates two files with the following contents:
 
 `foo.txt`
+
 ```txt
 value1
 ```
 
-
 `bar.txt`
+
 ```txt
 value2
 ```
-
 
 *   Free software: [MIT license](LICENSE)
 

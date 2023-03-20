@@ -43,14 +43,14 @@ green
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-| INPUT               | TYPE   | REQUIRED | DEFAULT               | DESCRIPTION                                                   |
-| ------------------- | ------ | -------- | --------------------- | ------------------------------------------------------------- |
-| bin\_path           | string | false    |                       | Path to the binary                                            |
-| directory           | string | true     | `".github/outputs"` | Directory to write to                                         |
-| extension           | string | false    | `"txt"`             | File extension to use                                         |
-| keys                | string | true     |                       | List of Keys to read fromthe `outputs` JSON string      |
-| outputs             | string | true     |                       | JSON string                                                   |
-| skip\_missing\_keys | string | false    | `"false"`           | Skip missing keys not found inthe `outputs` JSON string |
+|       INPUT       |  TYPE  | REQUIRED |       DEFAULT       |                         DESCRIPTION                         |
+|-------------------|--------|----------|---------------------|-------------------------------------------------------------|
+|     bin\_path      | string |  false   |                     |                     Path to the binary                      |
+|     directory     | string |   true   | `".github/outputs"` |                    Directory to write to                    |
+|     extension     | string |  false   |       `"txt"`       |                    File extension to use                    |
+|       keys        | string |   true   |                     |   List of Keys to read from<br>the `outputs` JSON string    |
+|      outputs      | string |   true   |                     |                         JSON string                         |
+| skip\_missing\_keys | string |  false   |      `"false"`      | Skip missing keys not found in<br>the `outputs` JSON string |
 
 <!-- AUTO-DOC-INPUT:END -->
 
@@ -95,7 +95,7 @@ value1
 value2
 ```
 
-* Free software: [MIT license](LICENSE)
+*   Free software: [MIT license](LICENSE)
 
 If you feel generous and want to show some extra appreciation:
 
@@ -115,7 +115,6 @@ Report bugs at https://github.com/tj-actions/json2file/issues.
 
 If you are reporting a bug, please include:
 
-* Your operating system name and VERSION.
-* Any details about your workflow that might be helpful in troubleshooting.
-* Detailed steps to reproduce the bug.
-
+*   Your operating system name and VERSION.
+*   Any details about your workflow that might be helpful in troubleshooting.
+*   Detailed steps to reproduce the bug.

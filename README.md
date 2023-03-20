@@ -99,7 +99,7 @@ value2
 
 If you feel generous and want to show some extra appreciation:
 
-[Buy me a coffee][buymeacoffee]
+[![Buy me a coffee][buymeacoffee-shield]][buymeacoffee]
 
 [buymeacoffee]: https://www.buymeacoffee.com/jackton1
 

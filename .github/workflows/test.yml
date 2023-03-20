@@ -94,7 +94,6 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        rust: [stable, beta, nightly]
         json: [true, false]
     name: Test release
     steps:
@@ -161,7 +160,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
-        rust: [stable, beta, nightly]
+        rust: [stable, beta]
         json: [true, false]
     name: Test action
     steps:

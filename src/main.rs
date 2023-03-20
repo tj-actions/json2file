@@ -89,8 +89,29 @@ mod tests {
     }
 
     #[test]
-    fn test_args() {
+    fn test_valid_extension() {
         let args = args::Args::parse_from([
+            "",
+            "--keys",
+            "key1 key2",
+            "--outputs",
+            "output",
+            "--directory",
+            "directory",
+            "--extension",
+            "txt",
+        ]);
+        assert_eq!(args.keys, "key1 key2");
+        assert_eq!(args.outputs, "output");
+        assert_eq!(args.directory, "directory");
+        assert_eq!(args.extension.to_string(), "txt");
+        assert!(!args.skip_missing_keys);
+        assert!(!args.verbose);
+    }
+
+    #[test]
+    fn test_invalid_extension() {
+        let err = args::Args::try_parse_from([
             "",
             "--keys",
             "key1 key2",
@@ -101,12 +122,9 @@ mod tests {
             "--extension",
             "ext",
         ]);
-        assert_eq!(args.keys, "key1 key2");
-        assert_eq!(args.outputs, "output");
-        assert_eq!(args.directory, "directory");
-        assert_eq!(args.extension, "ext");
-        assert!(!args.skip_missing_keys);
-        assert!(!args.verbose);
+
+        assert!(err.is_err());
+        assert!(err.unwrap_err().to_string().contains("invalid value 'ext'"));
     }
 
     #[test]

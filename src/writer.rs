@@ -4,6 +4,8 @@ use std::path::PathBuf;
 
 use unescape::unescape;
 
+use crate::args::Extension;
+
 pub fn create_output_directory(path: &PathBuf) {
     if !path.try_exists().unwrap_or(false) {
         println!("Creating output directory...");
@@ -28,7 +30,7 @@ pub fn write_outputs(
     keys: &Vec<String>,
     output: &str,
     output_directory: &PathBuf,
-    output_extension: &str,
+    output_extension: &Extension,
     verbose: &bool,
 ) {
     if *verbose {
@@ -55,7 +57,7 @@ pub fn write_outputs(
         }
         let value = match json.get(key) {
             Some(value) => {
-                if output_extension == "json" {
+                if output_extension.to_string() == "json" {
                     let bytes = value.to_string().into_bytes();
                     let json: serde_json::Value = serde_json::from_slice(&bytes).unwrap();
 
@@ -103,7 +105,7 @@ pub fn write_outputs(
             }
         };
 
-        if output_extension == "json" {
+        if output_extension.to_string() == "json" {
             serde_json::to_writer(&mut file, &value).unwrap();
         } else if let Err(err) = file.write_all(value.as_str().unwrap().as_bytes()) {
             eprintln!("Error writing to file '{}': {}", file_path.display(), err);

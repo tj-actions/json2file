@@ -90,6 +90,7 @@ jobs:
   
   test-release:
     runs-on: ${{ matrix.os }}
+    needs: [shellcheck, test, lint]
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]
@@ -156,6 +157,7 @@ jobs:
 
   test-action:
     runs-on: ${{ matrix.os }}
+    needs: [shellcheck, test, lint]
     strategy:
       matrix:
         os: [ubuntu-latest, macos-latest, windows-latest]

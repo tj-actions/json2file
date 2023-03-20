@@ -17,7 +17,7 @@ inputs:
     required: false
     default: "false"
   extension:
-    description: "File extension to use"
+    description: "File extension to use, possible values: txt, json"
     required: false
     default: "txt"
   bin_path:

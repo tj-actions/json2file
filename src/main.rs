@@ -89,7 +89,7 @@ mod tests {
     }
 
     #[test]
-    fn test_valid_args() {
+    fn test_valid_extension() {
         let args = args::Args::parse_from([
             "",
             "--keys",
@@ -110,7 +110,7 @@ mod tests {
     }
 
     #[test]
-    fn test_invalid_args() {
+    fn test_invalid_extension() {
         let err = args::Args::try_parse_from([
             "",
             "--keys",

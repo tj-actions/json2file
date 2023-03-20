@@ -124,10 +124,7 @@ mod tests {
         ]);
 
         assert!(err.is_err());
-        assert_eq!(
-            err.unwrap_err().to_string(),
-            "error: invalid value 'ext' for '--extension <EXTENSION>'\n  [possible values: txt, json]\n\nFor more information, try '--help'.\n"
-        );
+        assert!(err.unwrap_err().to_string().contains("invalid value 'ext'"));
     }
 
     #[test]

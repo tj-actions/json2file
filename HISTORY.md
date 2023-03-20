@@ -1,8 +1,39 @@
 # Changelog
 
+## [v1.4.0](https://github.com/tj-actions/json2file/tree/v1.4.0) (2023-03-20)
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1...v1.4.0)
+
+**Implemented enhancements:**
+
+- \[Feature\] Validate that the extension should either be txt or json [\#89](https://github.com/tj-actions/json2file/issues/89)
+
+**Merged pull requests:**
+
+- Updated README.md [\#94](https://github.com/tj-actions/json2file/pull/94) ([jackton1](https://github.com/jackton1))
+- fix: deprecation warning for groov.yml [\#93](https://github.com/tj-actions/json2file/pull/93) ([jackton1](https://github.com/jackton1))
+- feat: validate the extension valid choices txt and json [\#92](https://github.com/tj-actions/json2file/pull/92) ([jackton1](https://github.com/jackton1))
+- chore\(deps\): update tj-actions/verify-changed-files action to v14 [\#91](https://github.com/tj-actions/json2file/pull/91) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update peter-evans/create-pull-request action to v4.2.4 [\#90](https://github.com/tj-actions/json2file/pull/90) ([renovate[bot]](https://github.com/apps/renovate))
+- Updated README.md [\#88](https://github.com/tj-actions/json2file/pull/88) ([jackton1](https://github.com/jackton1))
+- chore\(deps\): update tj-actions/release-tagger action to v3 [\#87](https://github.com/tj-actions/json2file/pull/87) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/github-changelog-generator action to v1.18 [\#86](https://github.com/tj-actions/json2file/pull/86) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update tj-actions/auto-doc action to v2 [\#85](https://github.com/tj-actions/json2file/pull/85) ([renovate[bot]](https://github.com/apps/renovate))
+- fix\(deps\): update rust crate serde\_json to 1.0.94 [\#84](https://github.com/tj-actions/json2file/pull/84) ([renovate[bot]](https://github.com/apps/renovate))
+- fix\(deps\): update rust crate serde\_json to 1.0.93 [\#83](https://github.com/tj-actions/json2file/pull/83) ([renovate[bot]](https://github.com/apps/renovate))
+- fix\(deps\): update rust crate serde\_json to 1.0.92 [\#82](https://github.com/tj-actions/json2file/pull/82) ([renovate[bot]](https://github.com/apps/renovate))
+- chore\(deps\): update katyo/publish-crates action to v2 [\#81](https://github.com/tj-actions/json2file/pull/81) ([renovate[bot]](https://github.com/apps/renovate))
+- chore: update caching [\#80](https://github.com/tj-actions/json2file/pull/80) ([jackton1](https://github.com/jackton1))
+- chore\(deps\): update reviewdog/action-shellcheck action to v1.17 [\#79](https://github.com/tj-actions/json2file/pull/79) ([renovate[bot]](https://github.com/apps/renovate))
+- chore: upgraded to v1.3.0 [\#78](https://github.com/tj-actions/json2file/pull/78) ([jackton1](https://github.com/jackton1))
+
+## [v1](https://github.com/tj-actions/json2file/tree/v1) (2023-01-14)
+
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.3.0...v1)
+
 ## [v1.3.0](https://github.com/tj-actions/json2file/tree/v1.3.0) (2023-01-14)
 
-[Full Changelog](https://github.com/tj-actions/json2file/compare/v1...v1.3.0)
+[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.2.1...v1.3.0)
 
 **Merged pull requests:**
 
@@ -12,10 +43,6 @@
 - chore\(deps\): update actions-rs/grcov action to v0.1.6 [\#74](https://github.com/tj-actions/json2file/pull/74) ([renovate[bot]](https://github.com/apps/renovate))
 - chore: update test [\#73](https://github.com/tj-actions/json2file/pull/73) ([jackton1](https://github.com/jackton1))
 - chore: upgraded to v1.2.1 [\#72](https://github.com/tj-actions/json2file/pull/72) ([jackton1](https://github.com/jackton1))
-
-## [v1](https://github.com/tj-actions/json2file/tree/v1) (2023-01-10)
-
-[Full Changelog](https://github.com/tj-actions/json2file/compare/v1.2.1...v1)
 
 ## [v1.2.1](https://github.com/tj-actions/json2file/tree/v1.2.1) (2023-01-10)
 

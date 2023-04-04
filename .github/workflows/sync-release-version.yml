@@ -53,10 +53,8 @@ jobs:
           pattern: 'LATEST_VERSION='
           paths: |
             entrypoint.sh
-      - name: Generate CHANGELOG
-        uses: tj-actions/github-changelog-generator@v1.18
-        with:
-          output: 'HISTORY.md'
+      - name: Run git-cliff
+        uses: tj-actions/git-cliff@v1
       - name: Bump version
         uses: tj-actions/cargo-bump@v2
       - name: Get branch name

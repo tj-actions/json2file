@@ -1,5 +1,29 @@
 # Changelog
 
+# [1.4.2](https://github.com/tj-actions/json2file/compare/v1.4.1...v1.4.2) - (2023-04-13)
+
+## <!-- 1 -->🐛 Bug Fixes
+
+- **deps:** Update rust crate clap to 4.2.2 ([faaf471](https://github.com/tj-actions/json2file/commit/faaf471c0e61593aa8a92c037606f14895d2d53e))  - (renovate[bot])
+- **deps:** Update rust crate serde_json to 1.0.96 ([80a112c](https://github.com/tj-actions/json2file/commit/80a112c2aeff74d122bc8d2eadecdd281a5b7e3c))  - (renovate[bot])
+
+## <!-- 27 -->📌 Pin
+
+- Clap to the latest release ([#103](https://github.com/tj-actions/json2file/issues/103)) ([9b58c01](https://github.com/tj-actions/json2file/commit/9b58c015d04eb51bec3accecc02624ffc24965aa))  - (Tonye Jack)
+
+## <!-- 30 -->📝 Other
+
+- PR [#108](https://github.com/tj-actions/json2file/pull/108): update rust crate clap to 4.2.2 ([c6ba719](https://github.com/tj-actions/json2file/commit/c6ba71973e723de7d11bcbcc71fa4ced304fa22c))  - (repo-ranger[bot])
+- PR [#107](https://github.com/tj-actions/json2file/pull/107): update rust crate serde_json to 1.0.96 ([49befc8](https://github.com/tj-actions/json2file/commit/49befc816554ed7701dd17fe17304e30554c7d8a))  - (repo-ranger[bot])
+- PR [#106](https://github.com/tj-actions/json2file/pull/106): update codecov/codecov-action action to v3.1.2 ([4d4fd69](https://github.com/tj-actions/json2file/commit/4d4fd694116f225b45148dfc2ef976995a396966))  - (repo-ranger[bot])
+- PR [#105](https://github.com/tj-actions/json2file/pull/105): update peter-evans/create-pull-request action to v5 ([1409591](https://github.com/tj-actions/json2file/commit/1409591497ddff1d13dae533b36af7b4bb8d18a7))  - (repo-ranger[bot])
+- PR [#104](https://github.com/tj-actions/json2file/pull/104): upgraded to v1.4.1 ([77f1a63](https://github.com/tj-actions/json2file/commit/77f1a635b85a53752ab07eb4c5e46e7441621c3b))  - (repo-ranger[bot])
+
+## <!-- 7 -->⚙️ Miscellaneous Tasks
+
+- **deps:** Update codecov/codecov-action action to v3.1.2 ([5a8a22c](https://github.com/tj-actions/json2file/commit/5a8a22c932f5bffb38fb9146afdadd3056a257e9))  - (renovate[bot])
+- **deps:** Update peter-evans/create-pull-request action to v5 ([b8295c7](https://github.com/tj-actions/json2file/commit/b8295c79f34205cbce52a3593822a784904c44a6))  - (renovate[bot])
+
 # [1.4.1](https://github.com/tj-actions/json2file/compare/v1.4.0...v1.4.1) - (2023-04-04)
 
 ## <!-- 1 -->🐛 Bug Fixes
@@ -27,6 +51,7 @@
 
 ## <!-- 7 -->⚙️ Miscellaneous Tasks
 
+- Upgraded from v1.4.0 -> v1.4.1 ([e687265](https://github.com/tj-actions/json2file/commit/e6872653b4c7168e64b05ee07f60c1cfce653560))  - (github-actions[bot])
 - Generate changelogs with tj-actions/git-cliff ([#102](https://github.com/tj-actions/json2file/issues/102)) ([99d149a](https://github.com/tj-actions/json2file/commit/99d149a7b145fd9ebef5b94c8db898d862667eba))  - (Tonye Jack)
 
 # [1.4.0](https://github.com/tj-actions/json2file/compare/v1.3.0...v1.4.0) - (2023-03-20)

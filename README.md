@@ -47,10 +47,10 @@ green
 |-------------------|--------|----------|---------------------|-------------------------------------------------------------|
 |     bin\_path      | string |  false   |                     |                     Path to the binary                      |
 |     directory     | string |   true   | `".github/outputs"` |                    Directory to write to                    |
-|     extension     | string |  false   |       `"txt"`       |    File extension to use, possible values:<br>txt, json     |
-|       keys        | string |   true   |                     |   List of Keys to read from<br>the `outputs` JSON string    |
+|     extension     | string |  false   |       `"txt"`       |    File extension to use, possible<br>values: txt, json     |
+|       keys        | string |   true   |                     |   List of Keys to read<br>from the `outputs` JSON string    |
 |      outputs      | string |   true   |                     |                         JSON string                         |
-| skip\_missing\_keys | string |  false   |      `"false"`      | Skip missing keys not found in<br>the `outputs` JSON string |
+| skip\_missing\_keys | string |  false   |      `"false"`      | Skip missing keys not found<br>in the `outputs` JSON string |
 
 <!-- AUTO-DOC-INPUT:END -->
 

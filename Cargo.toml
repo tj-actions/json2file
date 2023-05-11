@@ -1,7 +1,7 @@
 [package]
 name = "json2file"
 authors = ["Tonye Jack <jtonye@ymail.com>"]
-version = "1.4.2"
+version = "1.5.0"
 description = "Generate file output from JSON"
 repository = "https://github.com/tj-actions/json2file"
 homepage = "https://github.com/tj-actions/json2file"

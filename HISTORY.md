@@ -1,6 +1,44 @@
 # Changelog
 
-# [1.4.2](https://github.com/tj-actions/json2file/compare/v1.4.1...v1.4.2) - (2023-04-13)
+# [1.5.0](https://github.com/tj-actions/json2file/compare/v1.4.2...v1.5.0) - (2023-05-02)
+
+## <!-- 1 -->🐛 Bug Fixes
+
+- **deps:** Update rust crate clap to 4.2.7 ([e0981f1](https://github.com/tj-actions/json2file/commit/e0981f1464dad492c73f603dfbd342a5ea8938c4))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.2.6 ([9269310](https://github.com/tj-actions/json2file/commit/9269310f86e990ba7431666a891e03a19863b1d9))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.2.5 ([9662a84](https://github.com/tj-actions/json2file/commit/9662a847bbdafe842b55e64703e92e68d3207ea9))  - (renovate[bot])
+- **deps:** Update rust crate regex to 1.8.1 ([9af5ca3](https://github.com/tj-actions/json2file/commit/9af5ca35eb110c1ee4703ea3dee8b2df1907b67a))  - (renovate[bot])
+- **deps:** Update rust crate regex to 1.8.0 ([97df26d](https://github.com/tj-actions/json2file/commit/97df26d78d9edf8fa4088bb25d7184d9609f507d))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.2.4 ([53df3c3](https://github.com/tj-actions/json2file/commit/53df3c3ba930920f83d3c7430c5d2e88aa58897d))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.2.3 ([c029203](https://github.com/tj-actions/json2file/commit/c029203f6fb227358c595393dca5f61c9c24e324))  - (renovate[bot])
+
+## <!-- 26 -->🔄 Update
+
+- Updated README.md
+ ([45892ff](https://github.com/tj-actions/json2file/commit/45892ffe9afdb41fb7f2cc79fd5f4d9f68c9eda9))  - (repo-ranger[bot])
+
+## <!-- 30 -->📝 Other
+
+- PR [#120](https://github.com/tj-actions/json2file/pull/120): update rust crate clap to 4.2.7 ([1672870](https://github.com/tj-actions/json2file/commit/167287041b0700f06194a24aac1d1eb38a333483))  - (repo-ranger[bot])
+- PR [#119](https://github.com/tj-actions/json2file/pull/119): update rust crate clap to 4.2.6 ([06ccaf4](https://github.com/tj-actions/json2file/commit/06ccaf489d5dea0f4dfb5fe38fbd90c43d8b4170))  - (repo-ranger[bot])
+- PR [#118](https://github.com/tj-actions/json2file/pull/118): README.md ([de9155a](https://github.com/tj-actions/json2file/commit/de9155a0035da7113ab1d8c24d14b0622e2609d3))  - (repo-ranger[bot])
+- PR [#117](https://github.com/tj-actions/json2file/pull/117): update peter-evans/create-pull-request action to v5.0.1 ([0f1b81b](https://github.com/tj-actions/json2file/commit/0f1b81b9a35eaf2f914a401c406e639c709205a2))  - (repo-ranger[bot])
+- PR [#116](https://github.com/tj-actions/json2file/pull/116): update rust crate clap to 4.2.5 ([eb7ab21](https://github.com/tj-actions/json2file/commit/eb7ab21b9d3948974285852b8d06fdc0a41cdd83))  - (repo-ranger[bot])
+- PR [#115](https://github.com/tj-actions/json2file/pull/115): update rust crate regex to 1.8.1 ([c559076](https://github.com/tj-actions/json2file/commit/c559076d267e0624dd592cd7bc01e24ca9e8a8c5))  - (repo-ranger[bot])
+- PR [#114](https://github.com/tj-actions/json2file/pull/114): update rust crate regex to 1.8.0 ([7ad09ad](https://github.com/tj-actions/json2file/commit/7ad09ad7748ba80d847d61b52912df530c95574f))  - (repo-ranger[bot])
+- PR [#113](https://github.com/tj-actions/json2file/pull/113): update codecov/codecov-action action to v3.1.3 ([58bc998](https://github.com/tj-actions/json2file/commit/58bc998924582f9e3553c941d770595be9a93d2e))  - (repo-ranger[bot])
+- PR [#112](https://github.com/tj-actions/json2file/pull/112): update rust crate clap to 4.2.4 ([e8ec08d](https://github.com/tj-actions/json2file/commit/e8ec08d2ad4cafd984a793f3cf5986800e526529))  - (repo-ranger[bot])
+- PR [#111](https://github.com/tj-actions/json2file/pull/111): update rust crate clap to 4.2.3 ([a595895](https://github.com/tj-actions/json2file/commit/a59589598a2509fa6463249439e3d4c57a4e7eea))  - (repo-ranger[bot])
+- PR [#110](https://github.com/tj-actions/json2file/pull/110): update rust-build/rust-build.action action to v1.4.3 ([8257c9e](https://github.com/tj-actions/json2file/commit/8257c9ecb97a4403e0cb1af509532265e6b8d065))  - (repo-ranger[bot])
+- PR [#109](https://github.com/tj-actions/json2file/pull/109): upgraded to v1.4.2 ([649d323](https://github.com/tj-actions/json2file/commit/649d3232b1f687f13b6622abb72d9964c8f5011a))  - (repo-ranger[bot])
+
+## <!-- 7 -->⚙️ Miscellaneous Tasks
+
+- **deps:** Update peter-evans/create-pull-request action to v5.0.1 ([6977bdd](https://github.com/tj-actions/json2file/commit/6977bddcd73500b3499db11042e9ec6c8912674e))  - (renovate[bot])
+- **deps:** Update codecov/codecov-action action to v3.1.3 ([e90a182](https://github.com/tj-actions/json2file/commit/e90a1828dbf5d3e818ff297fe6475d149fa1d0ed))  - (renovate[bot])
+- **deps:** Update rust-build/rust-build.action action to v1.4.3 ([e4f2f6e](https://github.com/tj-actions/json2file/commit/e4f2f6e54fa2e60f615a3c0e60426e47ce9e997b))  - (renovate[bot])
+
+# [1.4.2](https://github.com/tj-actions/json2file/compare/v1.4.1...v1.4.2) - (2023-04-14)
 
 ## <!-- 1 -->🐛 Bug Fixes
 
@@ -21,6 +59,7 @@
 
 ## <!-- 7 -->⚙️ Miscellaneous Tasks
 
+- Upgraded from v1.4.1 -> v1.4.2 ([46d3707](https://github.com/tj-actions/json2file/commit/46d3707a327c0049b276be5977a89354b9310003))  - (github-actions[bot])
 - **deps:** Update codecov/codecov-action action to v3.1.2 ([5a8a22c](https://github.com/tj-actions/json2file/commit/5a8a22c932f5bffb38fb9146afdadd3056a257e9))  - (renovate[bot])
 - **deps:** Update peter-evans/create-pull-request action to v5 ([b8295c7](https://github.com/tj-actions/json2file/commit/b8295c79f34205cbce52a3593822a784904c44a6))  - (renovate[bot])
 

@@ -31,6 +31,8 @@ runs:
       uses: tj-actions/setup-bin@v1
       id: setup-bin-rust
       with:
+        repository-owner: tj-actions
+        repository: json2file
         version: v1.5.0
         language-type: 'rust'
     - run: |

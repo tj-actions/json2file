@@ -1,51 +1,6 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-download_with_retries() {
-    local DELAY=10
-
-    local OUTPUT_FILE=$1
-
-    for i in $(seq 1 5); do
-        curl --connect-timeout 300 -sLf https://github.com/tj-actions/json2file/releases/download/"$LATEST_VERSION"/json2file_"$LATEST_VERSION"_"$TARGET"."$ARCHIVE" -o "$OUTPUT_FILE" && break
-        sleep $DELAY
-        echo "$i retries"
-    done
-}
-
-
-if [[ -z "$INPUT_BIN_PATH" ]]; then
-  echo "Downloading json2file binary..."
-  LATEST_VERSION=v1.5.0
-
-  # Download the latest version
-  WINDOWS_TARGET=x86_64-pc-windows-gnu
-  LINUX_TARGET=x86_64-unknown-linux-musl
-  MACOS_TARGET=x86_64-apple-darwin
-  ARCHIVE=zip
-  TEMP_DIR=$(mktemp -d)
-
-  if [[ $(uname -s) == "Linux" ]]; then
-    TARGET=$LINUX_TARGET
-    ARCHIVE=tar.gz
-  elif [[ $(uname -s) == "Darwin" ]]; then
-    TARGET=$MACOS_TARGET
-  else
-    TARGET=$WINDOWS_TARGET
-  fi
-
-  if [[ "$ARCHIVE" == "zip" ]]; then
-    download_with_retries "$TEMP_DIR"/json2file.zip
-    unzip -q "$TEMP_DIR"/json2file.zip -d "$TEMP_DIR"
-  else
-    download_with_retries "$TEMP_DIR"/json2file.tar.gz
-    tar -xzf "$TEMP_DIR"/json2file.tar.gz -C "$TEMP_DIR"
-  fi
-
-  chmod +x "$TEMP_DIR"/json2file
-  INPUT_BIN_PATH=$TEMP_DIR/json2file
-fi
-
 echo "Parsing inputs..."
 INPUT_OUTPUTS="$(echo "$INPUT_OUTPUTS" | jq -r @json)"
 INPUT_KEYS="$(echo "$INPUT_KEYS" |  tr '\n' ' ' | xargs)"

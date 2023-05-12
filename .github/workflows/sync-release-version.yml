@@ -46,13 +46,13 @@ jobs:
           only_major: true
           paths: |
             README.md
-      - name: Sync release version for entrypoint.sh.
+      - name: Sync release version for action.yml.
         uses: tj-actions/sync-release-version@v13
-        id: sync-release-version-entrypoint
+        id: sync-release-version-action
         with:
-          pattern: 'LATEST_VERSION='
+          pattern: 'version: '
           paths: |
-            entrypoint.sh
+            action.yml
       - name: Run git-cliff
         uses: tj-actions/git-cliff@v1
       - name: Bump version

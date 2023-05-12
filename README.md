@@ -43,14 +43,14 @@ green
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|       INPUT       |  TYPE  | REQUIRED |       DEFAULT       |                         DESCRIPTION                         |
-|-------------------|--------|----------|---------------------|-------------------------------------------------------------|
-|     bin\_path      | string |  false   |                     |                     Path to the binary                      |
-|     directory     | string |   true   | `".github/outputs"` |                    Directory to write to                    |
-|     extension     | string |  false   |       `"txt"`       |    File extension to use, possible<br>values: txt, json     |
-|       keys        | string |   true   |                     |   List of Keys to read<br>from the `outputs` JSON string    |
-|      outputs      | string |   true   |                     |                         JSON string                         |
-| skip\_missing\_keys | string |  false   |      `"false"`      | Skip missing keys not found<br>in the `outputs` JSON string |
+|       INPUT       |  TYPE  | REQUIRED |       DEFAULT       |                          DESCRIPTION                          |
+|-------------------|--------|----------|---------------------|---------------------------------------------------------------|
+|     bin\_path      | string |  false   |                     |                      Path to the binary                       |
+|     directory     | string |   true   | `".github/outputs"` |                     Directory to write to                     |
+|     extension     | string |  false   |       `"txt"`       |    File extension to use, possible <br>values: txt, json      |
+|       keys        | string |   true   |                     |   List of Keys to read <br>from the `outputs` JSON string     |
+|      outputs      | string |   true   |                     |                          JSON string                          |
+| skip\_missing\_keys | string |  false   |      `"false"`      | Skip missing keys not found <br>in the `outputs` JSON string  |
 
 <!-- AUTO-DOC-INPUT:END -->
 

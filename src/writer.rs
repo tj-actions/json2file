@@ -2,7 +2,7 @@ use std::fs::File;
 use std::io::{ErrorKind, Write};
 use std::path::PathBuf;
 
-use unescape::unescape;
+use unescaper::unescape;
 
 use crate::args::Extension;
 

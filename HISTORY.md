@@ -1,6 +1,26 @@
 # Changelog
 
-# [1.5.0](https://github.com/tj-actions/json2file/compare/v1.4.2...v1.5.0) - (2023-05-02)
+# [1.6.0](https://github.com/tj-actions/json2file/compare/v1.5.0...v1.6.0) - (2023-05-12)
+
+## <!-- 0 -->🚀 Features
+
+- Switch to use setup-bin action ([ad03d05](https://github.com/tj-actions/json2file/commit/ad03d056fb48d9e9f1ac37251be529be5f2c3add))  - (Tonye Jack)
+
+## <!-- 26 -->🔄 Update
+
+- Updated README.md ([#123](https://github.com/tj-actions/json2file/issues/123))
+
+Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([3028aff](https://github.com/tj-actions/json2file/commit/3028aff581570009fa76ae52ef93b336af04bc4f))  - (Tonye Jack)
+- Update action.yml ([da4cce5](https://github.com/tj-actions/json2file/commit/da4cce54fe494c947325aa6b80a090d648dba152))  - (Tonye Jack)
+- Update sync-release-version.yml ([a5278c3](https://github.com/tj-actions/json2file/commit/a5278c3b45a49c30163315246f78341f1ed303b2))  - (Tonye Jack)
+- Update entrypoint.sh ([5c75aa1](https://github.com/tj-actions/json2file/commit/5c75aa1f85905832c5ea2cb7af4a2db4fceb2fa2))  - (Tonye Jack)
+
+## <!-- 30 -->📝 Other
+
+- PR [#122](https://github.com/tj-actions/json2file/pull/122): switch to use setup-bin action ([17b1c0a](https://github.com/tj-actions/json2file/commit/17b1c0a90f5440dfd2451f9e1bb896efdb246992))  - (repo-ranger[bot])
+- PR [#121](https://github.com/tj-actions/json2file/pull/121): upgraded to v1.5.0 ([e379025](https://github.com/tj-actions/json2file/commit/e379025f1faa405e6965edb334651c51e5c6bc0b))  - (repo-ranger[bot])
+
+# [1.5.0](https://github.com/tj-actions/json2file/compare/v1.4.2...v1.5.0) - (2023-05-11)
 
 ## <!-- 1 -->🐛 Bug Fixes
 
@@ -34,6 +54,7 @@
 
 ## <!-- 7 -->⚙️ Miscellaneous Tasks
 
+- Upgraded from v1.4.2 -> v1.5.0 ([0338fd4](https://github.com/tj-actions/json2file/commit/0338fd4db6177117802bf20dda797637483ec2a3))  - (github-actions[bot])
 - **deps:** Update peter-evans/create-pull-request action to v5.0.1 ([6977bdd](https://github.com/tj-actions/json2file/commit/6977bddcd73500b3499db11042e9ec6c8912674e))  - (renovate[bot])
 - **deps:** Update codecov/codecov-action action to v3.1.3 ([e90a182](https://github.com/tj-actions/json2file/commit/e90a1828dbf5d3e818ff297fe6475d149fa1d0ed))  - (renovate[bot])
 - **deps:** Update rust-build/rust-build.action action to v1.4.3 ([e4f2f6e](https://github.com/tj-actions/json2file/commit/e4f2f6e54fa2e60f615a3c0e60426e47ce9e997b))  - (renovate[bot])

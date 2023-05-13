@@ -1,5 +1,16 @@
 # Changelog
 
+# [1.7.1](https://github.com/tj-actions/json2file/compare/v1.7.0...v1.7.1) - (2023-05-13)
+
+## <!-- 26 -->🔄 Update
+
+- Update action.yml ([54ec738](https://github.com/tj-actions/json2file/commit/54ec738dbf18ba1a7c47d9612c0fde97b467888b))  - (Tonye Jack)
+- Update Cargo.toml ([754b17f](https://github.com/tj-actions/json2file/commit/754b17ffa6cd3915ab3fb409c7d00d16ba5232a7))  - (Tonye Jack)
+
+## <!-- 30 -->📝 Other
+
+- PR [#125](https://github.com/tj-actions/json2file/pull/125): upgraded to v1.7.0 ([da91d18](https://github.com/tj-actions/json2file/commit/da91d18676775b070be24e86294f0fae3ce1a42d))  - (repo-ranger[bot])
+
 # [1.7.0](https://github.com/tj-actions/json2file/compare/v1.5.0...v1.7.0) - (2023-05-13)
 
 ## <!-- 0 -->🚀 Features
@@ -22,6 +33,10 @@ Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([3028aff](https://
 
 - PR [#122](https://github.com/tj-actions/json2file/pull/122): switch to use setup-bin action ([17b1c0a](https://github.com/tj-actions/json2file/commit/17b1c0a90f5440dfd2451f9e1bb896efdb246992))  - (repo-ranger[bot])
 - PR [#121](https://github.com/tj-actions/json2file/pull/121): upgraded to v1.5.0 ([e379025](https://github.com/tj-actions/json2file/commit/e379025f1faa405e6965edb334651c51e5c6bc0b))  - (repo-ranger[bot])
+
+## <!-- 7 -->⚙️ Miscellaneous Tasks
+
+- Upgraded from v1.6.0 -> v1.7.0 ([53a810f](https://github.com/tj-actions/json2file/commit/53a810f282bb1e1d685c96e47cd028772bf6de59))  - (github-actions[bot])
 
 # [1.5.0](https://github.com/tj-actions/json2file/compare/v1.4.2...v1.5.0) - (2023-05-11)
 

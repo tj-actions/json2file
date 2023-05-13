@@ -224,6 +224,54 @@ mod tests {
     }
 
     #[test]
+    fn test_main_csv() {
+        let args = args::Args::parse_from([
+            "",
+            "--keys",
+            "key1 key2",
+            "--outputs",
+            "{ \"key1\": \"value1\", \"key2\": [\"Cargo.toml\",\"src/lib.rs\",\"src/writer.rs\"], \"key3\": \"value3\" }",
+            "--directory",
+            "test_csv",
+            "--extension",
+            "csv",
+            "--skip-missing-keys",
+        ]);
+        let context = setup(&args.directory, true);
+        let output_directory = &context.output_directory;
+        let keys: Vec<String> = args
+            .keys
+            .split_whitespace()
+            .map(|s| s.to_string())
+            .collect();
+
+        write_outputs(
+            &args.skip_missing_keys,
+            &keys,
+            &args.outputs,
+            output_directory,
+            &args.extension,
+            &args.verbose,
+        );
+
+        // Check that the files were created.
+        assert!(output_directory.join("key1.csv").exists());
+        assert!(output_directory.join("key2.csv").exists());
+
+        // Check that the files contain the correct values.
+        let mut file = File::open(output_directory.join("key1.csv")).unwrap();
+        let mut contents = String::new();
+        file.read_to_string(&mut contents).unwrap();
+        assert_eq!(contents, "value1\n");
+
+        let mut file = File::open(output_directory.join("key2.csv")).unwrap();
+        let mut contents = String::new();
+        file.read_to_string(&mut contents).unwrap();
+        assert_eq!(contents, "Cargo.toml,src/lib.rs,src/writer.rs\n");
+        teardown(&context);
+    }
+
+    #[test]
     fn test_if_output_directory_doesnt_exist_it_gets_created() {
         let args = args::Args::parse_from([
             "",

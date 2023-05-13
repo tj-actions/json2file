@@ -65,6 +65,7 @@ jobs:
         id: verify-changed-files
         with:
           files: |
+            action.yml
             README.md
             HISTORY.md
             entrypoint.sh

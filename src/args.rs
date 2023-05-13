@@ -1,5 +1,6 @@
-use clap::{Parser, ValueEnum};
-use std::fmt;
+use clap::Parser;
+
+use crate::writer::Extension;
 
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
@@ -26,19 +27,4 @@ pub struct Args {
 
     #[arg(short, long)]
     pub verbose: bool,
-}
-
-#[derive(ValueEnum, Clone, Debug)]
-pub enum Extension {
-    Txt,
-    Json,
-}
-
-impl fmt::Display for Extension {
-    fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        match self {
-            Extension::Txt => write!(f, "txt"),
-            Extension::Json => write!(f, "json"),
-        }
-    }
 }

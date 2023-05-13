@@ -1,5 +1,20 @@
 # Changelog
 
+# [1.7.2](https://github.com/tj-actions/json2file/compare/v1.7.1...v1.7.2) - (2023-05-13)
+
+## <!-- 26 -->🔄 Update
+
+- Update lib.rs ([420b4be](https://github.com/tj-actions/json2file/commit/420b4bed26327f94e3149f3379c770b2fae555f2))  - (Tonye Jack)
+- Update lib.rs ([db0d8ea](https://github.com/tj-actions/json2file/commit/db0d8ea18ba93306ce99f189783d725844b47706))  - (Tonye Jack)
+
+## <!-- 30 -->📝 Other
+
+- PR [#126](https://github.com/tj-actions/json2file/pull/126): upgraded to v1.7.1 ([e8b0a13](https://github.com/tj-actions/json2file/commit/e8b0a13b3e1ba57d1e5822b8b3b91ddd539d3ce5))  - (repo-ranger[bot])
+
+## <!-- 7 -->⚙️ Miscellaneous Tasks
+
+- Add documentation ([f6f2b3d](https://github.com/tj-actions/json2file/commit/f6f2b3d22ebd69fb4fd550b4a075eb8790d9bba4))  - (Tonye Jack)
+
 # [1.7.1](https://github.com/tj-actions/json2file/compare/v1.7.0...v1.7.1) - (2023-05-13)
 
 ## <!-- 26 -->🔄 Update
@@ -10,6 +25,10 @@
 ## <!-- 30 -->📝 Other
 
 - PR [#125](https://github.com/tj-actions/json2file/pull/125): upgraded to v1.7.0 ([da91d18](https://github.com/tj-actions/json2file/commit/da91d18676775b070be24e86294f0fae3ce1a42d))  - (repo-ranger[bot])
+
+## <!-- 7 -->⚙️ Miscellaneous Tasks
+
+- Upgraded from v1.7.0 -> v1.7.1 ([f7d969c](https://github.com/tj-actions/json2file/commit/f7d969cddddfa8d3069075cb038ee275ca41b17c))  - (github-actions[bot])
 
 # [1.7.0](https://github.com/tj-actions/json2file/compare/v1.5.0...v1.7.0) - (2023-05-13)
 

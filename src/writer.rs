@@ -7,10 +7,14 @@ use clap::ValueEnum;
 use csv::{StringRecord, WriterBuilder};
 use unescaper::unescape;
 
+/// Output file extension
 #[derive(ValueEnum, Clone, Debug, PartialEq)]
 pub enum Extension {
+    /// Generate a Text file
     Txt,
+    /// Generate a JSON file
     Json,
+    /// Generate a CSV file
     Csv,
 }
 
@@ -24,6 +28,7 @@ impl fmt::Display for Extension {
     }
 }
 
+/// Create the output directory if it doesn't exist
 pub fn create_output_directory(path: &PathBuf) {
     if !path.try_exists().unwrap_or(false) {
         println!("Creating output directory...");
@@ -43,6 +48,7 @@ pub fn create_output_directory(path: &PathBuf) {
     }
 }
 
+/// Write the output files
 pub fn write_outputs(
     skip_missing_keys: &bool,
     keys: &Vec<String>,

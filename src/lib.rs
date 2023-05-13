@@ -10,4 +10,5 @@
 
 #![deny(missing_docs)]
 
+/// The writer module provides the functionality for writing JSON data to file(s).
 pub mod writer;

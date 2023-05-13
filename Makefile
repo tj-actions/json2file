@@ -21,3 +21,6 @@ clean:  ## Clean the build artifacts
 .PHONY: install
 install: build  ## Install the binary
 	@cargo install --path .
+
+.PHONY: all
+all: build test  ## Build and run the tests

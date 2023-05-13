@@ -69,7 +69,7 @@ Options:
   -o, --outputs <OUTPUTS>      The JSON output to use
   -d, --directory <DIRECTORY>  The directory to output the files to
   -s, --skip-missing-keys      Skip missing keys
-  -e, --extension <EXTENSION>  The extension to use for the files [default: txt] [possible values: txt, json]
+  -e, --extension <EXTENSION>  The extension to use for the files [default: txt] [possible values: txt, json, csv]
   -v, --verbose                
   -h, --help                   Print help
   -V, --version                Print version

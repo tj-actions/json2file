@@ -191,6 +191,7 @@ jobs:
         uses: tj-actions/changed-files@v35
         with:
           json: ${{ matrix.json }}
+          include_all_old_new_renamed_files: true
       - name: Generate output files from JSON with compiled binary
         uses: ./
         with:

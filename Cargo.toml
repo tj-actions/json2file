@@ -15,6 +15,6 @@ categories = ["command-line-utilities"]
 [dependencies]
 regex = "1.9.3"
 serde_json = "1.0.104"
-clap = { version = "4.3.19", features = ["derive"] }
+clap = { version = "4.3.20", features = ["derive"] }
 unescaper = "0.1.1"
 csv = "1.2.2"

@@ -43,14 +43,14 @@ green
 
 <!-- AUTO-DOC-INPUT:START - Do not remove or modify this section -->
 
-|       INPUT       |  TYPE  | REQUIRED |       DEFAULT       |                          DESCRIPTION                          |
-|-------------------|--------|----------|---------------------|---------------------------------------------------------------|
-|     bin\_path      | string |  false   |                     |                      Path to the binary                       |
-|     directory     | string |   true   | `".github/outputs"` |                     Directory to write to                     |
-|     extension     | string |  false   |       `"txt"`       |    File extension to use, possible <br>values: txt, json      |
-|       keys        | string |   true   |                     |   List of Keys to read <br>from the `outputs` JSON string     |
-|      outputs      | string |   true   |                     |                          JSON string                          |
-| skip\_missing\_keys | string |  false   |      `"false"`      | Skip missing keys not found <br>in the `outputs` JSON string  |
+|                                        INPUT                                        |  TYPE  | REQUIRED |       DEFAULT       |                          DESCRIPTION                          |
+|-------------------------------------------------------------------------------------|--------|----------|---------------------|---------------------------------------------------------------|
+|              <a name="input_bin_path"></a>[bin\_path](#input_bin_path)               | string |  false   |                     |                      Path to the binary                       |
+|             <a name="input_directory"></a>[directory](#input_directory)             | string |   true   | `".github/outputs"` |                     Directory to write to                     |
+|             <a name="input_extension"></a>[extension](#input_extension)             | string |  false   |       `"txt"`       |    File extension to use, possible <br>values: txt, json      |
+|                    <a name="input_keys"></a>[keys](#input_keys)                     | string |   true   |                     |   List of Keys to read <br>from the `outputs` JSON string     |
+|                <a name="input_outputs"></a>[outputs](#input_outputs)                | string |   true   |                     |                          JSON string                          |
+| <a name="input_skip_missing_keys"></a>[skip\_missing\_keys](#input_skip_missing_keys) | string |  false   |      `"false"`      | Skip missing keys not found <br>in the `outputs` JSON string  |
 
 <!-- AUTO-DOC-INPUT:END -->
 

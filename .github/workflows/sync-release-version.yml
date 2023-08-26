@@ -81,7 +81,7 @@ jobs:
           git tag ${{ steps.branch-name.outputs.tag }}
           git push -f origin ${{ steps.branch-name.outputs.tag }}
       - name: Run release-tagger
-        uses: tj-actions/release-tagger@v3
+        uses: tj-actions/release-tagger@v4
       - uses: actions-rs/toolchain@v1
         with:
           toolchain: stable

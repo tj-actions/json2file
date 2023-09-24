@@ -33,7 +33,7 @@ runs:
       with:
         repository-owner: tj-actions
         repository: json2file
-        version: v1.7.3
+        version: v1.7.4
         language-type: 'rust'
     - run: |
         bash $GITHUB_ACTION_PATH/entrypoint.sh

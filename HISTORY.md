@@ -1,6 +1,6 @@
 # Changelog
 
-# [1.7.4](https://github.com/tj-actions/json2file/compare/v1.7.3...v1.7.4) - (2023-09-24)
+# [1.7.5](https://github.com/tj-actions/json2file/compare/v1.7.3...v1.7.5) - (2023-09-24)
 
 ## <!-- 1 -->🐛 Bug Fixes
 
@@ -36,6 +36,7 @@
 
 ## <!-- 26 -->🔄 Update
 
+- Update sync-release-version.yml ([b63ac5a](https://github.com/tj-actions/json2file/commit/b63ac5ab35f3ea57306accc5c7efbe4fa4dd075c))  - (Tonye Jack)
 - Update sync-release-version.yml ([ab3f024](https://github.com/tj-actions/json2file/commit/ab3f024ce82fafd4816058aa55b857d698eea423))  - (Tonye Jack)
 - Update sync-release-version.yml ([088a825](https://github.com/tj-actions/json2file/commit/088a825401975b52511826ae4034b54c33f8db12))  - (Tonye Jack)
 - Updated .github/FUNDING.yml ([458f909](https://github.com/tj-actions/json2file/commit/458f9092c9c1ac4374ad04003c5a95912b163ecc))  - (Tonye Jack)
@@ -74,6 +75,7 @@ Co-authored-by: repo-ranger[bot] <repo-ranger[bot]@users.noreply.github.com> ([b
 
 ## <!-- 7 -->⚙️ Miscellaneous Tasks
 
+- Upgraded to v1.7.4 ([#193](https://github.com/tj-actions/json2file/issues/193)) ([e6f9943](https://github.com/tj-actions/json2file/commit/e6f9943ab261f5a96458fc65c812be9ade8a7c92))  - (tj-actions[bot])
 - **deps:** Update reviewdog/action-shellcheck action to v1.19 ([c5b8ef3](https://github.com/tj-actions/json2file/commit/c5b8ef310df9237644e8fb770ad57c7a865630a7))  - (renovate[bot])
 - **deps:** Update tj-actions/changed-files action to v39 ([adcd817](https://github.com/tj-actions/json2file/commit/adcd817f58e9b52ec21e442ff153a4d8fbce5548))  - (renovate[bot])
 - **deps:** Update actions/checkout action to v4 ([f52a6dd](https://github.com/tj-actions/json2file/commit/f52a6dd73f45de1f7e928029bddc3c8a2591aff5))  - (renovate[bot])

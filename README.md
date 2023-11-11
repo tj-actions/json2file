@@ -76,9 +76,10 @@ Options:
 ```
 
 ### Example
+Run
 
 ```bash
-$ json2file --keys="foo bar" --outputs="{\"foo\": \"value1\", \"bar\": \"value2\"}" --directory=/tmp --extension=txt
+json2file --keys="foo bar" --outputs="{\"foo\": \"value1\", \"bar\": \"value2\"}" --directory=/tmp --extension=txt
 ```
 
 This creates two files with the following contents:

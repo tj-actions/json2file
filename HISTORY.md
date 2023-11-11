@@ -1,5 +1,48 @@
 # Changelog
 
+# [1.7.6](https://github.com/tj-actions/json2file/compare/v1.7.5...v1.7.6) - (2023-11-11)
+
+## <!-- 1 -->🐛 Bug Fixes
+
+- **deps:** Update rust crate clap to 4.4.8 ([#206](https://github.com/tj-actions/json2file/issues/206)) ([f51e936](https://github.com/tj-actions/json2file/commit/f51e93620dd4550b3089951ed970993df9f90be6))  - (renovate[bot])
+- **deps:** Update rust crate serde_json to 1.0.108 ([8b6e2db](https://github.com/tj-actions/json2file/commit/8b6e2dbd0ebffbd72e405c5df58128852a6a2771))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.4.7 ([37f388c](https://github.com/tj-actions/json2file/commit/37f388cf97ce7f00186b6e39ee33eec13ac3cbc1))  - (renovate[bot])
+- **deps:** Update rust crate regex to 1.10.2 ([0b32f0e](https://github.com/tj-actions/json2file/commit/0b32f0e848205aadf4c5efe425407a56488e3364))  - (renovate[bot])
+- **deps:** Update rust crate regex to 1.10.1 ([60e1715](https://github.com/tj-actions/json2file/commit/60e1715a12e9c7f20a267bc08fb35dd094e2adb7))  - (renovate[bot])
+- **deps:** Update rust crate regex to 1.10.0 ([5927c9f](https://github.com/tj-actions/json2file/commit/5927c9f31f451ac714894f5528a7b9c66949776f))  - (renovate[bot])
+- **deps:** Update rust crate csv to 1.3.0 ([f218b70](https://github.com/tj-actions/json2file/commit/f218b708a4b80ab133e985d46ed4feb39900db63))  - (renovate[bot])
+- **deps:** Update rust crate regex to 1.9.6 ([97d1312](https://github.com/tj-actions/json2file/commit/97d1312a2f00c8bcf91998ca0fc16241a5d74325))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.4.6 ([1ef14ff](https://github.com/tj-actions/json2file/commit/1ef14ff6e2baa2130a0e7260e1d55f479a3ae669))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.4.5 ([790ca59](https://github.com/tj-actions/json2file/commit/790ca59bcbef7474aa8ce126c9249f4d7aa57902))  - (renovate[bot])
+
+## <!-- 26 -->🔄 Update
+
+- Updated README.md ([#208](https://github.com/tj-actions/json2file/issues/208))
+
+Co-authored-by: repo-ranger[bot] <repo-ranger[bot]@users.noreply.github.com> ([ac74c31](https://github.com/tj-actions/json2file/commit/ac74c31cef722b4645f96eb20335c37a8b560811))  - (tj-actions[bot])
+
+## <!-- 30 -->📝 Other
+
+- PR [#207](https://github.com/tj-actions/json2file/pull/207): update README.md ([0fe0085](https://github.com/tj-actions/json2file/commit/0fe008515215a7acd80598db024419a81c4e15c1))  - (repo-ranger[bot])
+- PR [#205](https://github.com/tj-actions/json2file/pull/205): update rust crate serde_json to 1.0.108 ([40d27f1](https://github.com/tj-actions/json2file/commit/40d27f1ffabaf6c8af849d680dbb6cfae6b93cb0))  - (repo-ranger[bot])
+- PR [#204](https://github.com/tj-actions/json2file/pull/204): update tj-actions/changed-files action to v40 ([b603667](https://github.com/tj-actions/json2file/commit/b6036676e5b72a1962364d60faa66d47a3582a56))  - (repo-ranger[bot])
+- PR [#203](https://github.com/tj-actions/json2file/pull/203): update rust crate clap to 4.4.7 ([ff92024](https://github.com/tj-actions/json2file/commit/ff92024358d60fb1e13ea002ba566e254f2f166a))  - (repo-ranger[bot])
+- PR [#202](https://github.com/tj-actions/json2file/pull/202): update rust-build/rust-build.action action to v1.4.4 ([df08c46](https://github.com/tj-actions/json2file/commit/df08c463a46d290c1dc24ccc81761d14e0e58c0b))  - (repo-ranger[bot])
+- PR [#201](https://github.com/tj-actions/json2file/pull/201): update rust crate regex to 1.10.2 ([835dafd](https://github.com/tj-actions/json2file/commit/835dafdeb5f00796f1057d70537e08b7f9561ab4))  - (repo-ranger[bot])
+- PR [#200](https://github.com/tj-actions/json2file/pull/200): update rust crate regex to 1.10.1 ([9ffd2d4](https://github.com/tj-actions/json2file/commit/9ffd2d45899fe852af3594d3eb7745065d8f301d))  - (repo-ranger[bot])
+- PR [#199](https://github.com/tj-actions/json2file/pull/199): update rust crate regex to 1.10.0 ([e737cab](https://github.com/tj-actions/json2file/commit/e737cab551da25c90123369c0a409372c8085d0a))  - (repo-ranger[bot])
+- PR [#198](https://github.com/tj-actions/json2file/pull/198): update rust crate csv to 1.3.0 ([03cfcf2](https://github.com/tj-actions/json2file/commit/03cfcf29cfeab8c9f8ea649c99744f74da917963))  - (repo-ranger[bot])
+- PR [#197](https://github.com/tj-actions/json2file/pull/197): update rust crate regex to 1.9.6 ([e049aab](https://github.com/tj-actions/json2file/commit/e049aab506735281950cefb4d91503afd6d1d9bc))  - (repo-ranger[bot])
+- PR [#196](https://github.com/tj-actions/json2file/pull/196): update rust crate clap to 4.4.6 ([1e3c9ec](https://github.com/tj-actions/json2file/commit/1e3c9ec43de3538c1b01a0c3d800418ad9e6de05))  - (repo-ranger[bot])
+- PR [#195](https://github.com/tj-actions/json2file/pull/195): update rust crate clap to 4.4.5 ([988632d](https://github.com/tj-actions/json2file/commit/988632d3ae2103aca1f3aec95d023b8b2506bac8))  - (repo-ranger[bot])
+- PR [#194](https://github.com/tj-actions/json2file/pull/194): upgraded to v1.7.5 ([9edf554](https://github.com/tj-actions/json2file/commit/9edf554b8c715ee3d4f955210afc75c5735da7c5))  - (repo-ranger[bot])
+
+## <!-- 7 -->⚙️ Miscellaneous Tasks
+
+- Update README.md ([538c1d3](https://github.com/tj-actions/json2file/commit/538c1d3dae1bfa064a3f835df15aed0bb5955aee))  - (Tonye Jack)
+- **deps:** Update tj-actions/changed-files action to v40 ([3c29597](https://github.com/tj-actions/json2file/commit/3c29597876b132e3b2c849f3b36d71891372d91a))  - (renovate[bot])
+- **deps:** Update rust-build/rust-build.action action to v1.4.4 ([6f3e215](https://github.com/tj-actions/json2file/commit/6f3e215381018e6fec7aaef2f72d91c078fa19ac))  - (renovate[bot])
+
 # [1.7.5](https://github.com/tj-actions/json2file/compare/v1.7.3...v1.7.5) - (2023-09-24)
 
 ## <!-- 1 -->🐛 Bug Fixes
@@ -75,6 +118,7 @@ Co-authored-by: repo-ranger[bot] <repo-ranger[bot]@users.noreply.github.com> ([b
 
 ## <!-- 7 -->⚙️ Miscellaneous Tasks
 
+- Upgraded from v1.7.4 -> v1.7.5 ([22a29a4](https://github.com/tj-actions/json2file/commit/22a29a48a276115c62c8f15d72b3488efb6c1a35))  - (github-actions[bot])
 - Upgraded to v1.7.4 ([#193](https://github.com/tj-actions/json2file/issues/193)) ([e6f9943](https://github.com/tj-actions/json2file/commit/e6f9943ab261f5a96458fc65c812be9ade8a7c92))  - (tj-actions[bot])
 - **deps:** Update reviewdog/action-shellcheck action to v1.19 ([c5b8ef3](https://github.com/tj-actions/json2file/commit/c5b8ef310df9237644e8fb770ad57c7a865630a7))  - (renovate[bot])
 - **deps:** Update tj-actions/changed-files action to v39 ([adcd817](https://github.com/tj-actions/json2file/commit/adcd817f58e9b52ec21e442ff153a4d8fbce5548))  - (renovate[bot])

@@ -62,7 +62,7 @@ jobs:
         id: branch-name
         uses: tj-actions/branch-names@v7
       - name: Verify Changed files
-        uses: tj-actions/verify-changed-files@v16
+        uses: tj-actions/verify-changed-files@v17
         id: verify-changed-files
         with:
           files: |

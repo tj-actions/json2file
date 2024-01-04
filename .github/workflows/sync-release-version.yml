@@ -60,7 +60,7 @@ jobs:
         uses: tj-actions/cargo-bump@v2
       - name: Get branch name
         id: branch-name
-        uses: tj-actions/branch-names@v7
+        uses: tj-actions/branch-names@v8
       - name: Verify Changed files
         uses: tj-actions/verify-changed-files@v17
         id: verify-changed-files

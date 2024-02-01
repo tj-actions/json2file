@@ -54,6 +54,25 @@ green
 
 <!-- AUTO-DOC-INPUT:END -->
 
+
+## Installation
+
+To install `json2file`, open a terminal window (Command Prompt or PowerShell on Windows) and run the following command:
+
+```shell
+cargo install json2file
+```
+
+### Building from Source
+
+If you prefer to build from the source, follow these steps:
+
+```shell
+git clone https://github.com/tj-actions/json2file
+cd json2file
+cargo build --release
+```
+
 ## CLI Reference
 
 Run `json2file --help` for more information.

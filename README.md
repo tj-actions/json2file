@@ -1,5 +1,5 @@
 [![Crates.io](https://img.shields.io/crates/v/json2file)](https://crates.io/crates/json2file)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b60a9e369c774e11a813baa11362b99d)](https://app.codacy.com/gh/tj-actions/json2file/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/b60a9e369c774e11a813baa11362b99d)](https://app.codacy.com/gh/tj-actions/json2file/dashboard?utm_source=gh\&utm_medium=referral\&utm_content=\&utm_campaign=Badge_grade)
 [![codecov](https://codecov.io/gh/tj-actions/json2file/branch/main/graph/badge.svg?token=FALQKDPDP2)](https://codecov.io/gh/tj-actions/json2file)
 [![CI](https://github.com/tj-actions/json2file/workflows/CI/badge.svg)](https://github.com/tj-actions/json2file/actions?query=workflow%3ACI)
 [![Update release version.](https://github.com/tj-actions/json2file/actions/workflows/sync-release-version.yml/badge.svg)](https://github.com/tj-actions/json2file/actions/workflows/sync-release-version.yml)

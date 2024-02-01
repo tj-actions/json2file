@@ -11,7 +11,7 @@
 
 # json2file
 
-Generate file output from a JSON string.
+Simplifies the process of serializing JSON data to a file.
 
 ## Usage
 

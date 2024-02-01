@@ -54,7 +54,6 @@ green
 
 <!-- AUTO-DOC-INPUT:END -->
 
-
 ## Installation
 
 To install `json2file`, open a terminal window (Command Prompt or PowerShell on Windows) and run the following command:

@@ -57,7 +57,7 @@ jobs:
       - name: Run git-cliff
         uses: tj-actions/git-cliff@v1
       - name: Bump version
-        uses: tj-actions/cargo-bump@v2
+        uses: tj-actions/cargo-bump@v3
       - name: Get branch name
         id: branch-name
         uses: tj-actions/branch-names@v8

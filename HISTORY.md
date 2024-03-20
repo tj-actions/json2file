@@ -1,10 +1,103 @@
 # Changelog
 
-# [unreleased]
+# [1.7.9](https://github.com/tj-actions/json2file/compare/v1.7.8...v1.7.9) - (2024-03-20)
+
+## <!-- 1 -->🐛 Bug Fixes
+
+- **deps:** Update rust crate clap to 4.5.3 ([fbfb44c](https://github.com/tj-actions/json2file/commit/fbfb44c35b7b93cdb873d178daf9bad592284daa))  - (renovate[bot])
+
+## <!-- 30 -->📝 Other
+
+- PR [#255](https://github.com/tj-actions/json2file/pull/255): update rust crate clap to 4.5.3 ([c515301](https://github.com/tj-actions/json2file/commit/c51530172fc98dbdbd6c18c1c54048920b9a4674))  - (repo-ranger[bot])
+- PR [#254](https://github.com/tj-actions/json2file/pull/254): update tj-actions/changed-files action to v43 ([884869d](https://github.com/tj-actions/json2file/commit/884869d7514e7af38e1e3edc23a63d2ce8bd68fc))  - (repo-ranger[bot])
+- PR [#253](https://github.com/tj-actions/json2file/pull/253): update peter-evans/create-pull-request action to v6.0.2 ([e320932](https://github.com/tj-actions/json2file/commit/e320932196cd426850b1fbece32a49def34563bd))  - (repo-ranger[bot])
 
 ## <!-- 7 -->⚙️ Miscellaneous Tasks
 
-- **deps:** Update tj-actions/branch-names action to v8 ([#220](https://github.com/tj-actions/json2file/issues/220)) ([814aa13](https://github.com/tj-actions/json2file/commit/814aa1391255e6637154f6804f029b905c6eb1e6))  - (renovate[bot])
+- Update toolchain to stable ([e9184bb](https://github.com/tj-actions/json2file/commit/e9184bbd67195a202345cd8bad02961eae9cbfe9))  - (Tonye Jack)
+- **deps:** Update tj-actions/changed-files action to v43 ([8a7d174](https://github.com/tj-actions/json2file/commit/8a7d1744e2361521364fd36fba37b014ba0a468e))  - (renovate[bot])
+- **deps:** Update peter-evans/create-pull-request action to v6.0.2 ([5925915](https://github.com/tj-actions/json2file/commit/59259155477b428aaa46061770b8b210adf3b26f))  - (renovate[bot])
+
+# [1.7.8](https://github.com/tj-actions/json2file/compare/v1.7.7...v1.7.8) - (2024-03-09)
+
+## <!-- 1 -->🐛 Bug Fixes
+
+- **deps:** Update rust crate clap to 4.5.2 ([7d50cf8](https://github.com/tj-actions/json2file/commit/7d50cf8d2f10509c8d3a560313499bd3c3ab3f67))  - (renovate[bot])
+- **deps:** Update rust crate serde_json to 1.0.114 ([ab62770](https://github.com/tj-actions/json2file/commit/ab62770aa702515ef5e51e35f88be0ea974829e8))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.5.1 ([#243](https://github.com/tj-actions/json2file/issues/243)) ([8dc0566](https://github.com/tj-actions/json2file/commit/8dc0566ea7843f982320a3bc3301c5e86478befa))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.5.0 ([10d0fcf](https://github.com/tj-actions/json2file/commit/10d0fcf19c4ec163e1fb5335e8301ed0c17e0a80))  - (renovate[bot])
+- **deps:** Update rust crate serde_json to 1.0.113 ([f8e9595](https://github.com/tj-actions/json2file/commit/f8e95956bcc7e2455cff3c298abc55984aa19161))  - (renovate[bot])
+- **deps:** Update rust crate serde_json to 1.0.112 ([13dae05](https://github.com/tj-actions/json2file/commit/13dae05b1122aab49551ae5bf719752240c33336))  - (renovate[bot])
+- **deps:** Update rust crate unescaper to 0.1.4 ([108da01](https://github.com/tj-actions/json2file/commit/108da014ff1abd64df50a576f8dd3b7ffbc5fdc0))  - (renovate[bot])
+- **deps:** Update rust crate regex to 1.10.3 ([96cf0f3](https://github.com/tj-actions/json2file/commit/96cf0f34caa105635fd9225b624a7d07228efaee))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.4.18 ([20bc4bb](https://github.com/tj-actions/json2file/commit/20bc4bb2b74c4d0c3fa7e9f7863b1a684725f556))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.4.17 ([c17425f](https://github.com/tj-actions/json2file/commit/c17425f9879340afeb233d6dd3841d43c20d03e5))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.4.16 ([9604908](https://github.com/tj-actions/json2file/commit/96049087893dd16d877e803254d62d3a150ed002))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.4.15 ([435e1d2](https://github.com/tj-actions/json2file/commit/435e1d2e57784c9ec007a1e530f572e2c7c45020))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.4.14 ([cc51a88](https://github.com/tj-actions/json2file/commit/cc51a88a44c78ccb0f309113bb764b735daee915))  - (renovate[bot])
+- **deps:** Update rust crate clap to 4.4.13 ([f834343](https://github.com/tj-actions/json2file/commit/f8343437aa0accb593553f38746df466c34bd34a))  - (renovate[bot])
+
+## <!-- 26 -->🔄 Update
+
+- Updated README.md ([#240](https://github.com/tj-actions/json2file/issues/240))
+
+Co-authored-by: jackton1 <17484350+jackton1@users.noreply.github.com> ([e9b7188](https://github.com/tj-actions/json2file/commit/e9b71881c08e8dca0f6721d43db70bebe7711612))  - (tj-actions[bot])
+- Update README.md ([8b34053](https://github.com/tj-actions/json2file/commit/8b340531d435ce6f8fed9a57ac6338a6b6162965))  - (Tonye Jack)
+- Update README.md ([e38ba18](https://github.com/tj-actions/json2file/commit/e38ba18ef6da0dfad2706ce5b935af546da91e67))  - (Tonye Jack)
+- Updated README.md ([#239](https://github.com/tj-actions/json2file/issues/239))
+
+Co-authored-by: jackton1 <17484350+jackton1@users.noreply.github.com> ([41a89e6](https://github.com/tj-actions/json2file/commit/41a89e61ede614c055945c5e376960cbbb81c089))  - (tj-actions[bot])
+- Update README.md ([72d5ba8](https://github.com/tj-actions/json2file/commit/72d5ba8425a3185e68f275e89626e6a0989d6b8b))  - (Tonye Jack)
+
+## <!-- 30 -->📝 Other
+
+- PR [#252](https://github.com/tj-actions/json2file/pull/252): update reviewdog/action-shellcheck action to v1.20 ([839fca0](https://github.com/tj-actions/json2file/commit/839fca012390e2c8218ff41af1e3eb68bd212e15))  - (repo-ranger[bot])
+- PR [#251](https://github.com/tj-actions/json2file/pull/251): update rust crate clap to 4.5.2 ([82a3224](https://github.com/tj-actions/json2file/commit/82a3224772230aec1fc292d8e6c02afbe735c178))  - (repo-ranger[bot])
+- PR [#250](https://github.com/tj-actions/json2file/pull/250): update tj-actions/cargo-bump action to v3 ([a9df78e](https://github.com/tj-actions/json2file/commit/a9df78e919c41969de25fb997e2caaf33a4e8202))  - (repo-ranger[bot])
+- PR [#249](https://github.com/tj-actions/json2file/pull/249): update tj-actions/verify-changed-files action to v19 ([2abc552](https://github.com/tj-actions/json2file/commit/2abc552b4ec151f0cde6db6e0eb1a676fc075700))  - (repo-ranger[bot])
+- PR [#248](https://github.com/tj-actions/json2file/pull/248): update peter-evans/create-pull-request action to v6.0.1 ([cd61678](https://github.com/tj-actions/json2file/commit/cd61678cb36fed10dec2349487d719654ff49af2))  - (repo-ranger[bot])
+- PR [#247](https://github.com/tj-actions/json2file/pull/247): update codecov/codecov-action action to v4.1.0 ([a85a6f0](https://github.com/tj-actions/json2file/commit/a85a6f0f38023c331db32e0e0c99edce68f1ac74))  - (repo-ranger[bot])
+- PR [#246](https://github.com/tj-actions/json2file/pull/246): update rust-build/rust-build.action action to v1.4.5 ([4d7873e](https://github.com/tj-actions/json2file/commit/4d7873e56cf9510392c3a54ff53982a9721917b5))  - (repo-ranger[bot])
+- PR [#245](https://github.com/tj-actions/json2file/pull/245): update codecov/codecov-action action to v4.0.2 ([6e3ac8a](https://github.com/tj-actions/json2file/commit/6e3ac8a75892cfa48a290fe06db64d3009142247))  - (repo-ranger[bot])
+- PR [#244](https://github.com/tj-actions/json2file/pull/244): update rust crate serde_json to 1.0.114 ([ebd1fd1](https://github.com/tj-actions/json2file/commit/ebd1fd1a935ec3bfd176be2268b86142d1170c1d))  - (repo-ranger[bot])
+- PR [#242](https://github.com/tj-actions/json2file/pull/242): update rust crate clap to 4.5.0 ([c72e069](https://github.com/tj-actions/json2file/commit/c72e0695c63d03742c0926d50f5d954258790603))  - (repo-ranger[bot])
+- PR [#241](https://github.com/tj-actions/json2file/pull/241): update tj-actions/verify-changed-files action to v18 ([5683b5a](https://github.com/tj-actions/json2file/commit/5683b5abb98f5bd2593c08163caca5daaca7b6c6))  - (repo-ranger[bot])
+- PR [#238](https://github.com/tj-actions/json2file/pull/238): update codecov/codecov-action action to v4.0.1 ([46a77ef](https://github.com/tj-actions/json2file/commit/46a77efbd0a431969bad4137849e121e8ee435a4))  - (repo-ranger[bot])
+- PR [#237](https://github.com/tj-actions/json2file/pull/237): update codecov/codecov-action action to v4 ([c098f5f](https://github.com/tj-actions/json2file/commit/c098f5fa7c87222386512d035833ff5f5ebfa843))  - (repo-ranger[bot])
+- PR [#236](https://github.com/tj-actions/json2file/pull/236): update peter-evans/create-pull-request action to v6 ([8938289](https://github.com/tj-actions/json2file/commit/8938289416f58ff0db7777ddb90ceffb195d5c73))  - (repo-ranger[bot])
+- PR [#235](https://github.com/tj-actions/json2file/pull/235): update codecov/codecov-action action to v3.1.6 ([715c945](https://github.com/tj-actions/json2file/commit/715c94509d8ac7f4abe5d885520dbf16f2a8b43a))  - (repo-ranger[bot])
+- PR [#234](https://github.com/tj-actions/json2file/pull/234): update rust crate serde_json to 1.0.113 ([8f649dc](https://github.com/tj-actions/json2file/commit/8f649dc5c5a6e16b355bab03e6a44e13ba3789cf))  - (repo-ranger[bot])
+- PR [#233](https://github.com/tj-actions/json2file/pull/233): update rust crate serde_json to 1.0.112 ([88cda13](https://github.com/tj-actions/json2file/commit/88cda1379ce670ce66817e6411e44e51e2218aac))  - (repo-ranger[bot])
+- PR [#232](https://github.com/tj-actions/json2file/pull/232): update codecov/codecov-action action to v3.1.5 ([3469036](https://github.com/tj-actions/json2file/commit/34690363b8fa0ef85d77f330ff815b1047df9448))  - (repo-ranger[bot])
+- PR [#231](https://github.com/tj-actions/json2file/pull/231): update rust crate unescaper to 0.1.4 ([16d1818](https://github.com/tj-actions/json2file/commit/16d1818e8900f4d4a1d66102df62902d6fad49d2))  - (repo-ranger[bot])
+- PR [#230](https://github.com/tj-actions/json2file/pull/230): update rust crate regex to 1.10.3 ([8dc6138](https://github.com/tj-actions/json2file/commit/8dc6138287ff032c096aac489567e715b44ffa6b))  - (repo-ranger[bot])
+- PR [#229](https://github.com/tj-actions/json2file/pull/229): update tj-actions/changed-files action to v42 ([3bd5cff](https://github.com/tj-actions/json2file/commit/3bd5cff4123a387a4e933ecce2bc865d82bc52d3))  - (repo-ranger[bot])
+- PR [#228](https://github.com/tj-actions/json2file/pull/228): update actions/cache action to v4 ([389f7f7](https://github.com/tj-actions/json2file/commit/389f7f796cc2c544f5148e729be032addd252393))  - (repo-ranger[bot])
+- PR [#227](https://github.com/tj-actions/json2file/pull/227): update rust crate clap to 4.4.18 ([b45a23d](https://github.com/tj-actions/json2file/commit/b45a23d729cad36a8d2f60a7e8637c4c566bed37))  - (repo-ranger[bot])
+- PR [#226](https://github.com/tj-actions/json2file/pull/226): update rust crate clap to 4.4.17 ([dc44040](https://github.com/tj-actions/json2file/commit/dc4404005289a83ffae0b42afe0b871c28445ef3))  - (repo-ranger[bot])
+- PR [#225](https://github.com/tj-actions/json2file/pull/225): update rust crate clap to 4.4.16 ([995039d](https://github.com/tj-actions/json2file/commit/995039d40fa59882a5350218f0a673631b282bbb))  - (repo-ranger[bot])
+- PR [#224](https://github.com/tj-actions/json2file/pull/224): update rust crate clap to 4.4.15 ([26db382](https://github.com/tj-actions/json2file/commit/26db382ffb8f0481786999c69812439be936545c))  - (repo-ranger[bot])
+- PR [#223](https://github.com/tj-actions/json2file/pull/223): update rust crate clap to 4.4.14 ([0b06e2b](https://github.com/tj-actions/json2file/commit/0b06e2b35e2107bddfc48fd706ad33577ca49e67))  - (repo-ranger[bot])
+- PR [#222](https://github.com/tj-actions/json2file/pull/222): update rust crate clap to 4.4.13 ([1da182a](https://github.com/tj-actions/json2file/commit/1da182ae60c3294bfae2b3ba49365d707fcc120f))  - (repo-ranger[bot])
+- PR [#221](https://github.com/tj-actions/json2file/pull/221): upgraded to v1.7.7 ([7ff44ba](https://github.com/tj-actions/json2file/commit/7ff44ba1c025cd7261043c82bbec3333a415c740))  - (repo-ranger[bot])
+
+## <!-- 7 -->⚙️ Miscellaneous Tasks
+
+- **deps:** Update reviewdog/action-shellcheck action to v1.20 ([f9094da](https://github.com/tj-actions/json2file/commit/f9094dac9e56ffa75ea7acf67794355ff53a634f))  - (renovate[bot])
+- **deps:** Update tj-actions/cargo-bump action to v3 ([9c5ed0c](https://github.com/tj-actions/json2file/commit/9c5ed0c1557a235f07a972978fa2d67e28424dc2))  - (renovate[bot])
+- **deps:** Update tj-actions/verify-changed-files action to v19 ([5bd47ad](https://github.com/tj-actions/json2file/commit/5bd47ad7d1ab8a239ef4195df0ad6575d9b6d6d2))  - (renovate[bot])
+- **deps:** Update peter-evans/create-pull-request action to v6.0.1 ([626808f](https://github.com/tj-actions/json2file/commit/626808fea71edebef68347cd8446b77bb7e28378))  - (renovate[bot])
+- **deps:** Update codecov/codecov-action action to v4.1.0 ([8f4c1c2](https://github.com/tj-actions/json2file/commit/8f4c1c23b74e1015b598ec11acac658789401360))  - (renovate[bot])
+- **deps:** Update rust-build/rust-build.action action to v1.4.5 ([36f179d](https://github.com/tj-actions/json2file/commit/36f179d672a0fe875e7f21391d28751788dddd4d))  - (renovate[bot])
+- **deps:** Update codecov/codecov-action action to v4.0.2 ([fe03bc1](https://github.com/tj-actions/json2file/commit/fe03bc18105610c0c2f5f6b56bd58c15f2523e05))  - (renovate[bot])
+- **deps:** Update tj-actions/verify-changed-files action to v18 ([6cc7acd](https://github.com/tj-actions/json2file/commit/6cc7acd8aeb309f4326d09bed5f244a09a044735))  - (renovate[bot])
+- **deps:** Update codecov/codecov-action action to v4.0.1 ([8038a30](https://github.com/tj-actions/json2file/commit/8038a30c66a202d545509fe9df59d245b7140919))  - (renovate[bot])
+- **deps:** Update codecov/codecov-action action to v4 ([7607c77](https://github.com/tj-actions/json2file/commit/7607c774a673e5c552acc471b094b740c9844f4a))  - (renovate[bot])
+- **deps:** Update peter-evans/create-pull-request action to v6 ([842c567](https://github.com/tj-actions/json2file/commit/842c5679bba37e164e9309486beb39b51fd839c5))  - (renovate[bot])
+- **deps:** Update codecov/codecov-action action to v3.1.6 ([ac896c0](https://github.com/tj-actions/json2file/commit/ac896c04054bbe2d0a34239f6697fae57f25f6d9))  - (renovate[bot])
+- **deps:** Update codecov/codecov-action action to v3.1.5 ([de5f6b5](https://github.com/tj-actions/json2file/commit/de5f6b5141c008e3456916792fdcaddb1f1457fd))  - (renovate[bot])
+- **deps:** Update tj-actions/changed-files action to v42 ([82b52bc](https://github.com/tj-actions/json2file/commit/82b52bcae784e16550a54719f3a0a9becf9f37c0))  - (renovate[bot])
+- **deps:** Update actions/cache action to v4 ([8ff85d3](https://github.com/tj-actions/json2file/commit/8ff85d36de42046b244a8a5ef787460797c756e2))  - (renovate[bot])
 
 # [1.7.7](https://github.com/tj-actions/json2file/compare/v1.7.6...v1.7.7) - (2024-01-04)
 
@@ -39,6 +132,8 @@
 
 ## <!-- 7 -->⚙️ Miscellaneous Tasks
 
+- Upgraded from v1.7.6 -> v1.7.7 ([33850ef](https://github.com/tj-actions/json2file/commit/33850efd874e6cd7fd2f35c03cc67b46efb1f549))  - (github-actions[bot])
+- **deps:** Update tj-actions/branch-names action to v8 ([#220](https://github.com/tj-actions/json2file/issues/220)) ([814aa13](https://github.com/tj-actions/json2file/commit/814aa1391255e6637154f6804f029b905c6eb1e6))  - (renovate[bot])
 - **deps:** Update tj-actions/verify-changed-files action to v17 ([ce37e0f](https://github.com/tj-actions/json2file/commit/ce37e0f7276e4216eb8c8ded1d864e092d4517aa))  - (renovate[bot])
 - **deps:** Update tj-actions/changed-files action to v41 ([11e1737](https://github.com/tj-actions/json2file/commit/11e1737da1c81bca89ac4e0f10a0e430e97adf34))  - (renovate[bot])
 
@@ -515,15 +610,6 @@ Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([3028aff](https://
 
 # [1.2.1](https://github.com/tj-actions/json2file/compare/v1.2.0...v1.2.1) - (2023-01-10)
 
-## <!-- 26 -->🔄 Update
-
-- Updated release action
- ([f88ef10](https://github.com/tj-actions/json2file/commit/f88ef1067759492a7ea7036d93c9b162fbfe1dc8))  - (Tonye Jack)
-- Updated release action
- ([546c6ae](https://github.com/tj-actions/json2file/commit/546c6aeab0923962a01b9d6674ae121d94508472))  - (Tonye Jack)
-- Updated release action
- ([f2bb27b](https://github.com/tj-actions/json2file/commit/f2bb27b97ec5dfba88e5d36421e767124dd071a9))  - (Tonye Jack)
-
 ## <!-- 30 -->📝 Other
 
 - PR [#71](https://github.com/tj-actions/json2file/pull/71): ([d3b9feb](https://github.com/tj-actions/json2file/commit/d3b9feb34cbd342aa895b805571d85b4681a9ffe))  - (Tonye Jack)
@@ -547,6 +633,12 @@ Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([3028aff](https://
 
 ## <!-- 26 -->🔄 Update
 
+- Updated release action
+ ([f88ef10](https://github.com/tj-actions/json2file/commit/f88ef1067759492a7ea7036d93c9b162fbfe1dc8))  - (Tonye Jack)
+- Updated release action
+ ([546c6ae](https://github.com/tj-actions/json2file/commit/546c6aeab0923962a01b9d6674ae121d94508472))  - (Tonye Jack)
+- Updated release action
+ ([f2bb27b](https://github.com/tj-actions/json2file/commit/f2bb27b97ec5dfba88e5d36421e767124dd071a9))  - (Tonye Jack)
 - Updated release action
  ([4496779](https://github.com/tj-actions/json2file/commit/4496779a2dc0e2307be92a49b7e5cd7b8f90ec09))  - (Tonye Jack)
 - Update Cargo.toml
@@ -596,6 +688,8 @@ Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([3028aff](https://
  ([d625885](https://github.com/tj-actions/json2file/commit/d625885aef03f488e8c9a885e6d02c861f6d4e18))  - (Tonye Jack)
 - Updated the test
  ([ec81d8e](https://github.com/tj-actions/json2file/commit/ec81d8e18d7914dbf288fb99d50ae2a59d5fb0ae))  - (Tonye Jack)
+- Update test.yml ([d9b56d9](https://github.com/tj-actions/json2file/commit/d9b56d96bae5b3abec9c96bd1dd060dc2579e7b5))  - (Tonye Jack)
+- Update test.yml ([a9357d1](https://github.com/tj-actions/json2file/commit/a9357d1d36329db280f7f4bcc1fa48fa849d9e91))  - (Tonye Jack)
 - Updated the test
  ([961ad88](https://github.com/tj-actions/json2file/commit/961ad886e2835251c62296aa2add70dc284fdba7))  - (Tonye Jack)
 - Updated test
@@ -604,8 +698,6 @@ Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([3028aff](https://
  ([93edfa8](https://github.com/tj-actions/json2file/commit/93edfa8cc16567ad9a665647ca9d6ef47408d3d2))  - (Tonye Jack)
 - Updated test
  ([7d706d2](https://github.com/tj-actions/json2file/commit/7d706d22c5514c5b3c346a1f53017cd3bbc5e106))  - (Tonye Jack)
-- Update test.yml ([d9b56d9](https://github.com/tj-actions/json2file/commit/d9b56d96bae5b3abec9c96bd1dd060dc2579e7b5))  - (Tonye Jack)
-- Update test.yml ([a9357d1](https://github.com/tj-actions/json2file/commit/a9357d1d36329db280f7f4bcc1fa48fa849d9e91))  - (Tonye Jack)
 - Update Makefile ([4411260](https://github.com/tj-actions/json2file/commit/44112608d354cb23929302bedadb4ed411b36c80))  - (Tonye Jack)
 - Updated to split code into modules
  ([18dde0a](https://github.com/tj-actions/json2file/commit/18dde0a511feba3bd1444407196037d7111a8bf9))  - (Tonye Jack)
@@ -630,9 +722,9 @@ Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([3028aff](https://
 
 - Update entrypoint.sh ([3b45bd2](https://github.com/tj-actions/json2file/commit/3b45bd28cc1585e0e735ba2e535dcc22ae81e0b3))  - (Tonye Jack)
 - Update Cargo.toml ([d2d5059](https://github.com/tj-actions/json2file/commit/d2d50598dc7800ad1e95de8fc6ccd4ed119b75b7))  - (Tonye Jack)
-- Update entrypoint.sh ([4e79acf](https://github.com/tj-actions/json2file/commit/4e79acfb2d4c544639e26fae042da0a8d8741234))  - (Tonye Jack)
 - Updated .github/workflows/update-readme.yml ([6ae4398](https://github.com/tj-actions/json2file/commit/6ae43988e3542b83038e1f5311bf7d07d9e68888))  - (Tonye Jack)
 - Updated .github/workflows/update-readme.yml ([a446d12](https://github.com/tj-actions/json2file/commit/a446d12cd34ce7f1d2bc94d48ee7380948e42517))  - (Tonye Jack)
+- Update entrypoint.sh ([4e79acf](https://github.com/tj-actions/json2file/commit/4e79acfb2d4c544639e26fae042da0a8d8741234))  - (Tonye Jack)
 - Updated .github/workflows/update-readme.yml ([ee4e60e](https://github.com/tj-actions/json2file/commit/ee4e60eb099aca10639bcfd2d9b3d5337d1b031c))  - (Tonye Jack)
 - Updated .github/workflows/update-readme.yml ([3293797](https://github.com/tj-actions/json2file/commit/3293797e0334e5af6f2441cb9539280714c96e4f))  - (Tonye Jack)
 - Update entrypoint.sh ([c2ac75b](https://github.com/tj-actions/json2file/commit/c2ac75b4febebb24531776a0ea69db4fddf90c2f))  - (Tonye Jack)
@@ -788,8 +880,8 @@ Co-authored-by: jackton1 <jackton1@users.noreply.github.com> ([3028aff](https://
 
 ## <!-- 0 -->🚀 Features
 
-- Add support for updating the release assets ([5d197ab](https://github.com/tj-actions/json2file/commit/5d197abd51e81707180095bcdab0048186720b3c))  - (Tonye Jack)
 - Update help text ([2021910](https://github.com/tj-actions/json2file/commit/2021910644862864befcbd77536029094636d39b))  - (Tonye Jack)
+- Add support for updating the release assets ([5d197ab](https://github.com/tj-actions/json2file/commit/5d197abd51e81707180095bcdab0048186720b3c))  - (Tonye Jack)
 
 ## <!-- 26 -->🔄 Update
 
@@ -922,6 +1014,8 @@ Co-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.
 
 - Upgraded from v1.0.2 -> v1.0.3
  ([6191c2a](https://github.com/tj-actions/json2file/commit/6191c2aed136cdb2ffe94c31b4cbd63ff8d0d75b))  - (jackton1)
+- Upgraded from v1.0.1 -> v1.0.2
+ ([8252ba7](https://github.com/tj-actions/json2file/commit/8252ba7104195ff9b4c1bebebecbfb34f7cfe3c9))  - (jackton1)
 
 # [1.0.3](https://github.com/tj-actions/json2file/compare/v1.0.2...v1.0.3) - (2022-12-18)
 
@@ -929,11 +1023,6 @@ Co-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.
 
 - Updated release action
  ([c11be46](https://github.com/tj-actions/json2file/commit/c11be466b2091fc1980b9dbb8b36bd935cacd662))  - (Tonye Jack)
-
-## <!-- 9 -->⬆️ Upgrades
-
-- Upgraded from v1.0.1 -> v1.0.2
- ([8252ba7](https://github.com/tj-actions/json2file/commit/8252ba7104195ff9b4c1bebebecbfb34f7cfe3c9))  - (jackton1)
 
 # [1.0.2](https://github.com/tj-actions/json2file/compare/v1.0.1...v1.0.2) - (2022-12-18)
 
@@ -991,6 +1080,13 @@ Co-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.
 - Updated the default outputs directory
  ([9d42af4](https://github.com/tj-actions/json2file/commit/9d42af46b45357496debd16bf009d60af2e21f03))  - (Tonye Jack)
 - Update test.yml ([bff4d8f](https://github.com/tj-actions/json2file/commit/bff4d8fa593ce3ea63f7b6a5ed510cb87ad09f7b))  - (Tonye Jack)
+- Updated README.md
+ ([7039bd7](https://github.com/tj-actions/json2file/commit/7039bd7739eb642d2e8bb21856bc6906dc16ffea))  - (jackton1)
+- Update action.yml ([72235c3](https://github.com/tj-actions/json2file/commit/72235c32ebf0956c28630996c3b9b216d055d50e))  - (Tonye Jack)
+- Update tj-actions/verify-changed-files action to v13 ([0aca73c](https://github.com/tj-actions/json2file/commit/0aca73c484b90fb37f44416b3da141acf2ce8b24))  - (renovate[bot])
+- Updated README.md
+ ([04ef323](https://github.com/tj-actions/json2file/commit/04ef3234d509ff4e97445819be22c465d919ff20))  - (renovate[bot])
+- Update tj-actions/auto-doc action to v1.6.0 ([deac69e](https://github.com/tj-actions/json2file/commit/deac69e07c5165f1bb9ef55eb84dbda30e9ddb54))  - (renovate[bot])
 - Update test.yml ([21122d0](https://github.com/tj-actions/json2file/commit/21122d02c512b962f4f0422150742e18d7eb44e1))  - (Tonye Jack)
 - Updated action.yml
  ([0d14519](https://github.com/tj-actions/json2file/commit/0d14519d8471ab39606d01d4a5cbdff1302c2bd1))  - (Tonye Jack)
@@ -1002,9 +1098,6 @@ Co-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.
 - Update entrypoint.sh ([d51e0ec](https://github.com/tj-actions/json2file/commit/d51e0ec3e30fe5da72696ec1eac1a039935196d9))  - (Tonye Jack)
 - Updated entrypoint.sh
  ([7d70bc4](https://github.com/tj-actions/json2file/commit/7d70bc412225165b93262373244c420cf3f086ba))  - (Tonye Jack)
-- Updated README.md
- ([7039bd7](https://github.com/tj-actions/json2file/commit/7039bd7739eb642d2e8bb21856bc6906dc16ffea))  - (jackton1)
-- Update action.yml ([72235c3](https://github.com/tj-actions/json2file/commit/72235c32ebf0956c28630996c3b9b216d055d50e))  - (Tonye Jack)
 - Updated entrypoint.sh
  ([a4def81](https://github.com/tj-actions/json2file/commit/a4def81ad69cf8065bb44dae1e14492b374d8bff))  - (Tonye Jack)
 - Updated test
@@ -1016,10 +1109,6 @@ Co-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.
 - Updated entrypoint.sh
  ([1418524](https://github.com/tj-actions/json2file/commit/14185246ab3abfac04e40f9760628a26c3cd5ac1))  - (Tonye Jack)
 - Update entrypoint.sh ([ce2d4a7](https://github.com/tj-actions/json2file/commit/ce2d4a76cfdaa6d07f8f9ca6112f2d5f84e58613))  - (Tonye Jack)
-- Updated README.md
- ([04ef323](https://github.com/tj-actions/json2file/commit/04ef3234d509ff4e97445819be22c465d919ff20))  - (renovate[bot])
-- Update tj-actions/verify-changed-files action to v13 ([0aca73c](https://github.com/tj-actions/json2file/commit/0aca73c484b90fb37f44416b3da141acf2ce8b24))  - (renovate[bot])
-- Update tj-actions/auto-doc action to v1.6.0 ([deac69e](https://github.com/tj-actions/json2file/commit/deac69e07c5165f1bb9ef55eb84dbda30e9ddb54))  - (renovate[bot])
 - Updated entrypoint.sh
  ([858075d](https://github.com/tj-actions/json2file/commit/858075d52ff9620b178c3981df0b729264ba2f22))  - (Tonye Jack)
 - Updated entrypoint.sh
@@ -1099,6 +1188,7 @@ Co-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.
 
 - Update Rust crate serde_json to 1.0.89 ([5919b0a](https://github.com/tj-actions/json2file/commit/5919b0a9243f9afe6dda85905959e81754323227))  - (renovate[bot])
 - Update reviewdog/action-shellcheck action to v1.16 ([c7cfd07](https://github.com/tj-actions/json2file/commit/c7cfd0770e84471b903eba46d4406129c192aeb9))  - (renovate[bot])
+- Update Rust crate regex to 1.7.0 ([d44c49c](https://github.com/tj-actions/json2file/commit/d44c49c271b619c091fb529ed8b2a7c71d907337))  - (renovate[bot])
 - Update test.yml ([2f6894e](https://github.com/tj-actions/json2file/commit/2f6894e8cd14b7e1a39ff58e79ec5640b95b289f))  - (Tonye Jack)
 - Update main.rs ([f2e2f24](https://github.com/tj-actions/json2file/commit/f2e2f24752dcc8fecc16514cf0dfbf19099280c7))  - (Tonye Jack)
 - Update main.rs ([42f0072](https://github.com/tj-actions/json2file/commit/42f0072377a2a2f6aef90bddfde4fe7414194090))  - (Tonye Jack)
@@ -1107,7 +1197,6 @@ Co-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.
 - Update entrypoint.sh ([c7e3c47](https://github.com/tj-actions/json2file/commit/c7e3c473b47fe99ee0327847f5dbd1c0233831da))  - (Tonye Jack)
 - Update README.md ([b42bb90](https://github.com/tj-actions/json2file/commit/b42bb90e5f83f218aa2c7db85f63199b9512f2d9))  - (Tonye Jack)
 - Update entrypoint.sh ([5bf9d92](https://github.com/tj-actions/json2file/commit/5bf9d92137f1d892fbb5dc3e7180d12a83e8dd42))  - (Tonye Jack)
-- Update Rust crate regex to 1.7.0 ([d44c49c](https://github.com/tj-actions/json2file/commit/d44c49c271b619c091fb529ed8b2a7c71d907337))  - (renovate[bot])
 - Updated entrypoint.sh
  ([90b4844](https://github.com/tj-actions/json2file/commit/90b484493d3c72d38f45657b5bafcaa6f286d76f))  - (Tonye Jack)
 - Updated test.yml
@@ -1128,15 +1217,15 @@ Co-authored-by: github-actions[bot] <41898282+github-actions[bot]@users.noreply.
  ([4dcc943](https://github.com/tj-actions/json2file/commit/4dcc94339849e5a7d2e3c91c5dc980934b4b8483))  - (Tonye Jack)
 - Updated README.md
  ([5fe48f3](https://github.com/tj-actions/json2file/commit/5fe48f3ad883df8d0a9a315a1eccdc998bae3eed))  - (jackton1)
+- Update Swatinem/rust-cache action to v2 ([c938cc0](https://github.com/tj-actions/json2file/commit/c938cc041fdccb07c3be5387c54609e2f0299475))  - (renovate[bot])
 - Update action.yml ([2bffb06](https://github.com/tj-actions/json2file/commit/2bffb06bd4e97aa5748e05c6977ffb2812a85c2e))  - (Tonye Jack)
 - Updated README.md
  ([6f2c1ca](https://github.com/tj-actions/json2file/commit/6f2c1ca8f0d3da41994e4074f3ac9ca98cff4aac))  - (jackton1)
 - Update action.yml ([9a541b6](https://github.com/tj-actions/json2file/commit/9a541b6aba29440c2847bb1e555ecbc9be3fe976))  - (Tonye Jack)
 - Updated README.md
  ([f453fa4](https://github.com/tj-actions/json2file/commit/f453fa4f2e6bcc473bcee45f142f036318bd0f60))  - (jackton1)
-- Update Swatinem/rust-cache action to v2 ([c938cc0](https://github.com/tj-actions/json2file/commit/c938cc041fdccb07c3be5387c54609e2f0299475))  - (renovate[bot])
-- Update action.yml ([efc51d5](https://github.com/tj-actions/json2file/commit/efc51d5d43f7477eda1e23aeb7fb86233aa82f63))  - (Tonye Jack)
 - Update actions/checkout action to v3 ([45c8adc](https://github.com/tj-actions/json2file/commit/45c8adc429411c4d23f3e86b9c3f63f865ddf8e4))  - (renovate[bot])
+- Update action.yml ([efc51d5](https://github.com/tj-actions/json2file/commit/efc51d5d43f7477eda1e23aeb7fb86233aa82f63))  - (Tonye Jack)
 - Updated README.md
  ([f8fce29](https://github.com/tj-actions/json2file/commit/f8fce298a204387a1cd4db050b7fbdbeec69bd5a))  - (jackton1)
 

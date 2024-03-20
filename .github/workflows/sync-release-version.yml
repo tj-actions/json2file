@@ -29,7 +29,7 @@ jobs:
           RUSTTARGET: ${{ matrix.target }}
           ARCHIVE_TYPES: ${{ matrix.archive }}
           EXTRA_FILES: "README.md LICENSE"
-          TOOLCHAIN_VERSION: 1.70.0
+          TOOLCHAIN_VERSION: stable
 
   update-version:
     runs-on: ubuntu-latest

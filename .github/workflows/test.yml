@@ -101,7 +101,7 @@ jobs:
         uses: actions/checkout@v4
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v43
+        uses: tj-actions/changed-files@v44
         with:
           json: ${{ matrix.json }}
           include_all_old_new_renamed_files: true
@@ -188,7 +188,7 @@ jobs:
           args: --release --all-features
       - name: Get changed files
         id: changed-files
-        uses: tj-actions/changed-files@v43
+        uses: tj-actions/changed-files@v44
         with:
           json: ${{ matrix.json }}
           include_all_old_new_renamed_files: true

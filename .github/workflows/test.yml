@@ -40,7 +40,7 @@ jobs:
         RUSTDOCFLAGS: '-Zprofile -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Cpanic=abort -Zpanic_abort_tests'
     - uses: actions-rs/grcov@v0.1.6
     - name: Codecov
-      uses: codecov/codecov-action@v4.2.0
+      uses: codecov/codecov-action@v4.3.0
       with:
         fail_ci_if_error: true
         token: ${{ secrets.CODECOV_TOKEN }}

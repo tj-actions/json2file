@@ -17,7 +17,7 @@ jobs:
       - name: Checkout to branch
         uses: actions/checkout@v4
       - name: shellcheck
-        uses: reviewdog/action-shellcheck@v1.23
+        uses: reviewdog/action-shellcheck@v1.24
 
   test:
     name: Run test

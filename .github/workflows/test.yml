@@ -26,28 +26,44 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    # Install the nightly toolchain
     - uses: actions-rs/toolchain@v1
       with:
         profile: minimal
         toolchain: nightly
         override: true
 
+    # Install llvm-tools-preview (required for grcov)
+    - name: Install llvm-tools-preview
+      run: rustup component add llvm-tools-preview
+
+    # Run tests with source-based coverage enabled
     - uses: actions-rs/cargo@v1
       with:
         command: test
         args: --all-features --no-fail-fast
       env:
         CARGO_INCREMENTAL: '0'
-        RUSTFLAGS: '-Cinstrument-coverage -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Cpanic=abort -Zpanic_abort_tests'
-        RUSTDOCFLAGS: '-Cinstrument-coverage -Ccodegen-units=1 -Cinline-threshold=0 -Clink-dead-code -Coverflow-checks=off -Cpanic=abort -Zpanic_abort_tests'
+        RUSTFLAGS: '-Cinstrument-coverage'
+        RUSTDOCFLAGS: '-Cinstrument-coverage'
 
-    - uses: actions-rs/grcov@v0.1.6
+    # Generate coverage files using grcov
+    - name: Generate coverage report
+      run: |
+        grcov . \
+          --binary-path ./target/debug/ \
+          --source-dir . \
+          --output-type lcov \
+          --output-path coverage.lcov \
+          --branch
 
+    # Upload coverage data to Codecov
     - name: Codecov
       uses: codecov/codecov-action@v4.5.0
       with:
         fail_ci_if_error: true
         token: ${{ secrets.CODECOV_TOKEN }}
+        files: coverage.lcov
 
   lint:
     name: Run lint
